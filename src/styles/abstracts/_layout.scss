@@ -1,0 +1,27 @@
+$grid-unit: 8px;
+$border-radius: 4px;
+
+.grid-spacing__vertical--1 {
+  height: $grid-unit * 1;
+  flex-shrink: 0;
+}
+.grid-spacing__vertical--2 {
+  height: $grid-unit * 2;
+  flex-shrink: 0;
+}
+.grid-spacing__vertical--3 {
+  height: $grid-unit * 3;
+  flex-shrink: 0;
+}
+.grid-spacing__vertical--4 {
+  height: $grid-unit * 4;
+  flex-shrink: 0;
+}
+.grid-spacing__vertical--5 {
+  height: $grid-unit * 5;
+  flex-shrink: 0;
+}
+.flex-layout {
+  display: flex;
+  flex: 1;
+}

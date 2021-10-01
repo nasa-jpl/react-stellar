@@ -1,0 +1,134 @@
+/* 
+  Design Reference: M20 GDS Figma
+  Design System / UI Components
+  https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-2.0?node-id=1%3A4439
+*/
+.typography-base {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: auto;
+}
+
+.App {
+  *,
+  *:before,
+  *:after {
+    @extend .typography-base;
+  }
+}
+
+.header {
+  @extend .typography-base;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: $gray100;
+}
+
+.label {
+  @extend .typography-base;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: gray10;
+  opacity: 0.65;
+}
+
+.body {
+  @extend .typography-base;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: gray10;
+  opacity: 0.9;
+}
+
+.medium {
+  @extend .typography-base;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: gray10;
+}
+
+.hint {
+  @extend .typography-base;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: gray50;
+  font-style: italic;
+}
+
+.bold {
+  @extend .typography-base;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: gray10;
+}
+
+.smallCaps {
+  @extend .typography-base;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  color: gray10;
+  opacity: 0.65;
+}
+
+/* M20 GDS Display Font Definitions */
+.displayH1 {
+  @extend .typography-base;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.01em;
+  color: gray10;
+}
+
+.displayH2 {
+  @extend .typography-base;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.005em;
+  color: gray10;
+}
+
+.displayH3 {
+  @extend .typography-base;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: gray10;
+}
+
+.displayBody {
+  @extend .typography-base;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: gray20;
+  letter-spacing: 0.01em;
+}
+
+/* Utility Classes */
+.noSelect {
+  user-select: none;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}

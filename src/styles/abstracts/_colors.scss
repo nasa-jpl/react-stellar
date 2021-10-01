@@ -1,0 +1,61 @@
+// Color Styles from Figma
+// https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-2.0?node-id=175%3A603
+
+/* When used as text, these are accessible on white and the lightest gray (#F8F8F8). */
+$gray100: #1b1d1e;
+$gray90: #1f2223;
+$gray80: #293137;
+$gray70: #444c50;
+$gray60: #545f64;
+
+/* When used as text, these are accessible on black and the darkest gray (#1B1D1E). */
+$gray50: #969696;
+$gray40: #bcbcbc;
+$gray30: #bec0c2;
+$gray20: #ebecec;
+$gray15: #f1f2f3;
+$gray10: #f8f8f8;
+
+/* Theme Colors (Default) */
+$error: red; // TODO
+$primary: #4055a8;
+$primary--hover: #5C71C7;
+// $primary--off-white: #dbf8e0;
+
+/* Utility classes */
+.bg--gray100 {
+  background: $gray100;
+}
+.bg--gray90 {
+  background: $gray90;
+}
+.bg--gray80 {
+  background: $gray80;
+}
+.bg--gray70 {
+  background: $gray70;
+}
+.bg--gray60 {
+  background: $gray60;
+}
+.bg--gray50 {
+  background: $gray50;
+}
+.bg--gray40 {
+  background: $gray40;
+}
+.bg--gray30 {
+  background: $gray30;
+}
+.bg--gray20 {
+  background: $gray20;
+}
+.bg--gray15 {
+  background: $gray15;
+}
+.bg--gray10 {
+  background: $gray10;
+}
+.bg--primary {
+  background: $primary;
+}
