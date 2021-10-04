@@ -17,10 +17,11 @@ $gray15: #f1f2f3;
 $gray10: #f8f8f8;
 
 /* Theme Colors (Default) */
+:root {
+  --stellar-color--primary: #4055a8;
+  --stellar-color--primary--hover: #5C71C7;
+}
 $error: red; // TODO
-$primary: #4055a8;
-$primary--hover: #5C71C7;
-// $primary--off-white: #dbf8e0;
 
 /* Utility classes */
 .bg--gray100 {
@@ -57,5 +58,5 @@ $primary--hover: #5C71C7;
   background: $gray10;
 }
 .bg--primary {
-  background: $primary;
+  background: --stellar-color--primary;
 }

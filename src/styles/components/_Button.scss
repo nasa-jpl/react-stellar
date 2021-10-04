@@ -23,10 +23,10 @@
 
 /* variant styles */
 .button--primary {
-  background: $primary;
+  background: var(--stellar-color--primary);
   color: $gray10;
   &:hover:not([disabled]) {
-    background: $primary--hover;
+    background: var(--stellar-color--primary--hover);
   }
 }
 .button--secondary {

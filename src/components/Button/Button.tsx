@@ -7,6 +7,7 @@ export type ButtonProps = {
   variant?: "primary" | "secondary" | "icon";
   className?: string;
   type?: "button" | "submit" | "reset";
+  theme?: "light" | "dark";
   disabled?: boolean;
   onClick: (event: React.MouseEvent<HTMLElement>) => void;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -16,6 +17,7 @@ export const Button = (props: ButtonProps) => {
     children,
     variant = "primary",
     type = "button",
+    theme = "light",
     onClick,
     icon,
     disabled = false,
@@ -28,6 +30,8 @@ export const Button = (props: ButtonProps) => {
     "button--secondary": variant === "secondary",
     "button--icon": variant === "icon",
     "button--no-text": !children,
+    "button--dark": theme === "dark",
+    "button--light": theme === "light",
     [className]: !!className,
   });
   return (
