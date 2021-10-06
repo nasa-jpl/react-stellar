@@ -1,15 +1,24 @@
 {
-  "name": "react-stellar",
-  "version": "0.0.1-alpha",
+  "name": "@gov.nasa.jpl.stellar/react-stellar",
+  "version": "0.0.22-alpha",
   "description": "The React implementation of the Stellar Design System",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "outputDir": "./dist",
+  "types": "dist/index.d.ts",
+  "typescript": {
+    "definition": "dist/index.d.ts"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "build-lib": "rollup -c"
+    "build-lib": "rollup -c",
+    "compile": "tsc -p ."
   },
   "repository": {
     "type": "git",
