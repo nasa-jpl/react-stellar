@@ -22,6 +22,8 @@ React implementation of the Stellar design system. Written in Typescript and bun
 
 Demos and documentation for the components can be found here: https://github.jpl.nasa.gov/pages/aplave/react-stellar/.
 
+## Developing Components
+- TODO, storybook, installing node, etc.
 ## Setting up Artifactory NPM
 
 To publish and install the library follow the steps below. This step only has to be done once per machine so you can skip it if you've already done this for another project. Make sure your `~/.npmrc` contains the right registry!
@@ -47,13 +49,16 @@ To publish and install the library follow the steps below. This step only has to
      ```
 8. You are now setup to install NPM dependencies which reside in JPL Artifactory. Running `npm install` should work as expected.
 
-## Component Library Publishing
+## Component Library NPM Publishing
 
 This repository is published to JPL Artifactory as an npm module for use by other projects.
 
 1. Set up your JPL Artifactory credentials using the instructions above.
 2. Run `npm run build-lib`. This will run Rollup on the project and output files to `/dist` for consumption.
 
+## Component Library Storybook GH Pages Deployment
+
+Components are developed and demoed using Storybook. Storybook can be run locally and can be built and deployed to Github Pages for easy viewing by running `npm run deploy-storybook`.
 ## Component Library Installation
 
 To install the published library follow the steps below. These steps assume you already have NodeJS installed on your machine and that you are installing this library into a React project.
