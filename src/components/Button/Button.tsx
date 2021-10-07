@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import classNames from "classnames";
-import ThemeContext from "../../contexts/theme"; // TODO Fix imports what happened..?
+import { ThemeContext } from "../../contexts/theme/theme"; // TODO Fix imports what happened..?
 
 export type ButtonProps = {
   children?: string | React.ReactNode;

@@ -2,7 +2,7 @@
 import "../src/styles/styles.scss";
 import "inter-ui";
 import { useDarkMode } from "storybook-dark-mode";
-import { ThemeContextProvider } from "../src/contexts/theme"; // TODO Fix imports what happened..?
+import { ThemeContextProvider } from "../src/contexts/theme/theme"; // TODO Fix imports what happened..?
 
 // create a component that uses the dark mode hook
 function ThemeWrapper(props) {
