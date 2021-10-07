@@ -1,7 +1,5 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-
+import { ComponentMeta } from "@storybook/react";
 import { Typography } from "../components/Typography";
-import { ThemeContextProvider } from "../contexts/theme/theme";
 
 export default {
   title: "Atoms/Typography",

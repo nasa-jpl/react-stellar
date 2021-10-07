@@ -17,7 +17,7 @@ export type TypographyProps = {
     | "displayH3"
     | "displayBody";
   className?: string;
-};
+} & React.HTMLAttributes<HTMLElement>;
 
 export const Typography = (props: TypographyProps) => {
   const {
@@ -25,6 +25,7 @@ export const Typography = (props: TypographyProps) => {
     elementType = "div",
     type = "body",
     className = "",
+    ...other
   } = props;
   const theme = useContext(ThemeContext);
 
@@ -36,10 +37,14 @@ export const Typography = (props: TypographyProps) => {
   return (
     <>
       {elementType === "div" && (
-        <div className={containerClass}>{children}</div>
+        <div className={containerClass} {...other}>
+          {children}
+        </div>
       )}
       {elementType === "span" && (
-        <span className={containerClass}>{children}</span>
+        <span className={containerClass} {...other}>
+          {children}
+        </span>
       )}
     </>
   );

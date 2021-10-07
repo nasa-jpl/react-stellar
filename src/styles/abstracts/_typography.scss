@@ -88,7 +88,7 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.05em;
-  color: $gray10;
+  color: var(--stellar-color--gray10);
 }
 
 .stellar-typography--bold--light {
@@ -106,7 +106,7 @@
   font-size: 10px;
   line-height: 16px;
   letter-spacing: 0.1em;
-  color: $gray10;
+  color: var(--stellar-color--gray10);
   opacity: 0.65;
 }
 
@@ -127,7 +127,7 @@
   font-size: 40px;
   line-height: 48px;
   letter-spacing: -0.01em;
-  color: $gray10;
+  color: var(--stellar-color--gray10);
 }
 
 .stellar-typography--displayH1--light {
@@ -144,7 +144,7 @@
   font-size: 32px;
   line-height: 40px;
   letter-spacing: -0.005em;
-  color: $gray10;
+  color: var(--stellar-color--gray10);
 }
 
 .stellar-typography--displayH2--light {
@@ -160,7 +160,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: $gray10;
+  color: var(--stellar-color--gray10);
 }
 
 .stellar-typography--displayH3--light {

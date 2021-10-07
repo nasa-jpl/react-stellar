@@ -55,7 +55,7 @@
   /* variant styles */
   &.stellar-button--primary {
     background: var(--stellar-color--dark--primary);
-    color: $gray10;
+    color: var(--stellar-color--gray10);
     &:hover:not([disabled]) {
       background: var(--stellar-color--dark--primary--hover);
     }
