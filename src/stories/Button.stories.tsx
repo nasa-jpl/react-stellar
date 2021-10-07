@@ -1,8 +1,8 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { SolIcon } from "../components/Icons";
-import { Button } from "../components/Button";
-import { ThemeContextProvider } from "../contexts/theme/theme";
+import { SolIcon } from "components/Icons";
+import { Button } from "components/Button";
+import { ThemeContextProvider } from "contexts/theme/theme";
 
 export default {
   title: "Atoms/Button",
@@ -38,23 +38,3 @@ Icon.args = {
   variant: "icon",
   icon: <SolIcon />,
 };
-
-export const ThemeTest = () => (
-  <div>
-    <div>
-      <ThemeContextProvider value="dark">
-        <Button variant="secondary" onClick={() => {}}>
-          Dark No Matter Global Theme
-        </Button>
-      </ThemeContextProvider>
-    </div>
-    <br />
-    <div>
-      <ThemeContextProvider value="light">
-        <Button variant="secondary" onClick={() => {}}>
-          Light No Matter Global Theme
-        </Button>
-      </ThemeContextProvider>
-    </div>
-  </div>
-);

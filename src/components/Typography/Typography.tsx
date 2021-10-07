@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import classNames from "classnames";
-import { ThemeContext } from "../../contexts/theme/theme"; // TODO Fix imports what happened..?
+import { ThemeContext } from "contexts/theme/theme";
 
 export type TypographyProps = {
   children?: string | React.ReactNode;

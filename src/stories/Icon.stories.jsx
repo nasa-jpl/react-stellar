@@ -1,5 +1,5 @@
-import { Typography } from "../components/Typography";
-import * as IconComponents from "../components/Icons";
+import { Typography } from "components/Typography";
+import * as IconComponents from "components/Icons";
 
 export default {
   title: "Atoms/Icons",

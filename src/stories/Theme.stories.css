@@ -1,0 +1,6 @@
+.my-theme {
+  --stellar-color--light--primary: #a84090;
+  --stellar-color--light--primary--hover: #ce50b1;
+  --stellar-color--dark--primary: #984c86;
+  --stellar-color--dark--primary--hover: #b0579b;
+}
