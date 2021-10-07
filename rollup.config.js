@@ -4,6 +4,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";
+import scss from "rollup-plugin-scss";
 
 // Excluded dependencies - dev dependencies
 const EXTERNAL = Object.keys(pkg.devDependencies);
@@ -28,6 +29,9 @@ export default [
         declarationDir: "dist",
       }),
       terser(),
+      scss({
+        output: './dist/stellar.css'
+      }),
     ],
     external: EXTERNAL, // https://rollupjs.org/guide/en/#peer-dependencies
   },
