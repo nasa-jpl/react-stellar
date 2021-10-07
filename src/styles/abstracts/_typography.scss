@@ -3,69 +3,87 @@
   Design System / UI Components
   https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-2.0?node-id=1%3A4439
 */
-.typography-base {
+.stellar-typography--base {
   font-family: Inter, Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: auto;
 }
 
-.App {
-  *,
-  *:before,
-  *:after {
-    @extend .typography-base;
-  }
+*,
+*:before,
+*:after {
+  @extend .stellar-typography--base;
 }
 
-.header {
-  @extend .typography-base;
+.stellar-typography--header {
+  @extend .stellar-typography--base;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: $gray100;
 }
 
-.label {
-  @extend .typography-base;
+.stellar-typography--header--light {
+  color: var(--stellar-color--gray100);
+}
+
+.stellar-typography--header--dark {
+  color: var(--stellar-color--gray10);
+}
+
+.stellar-typography--label {
+  @extend .stellar-typography--base;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.04em;
-  color: $gray10;
+}
+
+.stellar-typography--label--light {
+  color: var(--stellar-color--gray100);
   opacity: 0.65;
 }
 
-.body {
-  @extend .typography-base;
+.stellar-typography--label--dark {
+  color: var(--stellar-color--gray10);
+  opacity: 0.65;
+}
+
+.stellar-typography--body {
+  @extend .stellar-typography--base;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.04em;
-  color: $gray10;
+}
+
+.stellar-typography--body--light {
+  color: var(--stellar-color--gray100);
   opacity: 0.9;
 }
 
-.medium {
-  @extend .typography-base;
+.stellar-typography--body--dark {
+  color: var(--stellar-color--gray10);
+  opacity: 0.9;
+}
+
+.stellar-typography--medium {
+  @extend .stellar-typography--base;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.05em;
-  color: $gray10;
 }
 
-.hint {
-  @extend .typography-base;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  color: gray50;
-  font-style: italic;
+.stellar-typography--medium--light {
+  color: var(--stellar-color--gray100);
 }
 
-.bold {
-  @extend .typography-base;
+.stellar-typography--medium--dark {
+  color: var(--stellar-color--gray10);
+}
+
+.stellar-typography--bold {
+  @extend .stellar-typography--base;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
@@ -73,8 +91,16 @@
   color: $gray10;
 }
 
-.smallCaps {
-  @extend .typography-base;
+.stellar-typography--bold--light {
+  color: var(--stellar-color--gray100);
+}
+
+.stellar-typography--bold--dark {
+  color: var(--stellar-color--gray10);
+}
+
+.stellar-typography--smallCaps {
+  @extend .stellar-typography--base;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 10px;
@@ -84,9 +110,19 @@
   opacity: 0.65;
 }
 
+.stellar-typography--smallCaps--light {
+  color: var(--stellar-color--gray100);
+  opacity: 0.9;
+}
+
+.stellar-typography--smallCaps--dark {
+  color: var(--stellar-color--gray10);
+  opacity: 0.9;
+}
+
 /* M20 GDS Display Font Definitions */
-.displayH1 {
-  @extend .typography-base;
+.stellar-typography--displayH1 {
+  @extend .stellar-typography--base;
   font-weight: 600;
   font-size: 40px;
   line-height: 48px;
@@ -94,8 +130,16 @@
   color: $gray10;
 }
 
-.displayH2 {
-  @extend .typography-base;
+.stellar-typography--displayH1--light {
+  color: var(--stellar-color--gray100);
+}
+
+.stellar-typography--displayH1--dark {
+  color: var(--stellar-color--gray10);
+}
+
+.stellar-typography--displayH2 {
+  @extend .stellar-typography--base;
   font-weight: 600;
   font-size: 32px;
   line-height: 40px;
@@ -103,32 +147,51 @@
   color: $gray10;
 }
 
-.displayH3 {
-  @extend .typography-base;
+.stellar-typography--displayH2--light {
+  color: var(--stellar-color--gray100);
+}
+
+.stellar-typography--displayH2--dark {
+  color: var(--stellar-color--gray10);
+}
+
+.stellar-typography--displayH3 {
+  @extend .stellar-typography--base;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   color: $gray10;
 }
 
-.displayBody {
-  @extend .typography-base;
+.stellar-typography--displayH3--light {
+  color: var(--stellar-color--gray100);
+}
+
+.stellar-typography--displayH3--dark {
+  color: var(--stellar-color--gray10);
+}
+
+.stellar-typography--displayBody {
+  @extend .stellar-typography--base;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: gray20;
   letter-spacing: 0.01em;
 }
 
+.stellar-typography--displayBody--light {
+  color: var(--stellar-color--gray100);
+}
+
+.stellar-typography--displayBody--dark {
+  color: var(--stellar-color--gray10);
+}
+
 /* Utility Classes */
-.noSelect {
+.stellar-typography--noSelect {
   user-select: none;
 }
 
-.no-select {
-  user-select: none;
-}
-
-.capitalize {
+.stellar-typography--capitalize {
   text-transform: capitalize;
 }
