@@ -29,7 +29,7 @@ export const Button = (props: ButtonProps) => {
     "stellar-button": true,
     "stellar-button--primary": variant === "primary",
     "stellar-button--secondary": variant === "secondary",
-    "stellar-button--icon": variant === "icon",
+    "stellar-button--icon": variant === "icon", // TODO implement icon left and right once design settles
     "stellar-button--no-text": !children,
     [`stellar-button--${theme}`]: true,
     [className]: !!className,
@@ -42,7 +42,7 @@ export const Button = (props: ButtonProps) => {
       disabled={disabled}
       {...other}
     >
-      {icon && <span>{icon}</span>}
+      {icon && icon}
       {children}
     </button>
   );

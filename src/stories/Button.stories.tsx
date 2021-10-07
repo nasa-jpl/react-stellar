@@ -22,6 +22,17 @@ Secondary.args = {
   variant: "secondary",
 };
 
+export const JSXChildren = Template.bind({});
+JSXChildren.args = {
+  children: (
+    <>
+      <SolIcon />
+      <span>JSX Children</span>
+      <SolIcon />
+    </>
+  ),
+};
+
 export const Icon = Template.bind({});
 Icon.args = {
   variant: "icon",

@@ -1,5 +1,5 @@
 export const MarsviewerLogo = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg viewBox="0 0 125 125" fill="none" xmlns="http://www.w3.org/2000/svg">
       <mask
         id="logomask0"
@@ -40,7 +40,7 @@ export const MarsviewerLogo = (props: any) => (
 );
 
 export const ASTTROLogo = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -58,7 +58,7 @@ export const ASTTROLogo = (props: any) => (
 );
 
 export const ASTTROLogoGrayscale = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -85,7 +85,7 @@ export const ASTTROLogoGrayscale = (props: any) => (
 export const DataDriveLogo = (props: any) => {
   const gradientId = `grad_${Math.round(Math.random() * 100)}`;
   return (
-    <span className="Icon" {...props}>
+    <span className="stellar-icon" {...props}>
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <g opacity="0.5">
           <path
@@ -170,7 +170,7 @@ export const DataDriveLogo = (props: any) => {
 };
 
 export const CollapseIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -197,7 +197,7 @@ export const CollapseIcon = (props: any) => (
 );
 
 export const MinusIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -217,7 +217,7 @@ export const MinusIcon = (props: any) => (
 );
 
 export const PlusIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -244,7 +244,7 @@ export const PlusIcon = (props: any) => (
 );
 
 export const InfoIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -263,7 +263,7 @@ export const InfoIcon = (props: any) => (
 );
 
 export const RefreshIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -284,7 +284,7 @@ export const RefreshIcon = (props: any) => (
 );
 
 export const SolIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -333,7 +333,7 @@ export const SolIcon = (props: any) => (
 );
 
 export const CloseIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -360,7 +360,7 @@ export const CloseIcon = (props: any) => (
 );
 
 export const RotateCWIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -380,7 +380,7 @@ export const RotateCWIcon = (props: any) => (
 );
 
 export const RotateCCWIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -400,7 +400,7 @@ export const RotateCCWIcon = (props: any) => (
 );
 
 export const HomeIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -421,7 +421,7 @@ export const HomeIcon = (props: any) => (
 );
 
 export const MaximizeIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -462,7 +462,7 @@ export const MaximizeIcon = (props: any) => (
 );
 
 export const ClosePopoutIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -482,7 +482,7 @@ export const ClosePopoutIcon = (props: any) => (
 );
 
 export const PopoutIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -502,7 +502,7 @@ export const PopoutIcon = (props: any) => (
 );
 
 export const ArrowUpIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -522,7 +522,7 @@ export const ArrowUpIcon = (props: any) => (
 );
 
 export const ArrowDownIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -542,7 +542,7 @@ export const ArrowDownIcon = (props: any) => (
 );
 
 export const ArrowLeftIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -562,7 +562,7 @@ export const ArrowLeftIcon = (props: any) => (
 );
 
 export const SearchIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -581,7 +581,7 @@ export const SearchIcon = (props: any) => (
 );
 
 export const OpacityIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -600,7 +600,7 @@ export const OpacityIcon = (props: any) => (
 );
 
 export const NoOpacityIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -630,7 +630,7 @@ export const NoOpacityIcon = (props: any) => (
 );
 
 export const RemoveAllIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -650,7 +650,7 @@ export const RemoveAllIcon = (props: any) => (
 );
 
 export const CrosshairsFineOutlinedIcon2 = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="25"
       height="25"
@@ -715,7 +715,7 @@ export const CrosshairsFineOutlinedIcon2 = (props: any) => (
 );
 
 export const CrosshairsFineOutlinedIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="24"
       height="24"
@@ -780,7 +780,7 @@ export const CrosshairsFineOutlinedIcon = (props: any) => (
 );
 
 export const CrosshairsLooseIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -824,7 +824,7 @@ export const CrosshairsLooseIcon = (props: any) => (
 );
 
 export const RoverDriveIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -863,7 +863,7 @@ export const RoverDriveIcon = (props: any) => (
 );
 
 export const CameraOutlinedIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -950,7 +950,7 @@ export const CameraOutlinedIcon = (props: any) => (
 );
 
 export const RoverSiteIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -969,7 +969,7 @@ export const RoverSiteIcon = (props: any) => (
 );
 
 // export const UploadIcon = props => (
-//   <span className="Icon" {...props}>
+//   <span className="stellar-icon" {...props}>
 //     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 //       <path
 //         d="M8.72343 1.16529C8.54632 0.988176 8.30609 0.888672 8.05561 0.888672C7.80513 0.888672 7.5649 0.988176 7.38779 1.16529L4.55445 3.99863C4.18562 4.36746 4.18562 4.96544 4.55445 5.33427C4.92328 5.7031 5.52127 5.7031 5.8901 5.33427L7.11128 4.11309V9.38867C7.11128 9.91027 7.53412 10.3331 8.05572 10.3331C8.57733 10.3331 9.00017 9.91027 9.00017 9.38867V4.11332L10.2211 5.33427C10.5899 5.7031 11.1879 5.7031 11.5568 5.33427C11.9256 4.96544 11.9256 4.36746 11.5568 3.99863L8.72343 1.16529Z"
@@ -994,7 +994,7 @@ export const RoverSiteIcon = (props: any) => (
 // );
 
 export const UploadIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1029,7 +1029,7 @@ export const UploadIcon = (props: any) => (
 );
 
 export const UploadIconOutlined = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1063,7 +1063,7 @@ export const UploadIconOutlined = (props: any) => (
 );
 
 export const DrawIconOutlined = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1105,7 +1105,7 @@ export const DrawIconOutlined = (props: any) => (
 );
 
 export const FilterIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1135,7 +1135,7 @@ export const FilterIcon = (props: any) => (
 );
 
 export const SortIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1162,7 +1162,7 @@ export const SortIcon = (props: any) => (
 );
 
 export const ViewIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1191,7 +1191,7 @@ export const ViewIcon = (props: any) => (
 );
 
 export const WarningIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1210,7 +1210,7 @@ export const WarningIcon = (props: any) => (
 );
 
 export const ChevronUpIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1229,7 +1229,7 @@ export const ChevronUpIcon = (props: any) => (
 );
 
 export const ChevronDownIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1248,7 +1248,7 @@ export const ChevronDownIcon = (props: any) => (
 );
 
 export const ChevronRightIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1267,7 +1267,7 @@ export const ChevronRightIcon = (props: any) => (
 );
 
 export const CheckIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1287,7 +1287,7 @@ export const CheckIcon = (props: any) => (
 );
 
 export const ExternalLinkOutlined = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1318,7 +1318,7 @@ export const ExternalLinkOutlined = (props: any) => (
 );
 
 export const ExternalLink = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1349,7 +1349,7 @@ export const ExternalLink = (props: any) => (
 );
 
 export const Download = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1378,7 +1378,7 @@ export const Download = (props: any) => (
 );
 
 export const HelpIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1397,7 +1397,7 @@ export const HelpIcon = (props: any) => (
 );
 
 export const HelpOutlineIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1431,7 +1431,7 @@ export const HelpOutlineIcon = (props: any) => (
 );
 
 export const MeasureIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1461,7 +1461,7 @@ export const MeasureIcon = (props: any) => (
 );
 
 export const RulerIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1478,7 +1478,7 @@ export const RulerIcon = (props: any) => (
 );
 
 export const PinIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1497,7 +1497,7 @@ export const PinIcon = (props: any) => (
 );
 
 export const PinCrossedIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1524,7 +1524,7 @@ export const PinCrossedIcon = (props: any) => (
 );
 
 export const FolderIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1547,7 +1547,7 @@ export const FolderIcon = (props: any) => (
 );
 
 export const CursorDefaultIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1566,7 +1566,7 @@ export const CursorDefaultIcon = (props: any) => (
 );
 
 export const LineIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1580,7 +1580,7 @@ export const LineIcon = (props: any) => (
 );
 
 export const ArrowLineIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1597,7 +1597,7 @@ export const ArrowLineIcon = (props: any) => (
 );
 
 export const PolylineIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1615,7 +1615,7 @@ export const PolylineIcon = (props: any) => (
 );
 
 export const RectangleIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1637,7 +1637,7 @@ export const RectangleIcon = (props: any) => (
 );
 
 export const EllipseIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1651,7 +1651,7 @@ export const EllipseIcon = (props: any) => (
 );
 
 export const PolygonIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1676,7 +1676,7 @@ export const PolygonIcon = (props: any) => (
 );
 
 export const PencilIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1708,7 +1708,7 @@ export const PencilIcon = (props: any) => (
 );
 
 export const TextIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1727,7 +1727,7 @@ export const TextIcon = (props: any) => (
 );
 
 export const ChevronIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1746,7 +1746,7 @@ export const ChevronIcon = (props: any) => (
 );
 
 export const StrokeWidthIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1762,7 +1762,7 @@ export const StrokeWidthIcon = (props: any) => (
 );
 
 export const FontSizeIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1783,7 +1783,7 @@ export const FontSizeIcon = (props: any) => (
 );
 
 export const LineHeightIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1800,7 +1800,7 @@ export const LineHeightIcon = (props: any) => (
 );
 
 export const LetterSpacingIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1821,7 +1821,7 @@ export const LetterSpacingIcon = (props: any) => (
 );
 
 export const VisibleShowIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1844,7 +1844,7 @@ export const VisibleShowIcon = (props: any) => (
 );
 
 export const VisibleHideIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1871,7 +1871,7 @@ export const VisibleHideIcon = (props: any) => (
 );
 
 export const SwitchIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1898,7 +1898,7 @@ export const SwitchIcon = (props: any) => (
 );
 
 export const EditIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1925,7 +1925,7 @@ export const EditIcon = (props: any) => (
 );
 
 export const SaveIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1946,7 +1946,7 @@ export const SaveIcon = (props: any) => (
 );
 
 export const SpinnerIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -1963,7 +1963,7 @@ export const SpinnerIcon = (props: any) => (
 );
 
 export const LatestSolIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -2020,7 +2020,7 @@ export const LatestSolIcon = (props: any) => (
 );
 
 export const ThreeDotIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -2036,7 +2036,7 @@ export const ThreeDotIcon = (props: any) => (
 );
 
 export const SettingsIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -2055,7 +2055,7 @@ export const SettingsIcon = (props: any) => (
 );
 
 export const TrashIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"
@@ -2080,7 +2080,7 @@ export const TrashIcon = (props: any) => (
 );
 
 export const PersonIcon = (props: any) => (
-  <span className="Icon" {...props}>
+  <span className="stellar-icon" {...props}>
     <svg
       width="16"
       height="16"

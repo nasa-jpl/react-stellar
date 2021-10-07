@@ -14,7 +14,7 @@
   cursor: pointer;
   position: relative;
   &.stellar-button--no-text {
-    width: $grid-unit * 4;
+    width: $grid-unit * 3;
   }
   &.stellar-button--icon {
     padding: 0 $grid-unit;
@@ -23,23 +23,29 @@
 
 .stellar-button--icon {
   border: none;
-  background: transparent;
-  color: $gray100;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  &:hover:not([disabled]) {
-    background: red; // TODO
-    color: $gray50;
+  background: transparent;
+  &.stellar-button--dark {
+    color: var(--stellar-color--gray10);
+    &:hover:not([disabled]) {
+      background: var(--stellar-color--gray70);
+    }
   }
-  & span {
+  &.stellar-button--light {
+    color: var(--stellar-color--gray100);
+    &:hover:not([disabled]) {
+      background: var(--stellar-color--gray10);
+    }
+  }
+  & .Icon {
     margin-right: calc($grid-unit / 2);
     display: inline-flex;
     align-items: center;
   }
   &.stellar-button--no-text {
-    border-radius: 50%;
-    & span {
+    & .Icon {
       margin-right: 0;
     }
   }
