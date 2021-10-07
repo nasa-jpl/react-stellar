@@ -4,25 +4,40 @@
 :root {
   /* Application Primary Colors (Default) */
   --stellar-color--light--primary: #4055a8;
+  --stellar-color--light--primary-RGB: 92, 133, 199;
   --stellar-color--light--primary--hover: #5c71c7;
-  --stellar-color--dark--primary: #4c63b6; // TODO make this into Blue 60, etc
+  --stellar-color--light--primary--hover--RGB: 92, 133, 199;
+  --stellar-color--dark--primary: #4c63b6; // TODO make this into Blue 60, etc?
+  --stellar-color--dark--primary-RGB: 76, 99, 182;
   --stellar-color--dark--primary--hover: #647acb;
+  --stellar-color--dark--primary--hover-RGB: 100, 122, 203;
 
   /* Grays */
   /* When used as text, these are accessible on white and the lightest gray (#F8F8F8). */
   --stellar-color--gray100: #1b1d1e;
+  --stellar-color--gray100-RGB: 27, 29, 30;
   --stellar-color--gray90: #1f2223;
+  --stellar-color--gray90-RGB: 31, 34, 35;
   --stellar-color--gray80: #293137;
+  --stellar-color--gray80-RGB: 41, 49, 55;
   --stellar-color--gray70: #444c50;
+  --stellar-color--gray70-RGB: 68, 76, 80, 1;
   --stellar-color--gray60: #545f64;
+  --stellar-color--gray60-RGB: 84, 95, 100;
 
   /* When used as text, these are accessible on black and the darkest gray (#1B1D1E). */
   --stellar-color--gray50: #969696;
+  --stellar-color--gray50-RGB: 150, 150, 150;
   --stellar-color--gray40: #bcbcbc;
+  --stellar-color--gray40-RGB: 188, 188, 188;
   --stellar-color--gray30: #bec0c2;
+  --stellar-color--gray30-RGB: 190, 192, 194;
   --stellar-color--gray20: #ebecec;
+  --stellar-color--gray20-RGB: 235, 236, 236;
   --stellar-color--gray15: #f1f2f3;
+  --stellar-color--gray15-RGB: 241, 242, 243;
   --stellar-color--gray10: #f8f8f8;
+  --stellar-color--gray10-RGB: 248, 248, 248;
 }
 /* Utility classes */
 .stellar-color--bg--gray100 {

@@ -1,23 +1,59 @@
 .stellar-button {
   @extend .stellar-typography--medium;
   border: none;
-  border-radius: $border-radius;
+  border-radius: var(--stellar-layout--borderRadius);
   align-items: center;
   display: inline-flex;
   justify-content: center;
   text-decoration: none;
   text-transform: capitalize;
-  padding: 0 $grid-unit;
-  height: $grid-unit * 3;
+  padding: 0 calc(var(--stellar-layout--gridUnit));
+  height: calc(var(--stellar-layout--gridUnit) * 3);
   line-height: 14px;
   user-select: none;
   cursor: pointer;
   position: relative;
   &.stellar-button--no-text {
-    width: $grid-unit * 3;
+    width: calc(var(--stellar-layout--gridUnit) * 3);
   }
   &.stellar-button--icon {
-    padding: 0 $grid-unit;
+    padding: 0 calc(var(--stellar-layout--gridUnit));
+  }
+}
+
+.stellar-button--primary {
+  &.stellar-button--dark {
+    background: var(--stellar-color--dark--primary);
+    color: rgba(var(--stellar-color--gray10-RGB), 0.96);
+    &:hover:not([disabled]) {
+      background: var(--stellar-color--dark--primary--hover);
+    }
+  }
+  &.stellar-button--light {
+    background: var(--stellar-color--light--primary);
+    color: rgba(var(--stellar-color--gray10-RGB), 0.96);
+    &:hover:not([disabled]) {
+      background: var(--stellar-color--light--primary--hover);
+    }
+  }
+}
+
+.stellar-button--secondary {
+  &.stellar-button--dark {
+    background: var(--stellar-color--gray70);
+    color: rgba(255, 255, 255, 0.96); // TODO replace with variable
+    border: none;
+    &:hover:not([disabled]) {
+      background: var(--stellar-color--gray60);
+    }
+  }
+  &.stellar-button--light {
+    background: var(--stellar-color--gray10);
+    color: var(--stellar-color--gray100);
+    border: 1px solid var(--stellar-color--gray30); // TODO what should this be?
+    &:hover:not([disabled]) {
+      background: var(--stellar-color--gray20);
+    }
   }
 }
 
@@ -39,52 +75,14 @@
       background: var(--stellar-color--gray10);
     }
   }
-  & .Icon {
-    margin-right: calc($grid-unit / 2);
+  &.Icon {
+    margin-right: calc(calc(var(--stellar-layout--gridUnit) / 2));
     display: inline-flex;
     align-items: center;
   }
   &.stellar-button--no-text {
     & .Icon {
       margin-right: 0;
-    }
-  }
-}
-
-.stellar-button--dark {
-  /* variant styles */
-  &.stellar-button--primary {
-    background: var(--stellar-color--dark--primary);
-    color: var(--stellar-color--gray10);
-    &:hover:not([disabled]) {
-      background: var(--stellar-color--dark--primary--hover);
-    }
-  }
-  &.stellar-button--secondary {
-    background: var(--stellar-color--gray70);
-    color: rgba(255, 255, 255, 0.96); // TODO replace with variable
-    border: none;
-    &:hover:not([disabled]) {
-      background: var(--stellar-color--gray60);
-    }
-  }
-}
-
-.stellar-button--light {
-  /* variant styles */
-  &.stellar-button--primary {
-    background: var(--stellar-color--light--primary);
-    color: var(--stellar-color--gray10);
-    &:hover:not([disabled]) {
-      background: var(--stellar-color--light--primary--hover);
-    }
-  }
-  &.stellar-button--secondary {
-    background: var(--stellar-color--gray10);
-    color: var(--stellar-color--gray100);
-    border: 1px solid var(--stellar-color--gray30); // TODO what should this be?
-    &:hover:not([disabled]) {
-      background: var(--stellar-color--gray20);
     }
   }
 }

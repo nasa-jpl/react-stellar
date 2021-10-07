@@ -1,5 +1,5 @@
 .stellar-icon {
-  height: $grid-unit * 2;
-  width: $grid-unit * 2;
+  height: calc(var(--stellar-layout--gridUnit) * 2);
+  width: calc(var(--stellar-layout--gridUnit) * 2);
   display: inline-block;
 }

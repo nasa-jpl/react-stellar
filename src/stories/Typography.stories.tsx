@@ -6,7 +6,7 @@ export default {
   component: Typography,
 } as ComponentMeta<typeof Typography>;
 
-export const ThemeTest = () => (
+export const AllTypography = () => (
   <div>
     <Typography type="displayH1">Display H1</Typography>
     <Typography type="displayH2">Display H2</Typography>

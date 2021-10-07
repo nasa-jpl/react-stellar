@@ -1,7 +1,7 @@
 import { Typography } from "../components/Typography";
 
 export default {
-  title: "Atoms/Color",
+  title: "System/Color",
 };
 
 const ColorComponent = (props: { title: string; className: string }) => (

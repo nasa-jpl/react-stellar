@@ -1,27 +1,19 @@
-$grid-unit: 8px;
-$border-radius: 4px;
-
-.grid-spacing__vertical--1 {
-  height: $grid-unit * 1;
-  flex-shrink: 0;
+:root {
+  --stellar-layout--gridUnit: 8px;
+  --stellar-layout--gridUnit2x: calc(var(--stellar-layout--gridUnit) * 2);
+  --stellar-layout--gridUnit3x: calc(var(--stellar-layout--gridUnit) * 3);
+  --stellar-layout--gridUnit4x: calc(var(--stellar-layout--gridUnit) * 4);
+  --stellar-layout--borderRadius: 4px;
 }
-.grid-spacing__vertical--2 {
-  height: $grid-unit * 2;
-  flex-shrink: 0;
+.stellar-layout--gridSpacing--vertical--1 {
+  height: var(--stellar-layout--gridUnit);
 }
-.grid-spacing__vertical--3 {
-  height: $grid-unit * 3;
-  flex-shrink: 0;
+.stellar-layout--gridSpacing--vertical--2 {
+  height: var(--stellar-layout--gridUnit2x);
 }
-.grid-spacing__vertical--4 {
-  height: $grid-unit * 4;
-  flex-shrink: 0;
+.stellar-layout--gridSpacing--vertical--3 {
+  height: var(--stellar-layout--gridUnit3x);
 }
-.grid-spacing__vertical--5 {
-  height: $grid-unit * 5;
-  flex-shrink: 0;
-}
-.flex-layout {
-  display: flex;
-  flex: 1;
+.stellar-layout--gridSpacing--vertical--4 {
+  height: var(--stellar-layout--gridUnit4x);
 }
