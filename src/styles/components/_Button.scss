@@ -1,4 +1,4 @@
-.button {
+.stellar-button {
   @extend .medium;
   border: none;
   border-radius: $border-radius;
@@ -13,31 +13,15 @@
   user-select: none;
   cursor: pointer;
   position: relative;
-  &.button--no-text {
+  &.stellar-button--no-text {
     width: $grid-unit * 4;
   }
-  &.button--icon {
+  &.stellar-button--icon {
     padding: 0 $grid-unit;
   }
 }
 
-/* variant styles */
-.button--primary {
-  background: var(--stellar-color--primary);
-  color: $gray10;
-  &:hover:not([disabled]) {
-    background: var(--stellar-color--primary--hover);
-  }
-}
-.button--secondary {
-  background: $gray10;
-  color: $gray100;
-  border: 1px solid $gray30; // TODO what should this be?
-  &:hover:not([disabled]) {
-    background: $gray20;
-  }
-}
-.button--icon {
+.stellar-button--icon {
   border: none;
   background: transparent;
   color: $gray100;
@@ -53,10 +37,48 @@
     display: inline-flex;
     align-items: center;
   }
-  &.button--no-text {
+  &.stellar-button--no-text {
     border-radius: 50%;
     & span {
       margin-right: 0;
+    }
+  }
+}
+
+.stellar-button--dark {
+  /* variant styles */
+  &.stellar-button--primary {
+    background: var(--stellar-color--dark--primary);
+    color: $gray10;
+    &:hover:not([disabled]) {
+      background: var(--stellar-color--dark--primary--hover);
+    }
+  }
+  &.stellar-button--secondary {
+    background: var(--stellar-color--gray70);
+    color: rgba(255, 255, 255, 0.96); // TODO replace with variable
+    border: none;
+    &:hover:not([disabled]) {
+      background: var(--stellar-color--gray60);
+    }
+  }
+}
+
+.stellar-button--light {
+  /* variant styles */
+  &.stellar-button--primary {
+    background: var(--stellar-color--light--primary);
+    color: var(--stellar-color--gray10);
+    &:hover:not([disabled]) {
+      background: var(--stellar-color--light--primary--hover);
+    }
+  }
+  &.stellar-button--secondary {
+    background: var(--stellar-color--gray10);
+    color: var(--stellar-color--gray100);
+    border: 1px solid var(--stellar-color--gray30); // TODO what should this be?
+    &:hover:not([disabled]) {
+      background: var(--stellar-color--gray20);
     }
   }
 }

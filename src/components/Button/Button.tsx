@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import classNames from "classnames";
+import ThemeContext from "../../contexts/theme"; // TODO Fix imports what happened..?
 
 export type ButtonProps = {
   children?: string | React.ReactNode;
@@ -7,7 +8,6 @@ export type ButtonProps = {
   variant?: "primary" | "secondary" | "icon";
   className?: string;
   type?: "button" | "submit" | "reset";
-  theme?: "light" | "dark";
   disabled?: boolean;
   onClick: (event: React.MouseEvent<HTMLElement>) => void;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -17,21 +17,21 @@ export const Button = (props: ButtonProps) => {
     children,
     variant = "primary",
     type = "button",
-    theme = "light",
     onClick,
     icon,
     disabled = false,
     className = "",
     ...other
   } = props;
+  const theme = useContext(ThemeContext);
+
   const buttonClass = classNames({
-    button: true,
-    "button--primary": variant === "primary",
-    "button--secondary": variant === "secondary",
-    "button--icon": variant === "icon",
-    "button--no-text": !children,
-    "button--dark": theme === "dark",
-    "button--light": theme === "light",
+    "stellar-button": true,
+    "stellar-button--primary": variant === "primary",
+    "stellar-button--secondary": variant === "secondary",
+    "stellar-button--icon": variant === "icon",
+    "stellar-button--no-text": !children,
+    [`stellar-button--${theme}`]: true,
     [className]: !!className,
   });
   return (

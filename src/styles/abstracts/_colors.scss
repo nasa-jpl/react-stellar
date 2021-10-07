@@ -16,10 +16,28 @@ $gray20: #ebecec;
 $gray15: #f1f2f3;
 $gray10: #f8f8f8;
 
-/* Theme Colors (Default) */
 :root {
-  --stellar-color--primary: #4055a8;
-  --stellar-color--primary--hover: #5C71C7;
+  /* Application Primary Colors (Default) */
+  --stellar-color--light--primary: #4055a8;
+  --stellar-color--light--primary--hover: #5c71c7;
+  --stellar-color--dark--primary: #4c63b6; // TODO make this into Blue 60, etc
+  --stellar-color--dark--primary--hover: #647acb;
+
+  /* Grays */
+  /* When used as text, these are accessible on white and the lightest gray (#F8F8F8). */
+  --stellar-color--gray100: #1b1d1e;
+  --stellar-color--gray90: #1f2223;
+  --stellar-color--gray80: #293137;
+  --stellar-color--gray70: #444c50;
+  --stellar-color--gray60: #545f64;
+
+  /* When used as text, these are accessible on black and the darkest gray (#1B1D1E). */
+  --stellar-color--gray50: #969696;
+  --stellar-color--gray40: #bcbcbc;
+  --stellar-color--gray30: #bec0c2;
+  --stellar-color--gray20: #ebecec;
+  --stellar-color--gray15: #f1f2f3;
+  --stellar-color--gray10: #f8f8f8;
 }
 $error: red; // TODO
 
