@@ -28,7 +28,7 @@ export default [
         declaration: true,
         declarationDir: "dist",
       }),
-      terser(),
+      // terser(),
       scss({
         output: './dist/stellar.css'
       }),
