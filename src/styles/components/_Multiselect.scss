@@ -1,0 +1,50 @@
+.stellar-multiselect--options {
+  height: var(--stellar-layout--gridUnit4x);
+  display: flex;
+  align-items: center;
+  background: var(--stellar-color--gray80);
+  border-radius: var(--stellar-layout--borderRadius);
+  flex: 1 1;
+  border: 2px solid var(--stellar-color--gray80);
+}
+.stellar-multiselect--option {
+  height: inherit;
+  border: 2px solid var(--stellar-color--gray80);
+  background: none;
+  padding: 0px var(--stellar-layout--gridUnit);
+  flex: 1;
+  cursor: pointer;
+
+  &:first-child {
+    border-top-left-radius: var(--stellar-layout--borderRadius);
+    border-bottom-left-radius: var(--stellar-layout--borderRadius);
+    border-left: none;
+  }
+
+  &:last-child {
+    border-top-right-radius: var(--stellar-layout--borderRadius);
+    border-bottom-right-radius: var(--stellar-layout--borderRadius);
+    border-right: none;
+  }
+
+  &:hover .segmentedControl__optionText {
+    color: var(--stellar-color--gray10);
+  }
+}
+
+.stellar-multiselect--optionText {
+  @extend .stellar-typography--medium;
+  color: var(--stellar-color--gray10);
+  display: flex;
+}
+
+.stellar-multiselect--option--selected {
+  background: var(--stellar-color--gray10);
+  border-radius: var(--stellar-layout--borderRadius);
+  border: none;
+  border: 2px solid var(--stellar-color--gray10);
+
+  & .segmentedControl__optionText {
+    color: var(--stellar-color--gray10);
+  }
+}
