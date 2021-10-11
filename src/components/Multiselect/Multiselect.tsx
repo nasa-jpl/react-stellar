@@ -44,9 +44,8 @@ export const Multiselect = (props: MultiselectProps) => {
   };
   return (
     <div className={multiSelectClass}>
-      <div className="stellar-multiselect--options">
-        {options.map((option) => renderOption(option))}
-      </div>
+      <div className="stellar-multiselect--background"></div>
+      {options.map((option) => renderOption(option))}
     </div>
   );
 };

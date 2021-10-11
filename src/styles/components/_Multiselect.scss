@@ -1,50 +1,84 @@
-.stellar-multiselect--options {
-  height: var(--stellar-layout--gridUnit4x);
+.stellar-multiselect {
   display: flex;
   align-items: center;
-  background: var(--stellar-color--gray80);
   border-radius: var(--stellar-layout--borderRadius);
-  flex: 1 1;
-  border: 2px solid var(--stellar-color--gray80);
+  position: relative;
 }
+
+.stellar-multiselect--background {
+  pointer-events: none;
+  border-radius: var(--stellar-layout--borderRadius);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.stellar-multiselect--light {
+  background: var(--stellar-color--gray10);
+  & .stellar-multiselect--background {
+    border: 1px solid var(--stellar-color--gray20);
+  }
+
+  & .stellar-multiselect--option {
+    border: 1px solid var(--stellar-color--gray10);
+  }
+
+  & .stellar-multiselect--optionText {
+    color: var(--stellar-color--gray60);
+    opacity: 80%;
+  }
+
+  & .stellar-multiselect--option--selected {
+    border: 1px solid var(--stellar-color--gray20);
+    background-color: white;
+
+    & .stellar-multiselect--optionText {
+      color: var(--stellar-color--gray80);
+      opacity: 100%;
+    }
+  }
+}
+
+.stellar-multiselect--dark {
+  background: var(--stellar-color--gray90);
+  & .stellar-multiselect--background {
+    border: 1px solid var(--stellar-color--gray70);
+  }
+
+  & .stellar-multiselect--option {
+    border: 1px solid var(--stellar-color--gray90);
+  }
+
+  & .stellar-multiselect--optionText {
+    color: var(--stellar-color--gray10);
+    opacity: 80%;
+  }
+
+  & .stellar-multiselect--option--selected {
+    border: 1px solid var(--stellar-color--gray70);
+    background-color: var(--stellar-color--gray60);
+
+    & .stellar-multiselect--optionText {
+      color: var(--stellar-color--gray10);
+      opacity: 100%;
+    }
+  }
+}
+
 .stellar-multiselect--option {
-  height: inherit;
-  border: 2px solid var(--stellar-color--gray80);
+  height: var(--stellar-layout--gridUnit4x);
+  border-radius: var(--stellar-layout--borderRadius);
   background: none;
   padding: 0px var(--stellar-layout--gridUnit);
   flex: 1;
   cursor: pointer;
-
-  &:first-child {
-    border-top-left-radius: var(--stellar-layout--borderRadius);
-    border-bottom-left-radius: var(--stellar-layout--borderRadius);
-    border-left: none;
-  }
-
-  &:last-child {
-    border-top-right-radius: var(--stellar-layout--borderRadius);
-    border-bottom-right-radius: var(--stellar-layout--borderRadius);
-    border-right: none;
-  }
-
-  &:hover .segmentedControl__optionText {
-    color: var(--stellar-color--gray10);
-  }
 }
 
 .stellar-multiselect--optionText {
   @extend .stellar-typography--medium;
-  color: var(--stellar-color--gray10);
-  display: flex;
-}
-
-.stellar-multiselect--option--selected {
-  background: var(--stellar-color--gray10);
-  border-radius: var(--stellar-layout--borderRadius);
-  border: none;
-  border: 2px solid var(--stellar-color--gray10);
-
-  & .segmentedControl__optionText {
-    color: var(--stellar-color--gray10);
-  }
+  text-align: center;
+  padding: 0px var(--stellar-layout--gridUnit2x);
 }

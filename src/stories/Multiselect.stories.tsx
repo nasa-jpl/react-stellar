@@ -9,8 +9,9 @@ export default {
 } as ComponentMeta<typeof Multiselect>;
 
 const options1 = [
-  { value: "selected", label: "selected" },
-  { value: "inactive", label: "Inactive" },
+  { value: "selected", label: "Active" },
+  { value: "inactive1", label: "Inactive" },
+  { value: "inactive2", label: "Inactive" },
 ];
 
 const scStore = new Store({
