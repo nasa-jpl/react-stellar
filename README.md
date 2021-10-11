@@ -36,13 +36,13 @@ To publish and install the library follow the steps below. This step only has to
      curl -u <USERNAME>:<API_KEY> https://cae-artifactory.jpl.nasa.gov/artifactory/api/npm/auth
      ```
 5. The above command should output `_auth`, `always-auth`, and `email` entries. Add them to your `~/.npmrc` file.
-6. In addition, set the default NPM registry to the CAE Artifactory `npm-release-virtual` registry by adding the following line to `~/.npmrc`.
+6. In addition, add a scoped NPM registry to your `~/.npmrc` to point NPM to JPL Artifactory for stellar installation.
      ```
-     registry=https://artifactory.jpl.nasa.gov/artifactory/api/npm/npm-develop-local/
+     @gov.nasa.jpl.stellar:registry=https://artifactory.jpl.nasa.gov/artifactory/api/npm/npm-develop-local/
      ```
 7. After performing the above steps, your `~/.npmrc` file should look similar to the following, but with different values:
      ```
-     registry=https://cae-artifactory.jpl.nasa.gov/artifactory/api/npm/npm-develop-local/
+     @gov.nasa.jpl.stellar=https://cae-artifactory.jpl.nasa.gov/artifactory/api/npm/npm-develop-local/
      _auth=TG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGNvbnNlY3RldHVyIGFkaXBpc2NpbmcgZWxpdC4
      always-auth=true
      email=John.Doe@jpl.nasa.gov
