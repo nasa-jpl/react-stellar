@@ -22,10 +22,18 @@ const Template: ComponentStory<typeof Multiselect> = (args) => (
   <Multiselect {...args} />
 );
 
-export const Basic = Template.bind({});
-Basic.args = {
+export const Medium = Template.bind({});
+Medium.args = {
   options: options1,
-  selectedValue: "all",
+  selectedValue: "inactive1",
+  onChange: action("changed"),
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  options: options1,
+  size: "large",
+  selectedValue: "inactive1",
   onChange: action("changed"),
 };
 

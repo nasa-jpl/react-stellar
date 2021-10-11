@@ -7,17 +7,25 @@
   justify-content: center;
   text-decoration: none;
   text-transform: capitalize;
-  padding: 0 calc(var(--stellar-layout--gridUnit));
-  height: calc(var(--stellar-layout--gridUnit) * 3);
   line-height: 14px;
   user-select: none;
   cursor: pointer;
   position: relative;
   &.stellar-button--no-text {
-    width: calc(var(--stellar-layout--gridUnit) * 3);
+    width: var(--stellar-layout--gridUnit3x);
   }
   &.stellar-button--icon {
-    padding: 0 calc(var(--stellar-layout--gridUnit));
+    padding: 0 var(--stellar-layout--gridUnit);
+  }
+  &.stellar-button--medium {
+    padding: 0 var(--stellar-layout--gridUnit);
+    height: var(--stellar-layout--gridUnit3x);
+  }
+  &.stellar-button--large {
+    padding: 0 var(--stellar-layout--gridUnit2x);
+    height: var(--stellar-layout--gridUnit4x);
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 

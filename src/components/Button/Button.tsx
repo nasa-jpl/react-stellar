@@ -6,6 +6,7 @@ export type ButtonProps = {
   children?: string | React.ReactNode;
   icon?: React.ReactNode;
   variant?: "primary" | "secondary" | "icon";
+  size?: "medium" | "large";
   className?: string;
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
@@ -17,6 +18,7 @@ export const Button = (props: ButtonProps) => {
     children,
     variant = "primary",
     type = "button",
+    size = "medium",
     onClick,
     icon,
     disabled = false,
@@ -31,6 +33,7 @@ export const Button = (props: ButtonProps) => {
     "stellar-button--secondary": variant === "secondary",
     "stellar-button--icon": variant === "icon", // TODO implement icon left and right once design settles
     "stellar-button--no-text": !children,
+    [`stellar-button--${size}`]: true,
     [`stellar-button--${theme}`]: true,
     [className]: !!className,
   });

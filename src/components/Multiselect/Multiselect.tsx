@@ -11,16 +11,24 @@ export type MultiselectProps = {
   options: Array<Option>;
   onChange: (value: string) => any;
   selectedValue: string;
+  size?: "medium" | "large";
   className?: string;
 };
 
 export const Multiselect = (props: MultiselectProps) => {
-  const { options, selectedValue, onChange, className = "" } = props;
+  const {
+    options,
+    selectedValue,
+    onChange,
+    size = "medium",
+    className = "",
+  } = props;
 
   const theme = useContext(ThemeContext);
   const multiSelectClass = classNames({
     "stellar-multiselect": true,
     [`stellar-multiselect--${theme}`]: true,
+    [`stellar-multiselect--${size}`]: true,
     [className]: !!className,
   });
   const onOptionClick = (value: string) => {

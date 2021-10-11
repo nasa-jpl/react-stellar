@@ -2,7 +2,6 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { SolIcon } from "components/Icons";
 import { Button } from "components/Button";
-import { ThemeContextProvider } from "contexts/theme/theme";
 
 export default {
   title: "Atoms/Button",
@@ -37,4 +36,11 @@ export const Icon = Template.bind({});
 Icon.args = {
   variant: "icon",
   icon: <SolIcon />,
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  children: "Large Button",
+  variant: "secondary",
+  size: "large",
 };

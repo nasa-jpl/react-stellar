@@ -68,8 +68,15 @@
   }
 }
 
-.stellar-multiselect--option {
+.stellar-multiselect--medium .stellar-multiselect--option {
+  height: var(--stellar-layout--gridUnit3x);
+}
+
+.stellar-multiselect--large .stellar-multiselect--option {
   height: var(--stellar-layout--gridUnit4x);
+}
+
+.stellar-multiselect--option {
   border-radius: var(--stellar-layout--borderRadius);
   background: none;
   padding: 0px var(--stellar-layout--gridUnit);
@@ -81,4 +88,5 @@
   @extend .stellar-typography--medium;
   text-align: center;
   padding: 0px var(--stellar-layout--gridUnit2x);
+  white-space: nowrap;
 }
