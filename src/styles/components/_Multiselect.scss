@@ -82,6 +82,10 @@
   padding: 0px var(--stellar-layout--gridUnit);
   flex: 1;
   cursor: pointer;
+
+  &:focus {
+    z-index: 1;
+  }
 }
 
 .stellar-multiselect--optionText {
