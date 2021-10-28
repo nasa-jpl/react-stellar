@@ -1,4 +1,3 @@
-import { Typography } from "components/Typography";
 import * as IconComponents from "components/Icons";
 
 export default {
