@@ -69,9 +69,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "publishConfig": {
-    "registry": "https://artifactory.jpl.nasa.gov/artifactory/api/npm/npm-develop-local/"
-  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
