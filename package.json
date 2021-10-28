@@ -1,6 +1,6 @@
 {
-  "name": "react-stellar",
-  "version": "0.0.36",
+  "name": "@gov.nasa.jpl.stellar/react-stellar",
+  "version": "0.0.35-alpha",
   "description": "The React implementation of the Stellar Design System",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -30,6 +30,8 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-react": "^7.14.5",
+    "@gov.nasa.jpl.stellar/icons": "../stellar-icons",
+    "@gov.nasa.jpl.stellar/stellar": "../stellar",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-node-resolve": "^13.0.5",

@@ -22,7 +22,7 @@ export const AllIcons = () => (
             }}
           >
             {component}
-            <Typography type="body">{key}</Typography>
+            <div className="st-typography-body">{key}</div>
           </div>
         );
       })}

@@ -1,13 +1,49 @@
-.stellar-multiselect {
+.st-react-multiselect {
   display: flex;
   align-items: center;
-  border-radius: var(--stellar-layout--borderRadius);
   position: relative;
+  background: var(--st-react-multiselect-background);
+  border-radius: var(--st-border-radius);
 }
 
-.stellar-multiselect--background {
+.st-react-multiselect--option {
+  border: 1px solid var(--st-react-multiselect-option-border-color);
+  border-radius: var(--st-border-radius);
+  background: none;
+  padding: 0px var(--st-grid-unit);
+  flex: 1;
+  cursor: pointer;
+
+  &:focus {
+    // TODO generalize box shadow focus
+    box-shadow: 0 0 0 4px var(--st-button-focus-color, #4fa1ff);
+    outline: 0;
+    z-index: 1;
+  }
+
+  & .st-react-multiselect--optionText {
+    color: var(--st-react-multiselect-option-text-color);
+    text-align: center;
+    padding: 0px var(--st-grid-unit2x);
+    white-space: nowrap;
+  }
+
+  &.st-react-multiselect--option--selected {
+    border: 1px solid var(--st-react-multiselect-option-selected-border-color);
+    background-color: var(
+      --st-react-multiselect-option-selected-background-color
+    );
+
+    & .st-react-multiselect--optionText {
+      color: var(--st-react-multiselect-option-selected-text-color);
+    }
+  }
+}
+
+.st-react-multiselect--background {
   pointer-events: none;
-  border-radius: var(--stellar-layout--borderRadius);
+  border-radius: var(--st-border-radius);
+  border: 1px solid var(--st-react-multiselect-border-color);
   position: absolute;
   top: 0;
   left: 0;
@@ -16,81 +52,10 @@
   z-index: 0;
 }
 
-.stellar-multiselect--light {
-  background: var(--stellar-color--gray10);
-  & .stellar-multiselect--background {
-    border: 1px solid var(--stellar-color--gray20);
-  }
-
-  & .stellar-multiselect--option {
-    border: 1px solid var(--stellar-color--gray10);
-  }
-
-  & .stellar-multiselect--optionText {
-    color: var(--stellar-color--gray60);
-    opacity: 80%;
-  }
-
-  & .stellar-multiselect--option--selected {
-    border: 1px solid var(--stellar-color--gray20);
-    background-color: white;
-
-    & .stellar-multiselect--optionText {
-      color: var(--stellar-color--gray80);
-      opacity: 100%;
-    }
-  }
+.st-react-multiselect--medium .st-react-multiselect--option {
+  height: var(--st-grid-unit3x);
 }
 
-.stellar-multiselect--dark {
-  background: var(--stellar-color--gray90);
-  & .stellar-multiselect--background {
-    border: 1px solid var(--stellar-color--gray70);
-  }
-
-  & .stellar-multiselect--option {
-    border: 1px solid var(--stellar-color--gray90);
-  }
-
-  & .stellar-multiselect--optionText {
-    color: var(--stellar-color--gray10);
-    opacity: 80%;
-  }
-
-  & .stellar-multiselect--option--selected {
-    border: 1px solid var(--stellar-color--gray70);
-    background-color: var(--stellar-color--gray60);
-
-    & .stellar-multiselect--optionText {
-      color: var(--stellar-color--gray10);
-      opacity: 100%;
-    }
-  }
-}
-
-.stellar-multiselect--medium .stellar-multiselect--option {
-  height: var(--stellar-layout--gridUnit3x);
-}
-
-.stellar-multiselect--large .stellar-multiselect--option {
-  height: var(--stellar-layout--gridUnit4x);
-}
-
-.stellar-multiselect--option {
-  border-radius: var(--stellar-layout--borderRadius);
-  background: none;
-  padding: 0px var(--stellar-layout--gridUnit);
-  flex: 1;
-  cursor: pointer;
-
-  &:focus {
-    z-index: 1;
-  }
-}
-
-.stellar-multiselect--optionText {
-  @extend .stellar-typography--medium;
-  text-align: center;
-  padding: 0px var(--stellar-layout--gridUnit2x);
-  white-space: nowrap;
+.st-react-multiselect--large .st-react-multiselect--option {
+  height: var(--st-grid-unit4x);
 }

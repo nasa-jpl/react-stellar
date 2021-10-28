@@ -1,6 +1,4 @@
 import classNames from "classnames";
-import { ThemeContext } from "contexts/theme/theme";
-import { useContext } from "react";
 
 type Option = {
   value: string;
@@ -24,11 +22,9 @@ export const Multiselect = (props: MultiselectProps) => {
     className = "",
   } = props;
 
-  const theme = useContext(ThemeContext);
   const multiSelectClass = classNames({
-    "stellar-multiselect": true,
-    [`stellar-multiselect--${theme}`]: true,
-    [`stellar-multiselect--${size}`]: true,
+    "st-react-multiselect": true,
+    [`st-react-multiselect--${size}`]: true,
     [className]: !!className,
   });
   const onOptionClick = (value: string) => {
@@ -36,8 +32,8 @@ export const Multiselect = (props: MultiselectProps) => {
   };
   const renderOption = (option: Option) => {
     const optionClass = classNames({
-      "stellar-multiselect--option": true,
-      "stellar-multiselect--option--selected": option.value === selectedValue,
+      "st-react-multiselect--option": true,
+      "st-react-multiselect--option--selected": option.value === selectedValue,
     });
     return (
       <button
@@ -46,13 +42,15 @@ export const Multiselect = (props: MultiselectProps) => {
         key={option.value}
         className={optionClass}
       >
-        <div className="stellar-multiselect--optionText">{option.label}</div>
+        <div className="st-react-multiselect--optionText st-typography-medium">
+          {option.label}
+        </div>
       </button>
     );
   };
   return (
     <div className={multiSelectClass}>
-      <div className="stellar-multiselect--background"></div>
+      <div className="st-react-multiselect--background"></div>
       {options.map((option) => renderOption(option))}
     </div>
   );

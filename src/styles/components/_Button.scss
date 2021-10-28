@@ -1,100 +1,22 @@
-.stellar-button {
-  @extend .stellar-typography--medium;
-  border: none;
-  border-radius: var(--stellar-layout--borderRadius);
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  text-decoration: none;
-  text-transform: capitalize;
-  line-height: 14px;
-  user-select: none;
-  cursor: pointer;
-  position: relative;
-  &.stellar-button--no-text {
-    width: var(--stellar-layout--gridUnit3x);
-  }
-  &.stellar-button--icon {
-    padding: 0 var(--stellar-layout--gridUnit);
-  }
-  &.stellar-button--medium {
-    padding: 0 var(--stellar-layout--gridUnit);
-    height: var(--stellar-layout--gridUnit3x);
-  }
-  &.stellar-button--large {
-    padding: 0 var(--stellar-layout--gridUnit2x);
-    height: var(--stellar-layout--gridUnit4x);
-    font-size: 16px;
-    line-height: 16px;
-  }
-  &[disabled] {
-    opacity: 50%;
-    cursor: not-allowed;
-  }
-}
-
-.stellar-button--primary {
-  &.stellar-button--dark {
-    background: var(--stellar-color--dark--primary);
-    color: rgba(var(--stellar-color--gray10-RGB), 0.96);
-    &:hover:not([disabled]) {
-      background: var(--stellar-color--dark--primary--hover);
-    }
-  }
-  &.stellar-button--light {
-    background: var(--stellar-color--light--primary);
-    color: rgba(var(--stellar-color--gray10-RGB), 0.96);
-    &:hover:not([disabled]) {
-      background: var(--stellar-color--light--primary--hover);
-    }
-  }
-}
-
-.stellar-button--secondary {
-  &.stellar-button--dark {
-    background: var(--stellar-color--gray70);
-    color: rgba(255, 255, 255, 0.96); // TODO replace with variable
-    border: none;
-    &:hover:not([disabled]) {
-      background: var(--stellar-color--gray60);
-    }
-  }
-  &.stellar-button--light {
-    background: var(--stellar-color--gray10);
-    color: var(--stellar-color--gray100);
-    border: 1px solid var(--stellar-color--gray30); // TODO what should this be?
-    &:hover:not([disabled]) {
-      background: var(--stellar-color--gray20);
-    }
-  }
-}
-
-.stellar-button--icon {
-  border: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  &.stellar-button--dark {
-    color: var(--stellar-color--gray10);
-    &:hover:not([disabled]) {
-      background: var(--stellar-color--gray70);
-    }
-  }
-  &.stellar-button--light {
-    color: var(--stellar-color--gray100);
-    &:hover:not([disabled]) {
-      background: var(--stellar-color--gray10);
-    }
-  }
-  &.Icon {
-    margin-right: calc(calc(var(--stellar-layout--gridUnit) / 2));
+.st-button {
+  &.st-react-button-icon {
+    padding: 0 calc(var(--st-grid-unit) / 2);
     display: inline-flex;
-    align-items: center;
-  }
-  &.stellar-button--no-text {
-    & .Icon {
-      margin-right: 0;
+    justify-content: center;
+    background: transparent;
+    color: var(
+      --st-gray-80
+    ); // TODO hook up to custom react css variables? Or base stellar? Depends on font vs svg icons
+
+    &.large {
+      width: var(--st-grid-unit4x);
+      height: var(--st-grid-unit4x);
+    }
+
+    &:hover {
+      &:not([disabled]) {
+        background-color: var(--st-button-secondary-hover-background-color);
+      }
     }
   }
 }

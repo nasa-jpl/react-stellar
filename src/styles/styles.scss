@@ -1,55 +1,9 @@
 @charset 'utf-8';
 
-//Abstracts
-@import 'abstracts/_colors';
-@import 'abstracts/_layout';
-@import 'abstracts/_typography';
-
-//Base
-@import 'base/_base';
+//Variables
+@import '_variables';
 
 //Components
-// @import 'components/_App';
 @import 'components/_Icons';
-// @import 'components/_GenericModal';
 @import 'components/_Button';
-// @import 'components/_Dropdown';
-// @import 'components/_TextField';
-// @import 'components/_Checkbox';
 @import 'components/_Multiselect';
-// @import 'components/_SideNav';
-// @import 'components/_TopNav';
-// @import 'components/_Avatar';
-// @import 'components/_AvatarRow';
-// @import 'components/_Tooltip';
-// @import 'components/_Menu';
-// @import 'components/_ProgressWheel';
-// @import 'components/_ProgressBar';
-// @import 'components/_StartSessionModal';
-// @import 'components/_TipsCarousel';
-// @import 'components/_LatestReleaseDisplay';
-// @import 'components/_ImageThumbnail';
-// @import 'components/_ImageCard';
-// @import 'components/_CommonCardStyles';
-// @import 'components/_SessionCard';
-// @import 'components/_ModelCard';
-// @import 'components/_CardCarousel';
-// @import 'components/_ModelStatus';
-// @import 'components/_Prompt';
-// @import 'components/_WelcomeModal';
-// @import 'components/_UploadModelModal';
-// @import 'components/_EmptyState';
-// @import 'components/_MiniUploader';
-// @import 'components/_HelpTip';
-// @import 'components/_ModelInfo';
-// @import 'components/_SessionsPage';
-// @import 'components/_SideloadPage';
-// @import 'components/_TableRow';
-// @import 'components/_TableHeader';
-// @import 'components/_SessionsTable';
-// @import 'components/_ActiveNowBadge';
-// @import 'components/_Toast';
-// @import 'components/_SessionViewer';
-
-// //Pages
-// @import 'components/_Dashboard';

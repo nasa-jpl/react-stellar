@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import classNames from "classnames";
-import { ThemeContext } from "contexts/theme/theme";
 
 export type ButtonProps = {
   children?: string | React.ReactNode;
   icon?: React.ReactNode;
-  variant?: "primary" | "secondary" | "icon";
+  variant?: "secondary" | "tertiary" | "icon";
   size?: "medium" | "large";
   className?: string;
   type?: "button" | "submit" | "reset";
@@ -16,7 +15,7 @@ export type ButtonProps = {
 export const Button = (props: ButtonProps) => {
   const {
     children,
-    variant = "primary",
+    variant = "",
     type = "button",
     size = "medium",
     onClick,
@@ -25,16 +24,13 @@ export const Button = (props: ButtonProps) => {
     className = "",
     ...other
   } = props;
-  const theme = useContext(ThemeContext);
 
   const buttonClass = classNames({
-    "stellar-button": true,
-    "stellar-button--primary": variant === "primary",
-    "stellar-button--secondary": variant === "secondary",
-    "stellar-button--icon": variant === "icon", // TODO implement icon left and right once design settles
-    "stellar-button--no-text": !children,
-    [`stellar-button--${size}`]: true,
-    [`stellar-button--${theme}`]: true,
+    "st-button": true,
+    secondary: variant === "secondary",
+    tertiary: variant === "tertiary",
+    "st-react-button-icon": variant === "icon", // TODO implement icon left and right once design settles
+    large: size === "large",
     [className]: !!className,
   });
   return (

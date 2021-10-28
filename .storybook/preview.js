@@ -1,5 +1,6 @@
 // import "!style-loader!css-loader!sass-loader!./scss-loader.scss";
 import "../src/styles/styles.scss";
+import "@gov.nasa.jpl.stellar/stellar/css/index.css";
 import "inter-ui";
 import { useDarkMode } from "storybook-dark-mode";
 import { ThemeContextProvider } from "../src/contexts/theme/theme"; // TODO Fix imports what happened..?

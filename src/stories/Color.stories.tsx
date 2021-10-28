@@ -1,47 +1,50 @@
-import { Typography } from "components/Typography";
-
+// TODO do we even need this? It's just a dupe of the base stellar CSS?
 export default {
   title: "System/Color",
 };
 
-const ColorComponent = (props: { title: string; className: string }) => (
+const ColorComponent = (props: { title: string }) => (
   <div style={{ marginBottom: "16px", alignItems: "center", display: "flex" }}>
     <div
       style={{
         border: "1px solid rgb(255,255,255,0.10)",
         width: "64px",
         height: "64px",
+        background: `var(--st-${props.title})`,
       }}
-      className={`stellar-color--bg--${props.title}`}
     />
     <div style={{ marginLeft: "8px" }}>
-      <Typography type="medium">{props.title}</Typography>
-      <Typography type="label">
-        CSS Variable: {`--stellar-color--${props.title}`}
-      </Typography>
-      <Typography type="label">
-        Background class: {`stellar-color--bg--${props.title}`}
-      </Typography>
+      <div className="st-typography-medium">{props.title}</div>
+      <div className="st-typography-label">
+        CSS Variable: {`--st-${props.title}`}
+      </div>
     </div>
   </div>
 );
 
 const colorClassNames = [
-  "gray10",
-  "gray15",
-  "gray20",
-  "gray30",
-  "gray40",
-  "gray50",
-  "gray60",
-  "gray70",
-  "gray80",
-  "gray90",
-  "gray100",
-  "primary--light",
-  "primary--light--hover",
-  "primary--dark",
-  "primary--dark--hover",
+  "gray-10",
+  "gray-15",
+  "gray-20",
+  "gray-30",
+  "gray-40",
+  "gray-50",
+  "gray-60",
+  "gray-70",
+  "gray-80",
+  "gray-90",
+  "gray-100",
+  "primary",
+  "primary-10",
+  "primary-20",
+  "primary-30",
+  "primary-40",
+  "primary-50",
+  "primary-60",
+  "primary-70",
+  "primary-80",
+  "primary-90",
+  "primary-100",
 ];
 
 export const Color = () => (

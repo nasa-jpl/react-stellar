@@ -21,6 +21,12 @@ Secondary.args = {
   variant: "secondary",
 };
 
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  children: "Tertiary Button",
+  variant: "tertiary",
+};
+
 export const JSXChildren = Template.bind({});
 JSXChildren.args = {
   children: (
