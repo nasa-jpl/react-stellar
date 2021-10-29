@@ -1,6 +1,6 @@
 {
   "name": "@gov.nasa.jpl.stellar/react-stellar",
-  "version": "0.0.38-alpha",
+  "version": "0.0.39-alpha",
   "description": "The React implementation of the Stellar Design System",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -27,7 +27,6 @@
   "author": "Aaron Plave",
   "license": "ISC",
   "dependencies": {
-    "@gov.nasa.jpl.stellar/icons": "^1.0.2",
     "@gov.nasa.jpl.stellar/stellar": "^1.0.14"
   },
   "devDependencies": {
