@@ -3,12 +3,12 @@
   align-items: center;
   position: relative;
   background: var(--st-react-multiselect-background);
-  border-radius: var(--st-border-radius);
+  border-radius: 4px;
 }
 
 .st-react-multiselect--option {
   border: 1px solid var(--st-react-multiselect-option-border-color);
-  border-radius: var(--st-border-radius);
+  border-radius: 4px;
   background: none;
   padding: 0px var(--st-grid-unit);
   flex: 1;
@@ -42,7 +42,7 @@
 
 .st-react-multiselect--background {
   pointer-events: none;
-  border-radius: var(--st-border-radius);
+  border-radius: 4px;
   border: 1px solid var(--st-react-multiselect-border-color);
   position: absolute;
   top: 0;
