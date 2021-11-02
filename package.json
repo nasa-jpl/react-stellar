@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.jpl.nasa.gov:aplave/react-stellar.git"
+    "url": "git@github.jpl.nasa.gov:stellar/react-stellar.git"
   },
   "author": "Aaron Plave",
   "license": "ISC",
