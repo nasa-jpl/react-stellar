@@ -18,6 +18,7 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "build-lib": "rollup -c",
+    "build-icons": "svgr -d src/components/Icons/ node_modules/@gov.nasa.jpl.stellar/stellar-icons/icons",
     "compile": "tsc -p ."
   },
   "repository": {
@@ -27,7 +28,8 @@
   "author": "Aaron Plave",
   "license": "ISC",
   "dependencies": {
-    "@gov.nasa.jpl.stellar/stellar": "^1.0.14"
+    "@gov.nasa.jpl.stellar/stellar": "^1.0.14",
+    "@gov.nasa.jpl.stellar/stellar-icons": "../stellar-icons"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
@@ -45,6 +47,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.3.10",
     "@storybook/storybook-deployer": "^2.8.10",
+    "@svgr/cli": "^5.5.0",
     "@types/rollup-plugin-peer-deps-external": "^2.2.1",
     "babel-loader": "^8.2.2",
     "classnames": "^2.3.1",
