@@ -8,6 +8,7 @@ function SvgArrowDown(props: React.SVGProps<SVGSVGElement>) {
         stroke="currentColor"
         strokeWidth={1.333}
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

@@ -1,6 +1,6 @@
 {
   "name": "@gov.nasa.jpl.stellar/react-stellar",
-  "version": "0.0.40-alpha",
+  "version": "0.0.41",
   "description": "The React implementation of the Stellar Design System",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -18,7 +18,7 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "build-lib": "rollup -c",
-    "build-icons": "svgr -d src/components/Icons/ node_modules/@gov.nasa.jpl.stellar/stellar-icons/icons",
+    "build-icons": "svgr -d src/components/Icons/ node_modules/@gov.nasa.jpl.stellar/icons/icons",
     "compile": "tsc -p ."
   },
   "repository": {
@@ -28,10 +28,10 @@
   "author": "Aaron Plave",
   "license": "ISC",
   "dependencies": {
-    "@gov.nasa.jpl.stellar/stellar": "^1.0.14",
-    "@gov.nasa.jpl.stellar/stellar-icons": "../stellar-icons"
+    "@gov.nasa.jpl.stellar/stellar": "^1.0.14"
   },
   "devDependencies": {
+    "@gov.nasa.jpl.stellar/icons": "^1.0.3",
     "@babel/core": "^7.15.5",
     "@babel/preset-react": "^7.14.5",
     "@rollup/plugin-babel": "^5.3.0",

@@ -9,6 +9,7 @@ function SvgHome(props: React.SVGProps<SVGSVGElement>) {
         stroke="currentColor"
         strokeWidth={0.833}
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

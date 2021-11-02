@@ -8,6 +8,7 @@ function SvgSort(props: React.SVGProps<SVGSVGElement>) {
         stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
