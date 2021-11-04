@@ -1,6 +1,6 @@
 module.exports = {
   typescript: true,
-  // template: require("./icon-template"),
+  indexTemplate: require("./icon-index-template.js"),
   svgoConfig: {
     plugins: [
       {
