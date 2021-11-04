@@ -3,12 +3,12 @@
   align-items: center;
   position: relative;
   background: var(--st-react-multiselect-background);
-  border-radius: 4px;
+  border-radius: var(--st-react-multiselect-border-radius);
 }
 
 .st-react-multiselect--option {
   border: 1px solid var(--st-react-multiselect-option-border-color);
-  border-radius: 4px;
+  border-radius: var(--st-react-multiselect-border-radius);
   background: none;
   padding: 0px var(--st-grid-unit);
   flex: 1;
@@ -16,7 +16,7 @@
 
   &:focus {
     // TODO generalize box shadow focus
-    box-shadow: 0 0 0 4px var(--st-button-focus-color, #4fa1ff);
+    box-shadow: 0 0 0 var(--st-react-multiselect-border-radius) var(--st-button-focus-color, #4fa1ff);
     outline: 0;
     z-index: 1;
   }
@@ -42,7 +42,7 @@
 
 .st-react-multiselect--background {
   pointer-events: none;
-  border-radius: 4px;
+  border-radius: var(--st-react-multiselect-border-radius);
   border: 1px solid var(--st-react-multiselect-border-color);
   position: absolute;
   top: 0;
