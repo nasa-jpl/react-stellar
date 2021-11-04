@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Button } from "components/Button";
-import SvgSol from "components/Icons/Sol";
+import IconSol from "components/Icons/Sol";
 
 export default {
   title: "Atoms/Button",
@@ -31,9 +31,9 @@ export const JSXChildren = Template.bind({});
 JSXChildren.args = {
   children: (
     <>
-      <SvgSol />
+      <IconSol />
       <span>JSX Children</span>
-      <SvgSol />
+      <IconSol />
     </>
   ),
 };
