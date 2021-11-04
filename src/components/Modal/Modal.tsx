@@ -1,6 +1,6 @@
 import React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { Button, Close } from "index";
+import { Button, IconClose } from "index";
 import classNames from "classnames";
 
 export type ModalProps = {
@@ -34,7 +34,7 @@ export const Modal = (props: ModalProps) => {
             </ModalTitle>
             <DialogPrimitive.Close asChild>
               <Button variant="icon">
-                <Close />
+                <IconClose />
               </Button>
             </DialogPrimitive.Close>
           </div>
