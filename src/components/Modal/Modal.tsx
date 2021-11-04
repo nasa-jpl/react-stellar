@@ -1,6 +1,7 @@
 import React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { Button, IconClose } from "index";
+import { Button } from "components/Button";
+import { IconClose } from "components/Icons";
 import classNames from "classnames";
 
 export type ModalProps = {
