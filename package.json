@@ -1,6 +1,6 @@
 {
   "name": "@gov.nasa.jpl.stellar/react-stellar",
-  "version": "0.0.35-alpha",
+  "version": "0.0.41",
   "description": "The React implementation of the Stellar Design System",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -18,20 +18,22 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "build-lib": "rollup -c",
+    "build-icons": "svgr -d src/components/Icons/ node_modules/@gov.nasa.jpl.stellar/icons/icons",
     "compile": "tsc -p ."
   },
   "repository": {
     "type": "git",
-    "url": "git@github.jpl.nasa.gov:aplave/react-stellar.git"
+    "url": "git@github.jpl.nasa.gov:stellar/react-stellar.git"
   },
   "author": "Aaron Plave",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@gov.nasa.jpl.stellar/stellar": "^1.0.14"
+  },
   "devDependencies": {
+    "@gov.nasa.jpl.stellar/icons": "^1.0.3",
     "@babel/core": "^7.15.5",
     "@babel/preset-react": "^7.14.5",
-    "@gov.nasa.jpl.stellar/icons": "../stellar-icons",
-    "@gov.nasa.jpl.stellar/stellar": "../stellar",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
@@ -45,6 +47,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.3.10",
     "@storybook/storybook-deployer": "^2.8.10",
+    "@svgr/cli": "^5.5.0",
     "@types/rollup-plugin-peer-deps-external": "^2.2.1",
     "babel-loader": "^8.2.2",
     "classnames": "^2.3.1",
@@ -68,9 +71,6 @@
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  },
-  "publishConfig": {
-    "registry": "https://artifactory.jpl.nasa.gov/artifactory/api/npm/npm-develop-local/"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [

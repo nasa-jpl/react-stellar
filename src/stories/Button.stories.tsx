@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { SolIcon } from "components/Icons";
 import { Button } from "components/Button";
+import IconSol from "components/Icons/Sol";
 
 export default {
   title: "Atoms/Button",
@@ -31,9 +31,9 @@ export const JSXChildren = Template.bind({});
 JSXChildren.args = {
   children: (
     <>
-      <SolIcon />
+      <IconSol />
       <span>JSX Children</span>
-      <SolIcon />
+      <IconSol />
     </>
   ),
 };
@@ -41,7 +41,7 @@ JSXChildren.args = {
 export const Icon = Template.bind({});
 Icon.args = {
   variant: "icon",
-  icon: <SolIcon />,
+  icon: <IconSol />,
 };
 
 export const Large = Template.bind({});
