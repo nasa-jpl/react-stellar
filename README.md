@@ -20,7 +20,7 @@ React implementation of the Stellar design system. Written in Typescript and bun
 
 ## Component Usage and Demos
 
-Demos and documentation for the components can be found here: https://github.jpl.nasa.gov/pages/aplave/react-stellar/.
+Demos and documentation for the components can be found here: https://github.jpl.nasa.gov/pages/stellar/react-stellar/.
 
 ## Developing Components
 - TODO, storybook, installing node, etc.

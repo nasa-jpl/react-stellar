@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import classNames from "classnames";
 
 export type ButtonProps = {
@@ -9,40 +9,43 @@ export type ButtonProps = {
   className?: string;
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
-  onClick: (event: React.MouseEvent<HTMLElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button = (props: ButtonProps) => {
-  const {
-    children,
-    variant = "",
-    type = "button",
-    size = "medium",
-    onClick,
-    icon,
-    disabled = false,
-    className = "",
-    ...other
-  } = props;
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  (props, ref) => {
+    const {
+      children,
+      variant = "",
+      type = "button",
+      size = "medium",
+      onClick,
+      icon,
+      disabled = false,
+      className = "",
+      ...other
+    } = props;
 
-  const buttonClass = classNames({
-    "st-button": true,
-    secondary: variant === "secondary",
-    tertiary: variant === "tertiary",
-    "st-react-button-icon": variant === "icon", // TODO implement icon left and right once design settles
-    large: size === "large",
-    [className]: !!className,
-  });
-  return (
-    <button
-      onClick={onClick}
-      type={type}
-      className={buttonClass}
-      disabled={disabled}
-      {...other}
-    >
-      {icon && icon}
-      {children}
-    </button>
-  );
-};
+    const buttonClass = classNames({
+      "st-button": true,
+      secondary: variant === "secondary",
+      tertiary: variant === "tertiary",
+      "st-react-button-icon": variant === "icon", // TODO implement icon left and right once design settles
+      large: size === "large",
+      [className]: !!className,
+    });
+    return (
+      <button
+        ref={ref}
+        onClick={onClick}
+        type={type}
+        className={buttonClass}
+        disabled={disabled}
+        {...other}
+      >
+        {icon && icon}
+        {children}
+      </button>
+    );
+  }
+);
