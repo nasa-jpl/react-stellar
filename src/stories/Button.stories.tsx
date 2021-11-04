@@ -41,7 +41,7 @@ JSXChildren.args = {
 export const Icon = Template.bind({});
 Icon.args = {
   variant: "icon",
-  icon: <SvgSol />,
+  icon: <IconSol />,
 };
 
 export const Large = Template.bind({});
