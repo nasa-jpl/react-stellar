@@ -56,3 +56,20 @@ Interactive.args = {
     </>
   ),
 };
+
+export const ReactJSXExample = () => (
+  <Alert
+    title="Are you sure?"
+    description="This action cannot be undone, are you sure you want to delete this item?"
+    open
+  >
+    <AlertCancel asChild>
+      <Button variant="secondary" onClick={action("action")}>
+        Cancel
+      </Button>
+    </AlertCancel>
+    <AlertAction asChild>
+      <Button onClick={action("action")}>Delete</Button>
+    </AlertAction>
+  </Alert>
+);

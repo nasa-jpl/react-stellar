@@ -72,7 +72,7 @@ Interactive.args = {
   ),
 };
 
-export const Example = () => (
+export const ReactJSXExample = () => (
   <Modal title="Modal Title" open>
     <ModalBody>
       <ModalDescription>
