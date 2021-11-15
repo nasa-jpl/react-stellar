@@ -110,4 +110,3 @@ export const ModalActionRow = (props: ModalActionRowProps) => {
 export const ModalTrigger = DialogPrimitive.Trigger;
 export const ModalClose = DialogPrimitive.Close;
 export const ModalTitle = DialogPrimitive.Title;
-// export const ModalDescription = DialogPrimitive.Description;
