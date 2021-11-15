@@ -1,22 +1,26 @@
 .st-react-modal {
   display: flex;
   flex-direction: column;
-  background-color: white;
-  min-width: calc(var(--st-grid-unit) * 40);
-  border-radius: 4px;
-  border: 1px solid gray;
-  box-shadow: hsl(206deg 22% 7% / 35%) 0px 10px 38px -10px,
-    hsl(206deg 22% 7% / 20%) 0px 10px 20px -15px;
+  min-width: var(--st-react-modal-min-width);
+  border-radius: var(--st-react-modal-border-radius);
+  border: var(--st-react-modal-border);
+  box-shadow: var(--st-react-modal-box-shadow);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: var(--st-react-modal-animation);
+  }
 
   .st-react-modal--header {
     display: flex;
     flex-direction: column;
-    padding: var(--st-grid-unit2x);
-    padding-bottom: 0;
+    padding: var(--st-react-modal-header-padding);
+    background: var(--st-react-modal-header-background-color);
+    border-bottom: var(--st-react-modal-header-border-bottom);
   }
 
   .st-react-modal--header--title-row {
@@ -26,31 +30,32 @@
   }
 
   .st-react-modal--description--text {
-    margin-top: var(--st-grid-unit2x);
+    margin-bottom: var(--st-grid-unit2x);
   }
 
   .st-react-modal--content {
+    background: var(--st-react-modal-content-background-color);
     display: flex;
     padding: var(--st-grid-unit2x);
     flex-direction: column;
   }
-
 }
 
 .st-react-modal--action-row {
   display: flex;
+  background: var(--st-react-modal-action-row-background-color);
   justify-content: flex-end;
-  padding-top: var(--st-grid-unit2x);
+  padding: var(--st-react-modal-action-row-padding);
   gap: var(--st-grid-unit);
+  border-top: var(--st-react-modal-action-row-border-top);
 }
 
 .st-react-modal--overlay {
-  background-color: hsl(0 0% 0% / 0.439);
+  background-color: var(--st-react-modal-overlay-background-color);
   position: fixed;
   inset: 0;
 
   @media (prefers-reduced-motion: no-preference) {
-    animation: 150ms cubic-bezier(0.16, 1, 0.3, 1) 0s 1 normal none running
-      fadeIn;
+    animation: var(--st-react-modal-overlay-animation);
   }
 }

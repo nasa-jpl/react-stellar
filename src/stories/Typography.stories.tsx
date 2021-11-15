@@ -13,6 +13,6 @@ export const AllTypography = () => (
     <div className="st-typography-body">Body</div>
     <div className="st-typography-medium">Medium</div>
     <div className="st-typography-bold">Bold</div>
-    <div className="st-typography-smallCaps">Small Caps</div>
+    <div className="st-typography-small-caps">Small Caps</div>
   </div>
 );

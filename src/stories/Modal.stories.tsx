@@ -5,6 +5,8 @@ import {
   Modal,
   ModalActionRow,
   ModalClose,
+  ModalBody,
+  ModalDescription,
 } from "components/Modal";
 import { Button } from "index";
 
@@ -24,7 +26,22 @@ Controlled.args = {
   description: "Somewhere, something incredible is waiting to be known.",
   open: true,
   onOpenChange: action("open changed"),
-  children: <img width="100%" src={img} />,
+  children: (
+    <>
+      <ModalBody>
+        <ModalDescription>
+          Somewhere, something incredible is waiting to be known.
+        </ModalDescription>
+        <img width="100%" src={img} />
+      </ModalBody>
+      <ModalActionRow>
+        <ModalClose asChild>
+          <Button variant="secondary">Cancel</Button>
+        </ModalClose>
+        <Button>Begin</Button>
+      </ModalActionRow>
+    </>
+  ),
 };
 
 export const Interactive = Template.bind({});
@@ -39,7 +56,12 @@ Interactive.args = {
   onOpenChange: action("open changed"),
   children: (
     <>
-      <img width="100%" src={img} />
+      <ModalBody>
+        <ModalDescription>
+          Somewhere, something incredible is waiting to be known.
+        </ModalDescription>
+        <img width="100%" src={img} />
+      </ModalBody>
       <ModalActionRow>
         <ModalClose asChild>
           <Button variant="secondary">Cancel</Button>
@@ -49,3 +71,20 @@ Interactive.args = {
     </>
   ),
 };
+
+export const ReactJSXExample = () => (
+  <Modal title="Modal Title" open>
+    <ModalBody>
+      <ModalDescription>
+        Somewhere, something incredible is waiting to be known.
+      </ModalDescription>
+      <img width="100%" src={img} />
+    </ModalBody>
+    <ModalActionRow>
+      <ModalClose asChild>
+        <Button variant="secondary">Cancel</Button>
+      </ModalClose>
+      <Button>Begin</Button>
+    </ModalActionRow>
+  </Modal>
+);

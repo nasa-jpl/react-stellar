@@ -3,11 +3,15 @@
 // Stellar CSS base
 @import "@gov.nasa.jpl.stellar/stellar/css/index.css";
 
-//Variables
+// Variables
 @import "_variables";
 
-//Components
+// Animations
+@import "_animations";
+
+// Components
 @import "components/_Icons";
 @import "components/_Button";
 @import "components/_Multiselect";
+@import "components/_Alert";
 @import "components/_Modal";
