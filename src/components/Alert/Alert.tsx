@@ -33,15 +33,15 @@ export const Alert = (props: AlertProps) => {
               </div>
             </AlertTitle>
           </div>
+        </div>
+        <div className="st-react-modal--content">
           <AlertDescription asChild>
             <div className="st-react-modal--description--text st-typography-body">
               {description}
             </div>
           </AlertDescription>
         </div>
-        <div className="st-react-modal--content">
-          <ModalActionRow>{children}</ModalActionRow>
-        </div>
+        <ModalActionRow>{children}</ModalActionRow>
       </AlertContent>
       {trigger && <AlertTrigger asChild>{trigger}</AlertTrigger>}
     </AlertDialog.Root>
@@ -57,6 +57,7 @@ export const AlertContent = React.forwardRef(
     const { children, className = "", ...alertProps } = props;
     const modalClass = classNames({
       "st-react-modal": true,
+      "st-react-alert": true,
       [className]: !!className,
     });
     return (
