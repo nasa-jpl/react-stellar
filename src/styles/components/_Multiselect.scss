@@ -14,13 +14,6 @@
   flex: 1;
   cursor: pointer;
 
-  &:focus {
-    // TODO generalize box shadow focus
-    box-shadow: 0 0 0 var(--st-react-multiselect-border-radius) var(--st-button-focus-color, #4fa1ff);
-    outline: 0;
-    z-index: 1;
-  }
-
   & .st-react-multiselect--optionText {
     color: var(--st-react-multiselect-option-text-color);
     text-align: center;
