@@ -4,10 +4,31 @@ import { Button } from "components/Button";
 import { IconClose } from "components/Icons";
 import classNames from "classnames";
 
+export type ModalDescriptionProps = {
+  children?: string | React.ReactNode;
+};
+
+export const ModalDescription = (props: ModalDescriptionProps) => (
+  <DialogPrimitive.Description asChild>
+    <div className="st-react-modal--description--text st-typography-body">
+      {props.children}
+    </div>
+  </DialogPrimitive.Description>
+);
+
+export type ModalBodyProps = {
+  children?: string | React.ReactNode;
+};
+
+export const ModalBody = (props: ModalBodyProps) => (
+  <div className="st-react-modal--content">{props.children}</div>
+);
+
 export type ModalProps = {
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   children?: string | React.ReactNode;
+  actions?: React.ReactNode[];
   trigger?: React.ReactNode;
   className?: string;
 } & DialogPrimitive.DialogProps;
@@ -15,8 +36,9 @@ export type ModalProps = {
 export const Modal = (props: ModalProps) => {
   const {
     title,
-    description,
+    // description,
     children,
+    actions = [],
     trigger,
     className = "",
     ...modalProps
@@ -39,13 +61,8 @@ export const Modal = (props: ModalProps) => {
               </Button>
             </DialogPrimitive.Close>
           </div>
-          <ModalDescription asChild>
-            <div className="st-react-modal--description--text st-typography-body">
-              {description}
-            </div>
-          </ModalDescription>
         </div>
-        <div className="st-react-modal--content">{children}</div>
+        {children}
       </ModalContent>
       {trigger && <ModalTrigger asChild>{trigger}</ModalTrigger>}
     </DialogPrimitive.Root>
@@ -93,4 +110,4 @@ export const ModalActionRow = (props: ModalActionRowProps) => {
 export const ModalTrigger = DialogPrimitive.Trigger;
 export const ModalClose = DialogPrimitive.Close;
 export const ModalTitle = DialogPrimitive.Title;
-export const ModalDescription = DialogPrimitive.Description;
+// export const ModalDescription = DialogPrimitive.Description;
