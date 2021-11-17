@@ -1,0 +1,38 @@
+.st-react-checkbox {
+  display: flex;
+  gap: var(--st-grid-unit);
+  align-items: center;
+  padding: 2px 4px;
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--st-gray-10);
+  }
+
+  & button {
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--st-primary-50);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin: 4px;
+    background: rgba(240, 228, 255, 0.24);
+  }
+
+  & .st-react-checkbox--indicator {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: var(--st-primary-50);
+  }
+
+  & .st-react-checkbox--label.st-typography-label {
+    color: var(--st-gray-60);
+    user-select: none;
+  }
+
+  &.st-react-checkbox--label-right {
+    flex-direction: row-reverse;
+  }
+}
