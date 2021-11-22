@@ -7,6 +7,13 @@ import { Button } from "index";
 export default {
   title: "Molecules/Popover",
   component: Popover,
+  parameters: {
+    docs: {
+      description: {
+        component: "Overlay content, triggered by a button.",
+      },
+    },
+  },
 } as ComponentMeta<typeof Popover>;
 
 const Template: ComponentStory<typeof Popover> = (args) => (
