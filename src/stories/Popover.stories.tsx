@@ -17,7 +17,6 @@ const Template: ComponentStory<typeof Popover> = (args) => (
 
 export const Interactive = Template.bind({});
 Interactive.args = {
-  contentProps: { sideOffset: 16 },
   onOpenChange: action("open changed"),
   children: (
     <>
@@ -45,11 +44,54 @@ Interactive.args = {
   trigger: <Button>Open Popover</Button>,
 };
 
+export const OverridingRadixProps = Template.bind({});
+OverridingRadixProps.args = {
+  // All other props are spread to the Radix Popover Root.
+  // See https://www.radix-ui.com/docs/primitives/components/popover#root
+  // for a full list of Root props
+  modal: true, // Radix Popover Root prop example
+  onOpenChange: action("open changed"), // Radix Popover Root prop example
+
+  // Control the majority of the Popover behaviors by setting Radix Popover Content props.
+  // See https://www.radix-ui.com/docs/primitives/components/popover#content
+  // for a full list of Content props.
+  // Common props include "side", "sideOffset", "align", and "avoidCollisions".
+  contentProps: {
+    sideOffset: 18,
+    alignOffset: 32,
+    onInteractOutside: (evt) => evt.preventDefault(),
+    onPointerDownOutside: (evt) => evt.preventDefault(),
+    onEscapeKeyDown: (evt) => evt.preventDefault(),
+  },
+
+  children: (
+    <>
+      <div>
+        <div className="st-typography-small-caps">Option Group 1</div>
+        <div className="st-typography-medium">Checkbox 1 with label</div>
+        <div className="st-typography-medium">Checkbox 2 with label</div>
+        <div className="st-typography-medium">Checkbox 3 with label</div>
+      </div>
+      <br />
+      <div>
+        <div className="st-typography-small-caps">Option Group 2</div>
+        <div className="st-typography-medium">Checkbox 1 with label</div>
+        <div className="st-typography-medium">Checkbox 2 with label</div>
+        <div className="st-typography-medium">Checkbox 3 with label</div>
+      </div>
+      <br />
+      <PopoverClose asChild>
+        <Button variant="secondary" style={{ width: "100%" }}>
+          Close
+        </Button>
+      </PopoverClose>
+    </>
+  ),
+  trigger: <Button>Open Popover</Button>,
+};
+
 export const ReactJSXExample = () => (
-  <Popover
-    trigger={<Button>Open Popover</Button>}
-    contentProps={{ sideOffset: 16 }}
-  >
+  <Popover trigger={<Button>Open Popover</Button>}>
     <div>
       <div className="st-typography-small-caps">Option Group 1</div>
       <div className="st-typography-medium">Checkbox 1 with label</div>

@@ -13,11 +13,19 @@ export type PopoverProps = {
 } & PopoverPrimitive.PopoverProps;
 
 export const Popover = (props: PopoverProps) => {
-  const { children, trigger, className = "", ...popoverProps } = props;
+  const {
+    children,
+    trigger,
+    className = "",
+    contentProps,
+    ...popoverProps
+  } = props;
 
   return (
     <PopoverPrimitive.Root {...popoverProps}>
-      <PopoverContent className={className}>{children}</PopoverContent>
+      <PopoverContent className={className} {...contentProps}>
+        {children}
+      </PopoverContent>
       {trigger && <PopoverTrigger asChild>{trigger}</PopoverTrigger>}
     </PopoverPrimitive.Root>
   );
