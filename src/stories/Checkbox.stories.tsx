@@ -1,3 +1,4 @@
+import { action } from "@storybook/addon-actions";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Checkbox } from "components/Checkbox";
 
@@ -7,7 +8,7 @@ export default {
 } as ComponentMeta<typeof Checkbox>;
 
 const Template: ComponentStory<typeof Checkbox> = (args) => (
-  <Checkbox {...args} />
+  <Checkbox onCheckedChange={action("checked changed")} {...args} />
 );
 
 export const LabelLeft = Template.bind({});
@@ -19,11 +20,8 @@ export const LabelRight = Template.bind({});
 LabelRight.args = {
   required: true,
   label: "This is a label",
-  labelPosition: "left",
+  labelPosition: "right",
 };
 
 export const Unlabeled = Template.bind({});
-Unlabeled.args = {
-  label: "This is a label",
-  labelPosition: "left",
-};
+Unlabeled.args = {};

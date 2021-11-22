@@ -1,7 +1,6 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import classNames from "classnames";
-import { IconCheck } from "index";
 
 export type CheckboxProps = {
   label?: string;
@@ -10,7 +9,7 @@ export type CheckboxProps = {
   disabled?: boolean;
 } & CheckboxPrimitive.CheckboxProps;
 
-export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
+export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(
   (props, ref) => {
     const {
       disabled = false,
@@ -23,29 +22,35 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const checkboxClass = classNames({
       "st-react-checkbox": true,
       "st-react-checkbox--label-right": labelPosition === "right",
+      "st-react-checkbox--unlabeled": !label,
       [className]: !!className,
     });
     return (
-      <div className={checkboxClass}>
-        <CheckboxPrimitive.Root id={label}>
-          <CheckboxPrimitive.Indicator className="st-react-checkbox--indicator">
+      <CheckboxPrimitive.Root
+        id={label}
+        className={checkboxClass}
+        {...other}
+        ref={ref}
+      >
+        <div className="st-react-checkbox--indicator">
+          <div className="st-react-checkbox--indicator-check">
             <CheckSVG />
-          </CheckboxPrimitive.Indicator>
-          {label && (
-            <label
-              className="st-react-checkbox--label st-typography-label"
-              htmlFor={label}
-            >
-              {label}
-            </label>
-          )}
-        </CheckboxPrimitive.Root>
-      </div>
+          </div>
+        </div>
+        {label && (
+          <label
+            className="st-react-checkbox--label st-typography-label"
+            htmlFor={label}
+          >
+            {label}
+          </label>
+        )}
+      </CheckboxPrimitive.Root>
     );
   }
 );
 
-const CheckSVG = () => (
+export const CheckSVG = () => (
   <svg
     width="8"
     height="6"
