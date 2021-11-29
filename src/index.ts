@@ -4,3 +4,4 @@ export * from "./components/Icons";
 export * from "./components/Multiselect";
 export * from "./components/Modal";
 export * from "./components/Alert";
+export * from "./components/Checkbox";
