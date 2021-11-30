@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Popover, PopoverClose } from "components/Popover";
-import { Button } from "index";
+import { Button, Checkbox } from "index";
 
 export default {
   title: "Molecules/Popover",
@@ -22,32 +22,40 @@ const Template: ComponentStory<typeof Popover> = (args) => (
   </div>
 );
 
+const popoverChildren = (
+  <>
+    <div>
+      <div style={{ marginBottom: "8px" }} className="st-typography-small-caps">
+        Option Group 1
+      </div>
+      <Checkbox style={{ width: "100%" }} label="Group1 1" />
+      <Checkbox style={{ width: "100%" }} label="Group1 2" />
+      <Checkbox style={{ width: "100%" }} label="Group1 3" />
+      <Checkbox style={{ width: "100%" }} label="Group1 4" />
+    </div>
+    <br />
+    <div>
+      <div style={{ marginBottom: "8px" }} className="st-typography-small-caps">
+        Option Group 2
+      </div>
+      <Checkbox style={{ width: "100%" }} label="Group2 1" />
+      <Checkbox style={{ width: "100%" }} label="Group2 2" />
+      <Checkbox style={{ width: "100%" }} label="Group2 3" />
+      <Checkbox style={{ width: "100%" }} label="Group2 4" />
+    </div>
+    <br />
+    <PopoverClose asChild>
+      <Button variant="secondary" style={{ width: "100%" }}>
+        Close
+      </Button>
+    </PopoverClose>
+  </>
+);
+
 export const Interactive = Template.bind({});
 Interactive.args = {
   onOpenChange: action("open changed"),
-  children: (
-    <>
-      <div>
-        <div className="st-typography-small-caps">Option Group 1</div>
-        <div className="st-typography-medium">Checkbox 1 with label</div>
-        <div className="st-typography-medium">Checkbox 2 with label</div>
-        <div className="st-typography-medium">Checkbox 3 with label</div>
-      </div>
-      <br />
-      <div>
-        <div className="st-typography-small-caps">Option Group 2</div>
-        <div className="st-typography-medium">Checkbox 1 with label</div>
-        <div className="st-typography-medium">Checkbox 2 with label</div>
-        <div className="st-typography-medium">Checkbox 3 with label</div>
-      </div>
-      <br />
-      <PopoverClose asChild>
-        <Button variant="secondary" style={{ width: "100%" }}>
-          Close
-        </Button>
-      </PopoverClose>
-    </>
-  ),
+  children: popoverChildren,
   trigger: <Button>Open Popover</Button>,
 };
 
@@ -71,48 +79,10 @@ export const OverridingRadixProps = () => (
     }}
     trigger={<Button>Open Popover</Button>}
   >
-    <div>
-      <div className="st-typography-small-caps">Option Group 1</div>
-      <div className="st-typography-medium">Checkbox 1 with label</div>
-      <div className="st-typography-medium">Checkbox 2 with label</div>
-      <div className="st-typography-medium">Checkbox 3 with label</div>
-    </div>
-    <br />
-    <div>
-      <div className="st-typography-small-caps">Option Group 2</div>
-      <div className="st-typography-medium">Checkbox 1 with label</div>
-      <div className="st-typography-medium">Checkbox 2 with label</div>
-      <div className="st-typography-medium">Checkbox 3 with label</div>
-    </div>
-    <br />
-    <PopoverClose asChild>
-      <Button variant="secondary" style={{ width: "100%" }}>
-        Close
-      </Button>
-    </PopoverClose>
+    {popoverChildren}
   </Popover>
 );
 
 export const ReactJSXExample = () => (
-  <Popover trigger={<Button>Open Popover</Button>}>
-    <div>
-      <div className="st-typography-small-caps">Option Group 1</div>
-      <div className="st-typography-medium">Checkbox 1 with label</div>
-      <div className="st-typography-medium">Checkbox 2 with label</div>
-      <div className="st-typography-medium">Checkbox 3 with label</div>
-    </div>
-    <br />
-    <div>
-      <div className="st-typography-small-caps">Option Group 2</div>
-      <div className="st-typography-medium">Checkbox 1 with label</div>
-      <div className="st-typography-medium">Checkbox 2 with label</div>
-      <div className="st-typography-medium">Checkbox 3 with label</div>
-    </div>
-    <br />
-    <PopoverClose asChild>
-      <Button variant="secondary" style={{ width: "100%" }}>
-        Close
-      </Button>
-    </PopoverClose>
-  </Popover>
+  <Popover trigger={<Button>Open Popover</Button>}>{popoverChildren}</Popover>
 );

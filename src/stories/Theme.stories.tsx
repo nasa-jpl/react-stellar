@@ -19,7 +19,7 @@ const component = () => {
 export const Theme = () => (
   <div>
     <div
-      className="st-dark-theme"
+      className="st-theme-dark"
       style={{
         padding: "8px",
         border: "1px solid black",
