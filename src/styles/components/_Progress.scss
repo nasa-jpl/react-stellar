@@ -1,0 +1,14 @@
+.st-react-progress {
+  position: relative;
+  overflow: hidden;
+  background: var(--st-react-progress-background);
+  border-radius: var(--st-react-progress-border-radius);
+  width: 100%;
+  height: var(--st-react-progress-height);
+
+  .st-react-progress--indicator {
+    background: var(--st-react-progress-indicator-background);
+    height: 100%;
+    transition: var(--st-react-progress-indicator-transition);
+  }
+}
