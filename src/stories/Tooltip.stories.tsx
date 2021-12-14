@@ -27,9 +27,40 @@ Default.args = {
   content: "Tooltip Content",
 };
 
+export const DelayDuration = Template.bind({});
+DelayDuration.args = {
+  delayDuration: 0,
+  children: <Button>No Delay</Button>,
+  content: "Tooltip Content",
+};
+
+export const PreferredSide = Template.bind({});
+PreferredSide.args = {
+  contentProps: { side: "bottom", align: "start" },
+  children: <Button>Bottom Start)</Button>,
+  content: "Tooltip Content",
+};
+
 export const JSXChildren = Template.bind({});
 JSXChildren.args = {
   children: <Button>Hover over me</Button>,
+  content: (
+    <div style={{ display: "flex", gap: "var(--st-grid-unit)" }}>
+      <IconSol />
+      Tooltip Content
+    </div>
+  ),
+};
+
+export const DisabledContent = Template.bind({});
+DisabledContent.args = {
+  children: (
+    <span tabIndex={0}>
+      <Button disabled style={{ pointerEvents: "none" }}>
+        Disabled Content
+      </Button>
+    </span>
+  ),
   content: (
     <div style={{ display: "flex", gap: "var(--st-grid-unit)" }}>
       <IconSol />
