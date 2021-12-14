@@ -37,7 +37,7 @@ DelayDuration.args = {
 export const PreferredSide = Template.bind({});
 PreferredSide.args = {
   contentProps: { side: "bottom", align: "start" },
-  children: <Button>Bottom Start)</Button>,
+  children: <Button>Bottom Start</Button>,
   content: "Tooltip Content",
 };
 
