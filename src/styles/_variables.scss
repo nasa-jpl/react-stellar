@@ -9,6 +9,16 @@
   --st-react-multiselect-option-selected-text-color: var(--st-gray-80);
   --st-react-multiselect-option-text-color: rgba(var(--st-gray-60-RGB), 0.65);
 
+  // Dropdown.
+  --st-react-dropdown-font-family: var(--st-typography-font-family);
+  --st-react-dropdown-font-weight: var(--st-typography-body-font-weight);
+  --st-react-dropdown-font-size: var(--st-typography-body-font-size);
+  // --st-react-dropdown-height: var(--st-grid-unit3x);
+  --st-react-dropdown-hover-background: var(--st-gray-10);
+  --st-react-dropdown-letter-spacing: var(--st-typography-body-letter-spacing);
+  --st-react-dropdown-line-height: var(--st-typography-body-line-height);
+  --st-react-dropdown-value-color: var(--st-gray-80);
+
   // Modal.
   --st-react-modal-animation: 150ms cubic-bezier(0.16, 1, 0.3, 1) 0s 1 normal
     none running contentShow;
@@ -27,8 +37,10 @@
   --st-react-modal-action-row-border-top: 1px solid var(--st-gray-15);
   --st-react-modal-action-row-secondary-button-background: white;
   --st-react-modal-action-row-secondary-button-border: 1px solid
-  var(--st-gray-20);
-  --st-react-modal-action-row-secondary-button-hover-background: var(--st-gray-10);
+    var(--st-gray-20);
+  --st-react-modal-action-row-secondary-button-hover-background: var(
+    --st-gray-10
+  );
   --st-react-modal-overlay-background-color: hsl(0 0% 0% / 0.439);
   --st-react-modal-overlay-animation: 150ms cubic-bezier(0.16, 1, 0.3, 1) 0s 1
     normal none running fadeIn;
