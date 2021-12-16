@@ -20,14 +20,19 @@ export type GroupType = {
   options: OptionsType;
 };
 
-const ClearIndicator = (props: ClearIndicatorProps<OptionType, true>) => {
+const ClearIndicator = (
+  props: ClearIndicatorProps<OptionType, boolean, GroupType>
+) => {
   const {
     children = <IconClose />,
-    getStyles,
     innerProps: { ref, ...restInnerProps },
   } = props;
   return (
-    <div {...restInnerProps} ref={ref} className="st-react-dropdown--clear-indicator">
+    <div
+      {...restInnerProps}
+      ref={ref}
+      className="st-react-dropdown--clear-indicator"
+    >
       {children}
     </div>
   );
