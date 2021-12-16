@@ -27,19 +27,30 @@ Default.args = {
   labelPosition: "top",
 };
 
+export const LongList = Template.bind({});
+const longListItems = [];
+for (let i = 0; i < 100; i++)
+  longListItems.push({ label: `Label ${i}`, value: i });
+LongList.args = {
+  options: longListItems,
+  label: "Dropdown Label",
+  labelPosition: "top",
+};
+
 export const Searchable = Template.bind({});
 Searchable.args = {
-  options: [
-    { label: "Label 1", value: 1 },
-    { label: "Label 2", value: 2 },
-    { label: "Label 3", value: 3 },
-    { label: "Label 4", value: 4 },
-    { label: "Label 5", value: 5 },
-    { label: "Label 6", value: 6 },
-  ],
+  options: longListItems,
   label: "Dropdown Label",
   labelPosition: "top",
   isSearchable: true,
+};
+
+export const Clearable = Template.bind({});
+Clearable.args = {
+  options: longListItems,
+  label: "Dropdown Label",
+  labelPosition: "top",
+  isClearable: true,
 };
 
 export const MultipleSelection = Template.bind({});

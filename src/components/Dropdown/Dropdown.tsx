@@ -1,4 +1,5 @@
 import ReactSelect, {
+  ClearIndicatorProps,
   CommonProps,
   components,
   ContainerProps,
@@ -9,7 +10,8 @@ import ReactSelect, {
 } from "react-select";
 import { SelectComponents } from "react-select/dist/declarations/src/components";
 import classNames from "classnames";
-import React, { Children } from "react";
+import React, { Children, CSSProperties } from "react";
+import { IconClose } from "index";
 
 export type OptionType = { [string: string]: any };
 export type OptionsType = OptionType[];
@@ -18,13 +20,26 @@ export type GroupType = {
   options: OptionsType;
 };
 
+const ClearIndicator = (props: ClearIndicatorProps<OptionType, true>) => {
+  const {
+    children = <IconClose />,
+    getStyles,
+    innerProps: { ref, ...restInnerProps },
+  } = props;
+  return (
+    <div {...restInnerProps} ref={ref} className="st-react-dropdown--clear-indicator">
+      {children}
+    </div>
+  );
+};
+
 export type DropdownProps = {
   options: OptionsType;
   className?: string;
   // multi: PropTypes.bool,
   isSearchable?: boolean;
+  isClearable?: boolean;
   disabled?: boolean;
-  // clearable: PropTypes.bool,
   label?: string;
   labelPosition: "top" | "left" | "inner";
   components: SelectComponents<OptionType, boolean, GroupType>;
@@ -35,9 +50,7 @@ export const Dropdown = (props: DropdownProps) => {
   const {
     options,
     disabled = false,
-    // multi,
-    isSearchable = false,
-    // clearable,
+    isSearchable = false, // Set this to be off by default, react-select has it on by default
     label = "",
     labelPosition,
     // labelWidth,
@@ -70,7 +83,7 @@ export const Dropdown = (props: DropdownProps) => {
 
   const selectComponents = Object.assign(
     {},
-    { SingleValue: SingleValueComponent },
+    { SingleValue: SingleValueComponent, ClearIndicator },
     propComponents
   );
 
