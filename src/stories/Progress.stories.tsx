@@ -15,3 +15,5 @@ export const Default = Template.bind({});
 Default.args = {
   progress: 50,
 };
+
+export const Indeterminate = Template.bind({});
