@@ -8,6 +8,7 @@
   }
 
   .st-react-dropdown--inner-label {
+    color: var(--st-gray-60);
   }
 
   .st-react-dropdown--rs__control {
@@ -170,5 +171,31 @@
 
   .st-react-dropdown--clear-indicator:hover {
     color: var(--st-gray-100);
+  }
+
+  .st-react-dropdown--rs__multi-value {
+    margin: 0;
+    margin-right: calc(var(--st-grid-unit) / 2);
+    height: 18px;
+    background: var(--st-gray-20);
+  }
+
+  .st-react-dropdown--rs__multi-value__label {
+    font-family: var(--st-react-dropdown-font-family);
+    font-size: var(--st-react-dropdown-font-size);
+    font-weight: var(--st-react-dropdown-font-weight);
+    height: var(--st-react-dropdown-height);
+    letter-spacing: var(--st-react-dropdown-letter-spacing) !important;
+    color: var(--st-react-dropdown-value-color);
+    line-height: 12px;
+  }
+
+  .st-react-dropdown--rs__multi-value__remove {
+    width: 18px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

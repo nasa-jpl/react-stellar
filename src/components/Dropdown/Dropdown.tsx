@@ -2,15 +2,14 @@ import ReactSelect, {
   ClearIndicatorProps,
   CommonProps,
   components,
-  ContainerProps,
-  Props,
-  SelectComponentsConfig,
+  MultiValue,
+  MultiValueProps,
+  MultiValueRemoveProps,
   SingleValue,
   SingleValueProps,
 } from "react-select";
 import { SelectComponents } from "react-select/dist/declarations/src/components";
 import classNames from "classnames";
-import React, { Children, CSSProperties } from "react";
 import { IconClose } from "index";
 
 export type OptionType = { [string: string]: any };
@@ -79,16 +78,24 @@ export const Dropdown = (props: DropdownProps) => {
     return (
       <components.SingleValue {...otherProps}>
         {labelPosition === "inner" && (
-          <span className="st-react-dropdown--inner-label">{label}:</span>
+          <span className="st-react-dropdown--inner-label">{label}:&nbsp;</span>
         )}
         {children}
       </components.SingleValue>
     );
   };
 
+  const MultiValueRemove = (props: MultiValueRemoveProps<OptionType>) => {
+    return (
+      <components.MultiValueRemove {...props}>
+        <IconClose />
+      </components.MultiValueRemove>
+    );
+  };
+
   const selectComponents = Object.assign(
     {},
-    { SingleValue: SingleValueComponent, ClearIndicator },
+    { SingleValue: SingleValueComponent, ClearIndicator, MultiValueRemove },
     propComponents
   );
 

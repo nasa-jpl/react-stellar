@@ -53,6 +53,13 @@ Clearable.args = {
   isClearable: true,
 };
 
+export const InnerLabel = Template.bind({});
+InnerLabel.args = {
+  options: longListItems,
+  label: "Dropdown Label",
+  labelPosition: "inner",
+};
+
 export const MultipleSelection = Template.bind({});
 MultipleSelection.args = {
   options: [
