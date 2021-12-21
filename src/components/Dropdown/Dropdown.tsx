@@ -2,8 +2,6 @@ import ReactSelect, {
   ClearIndicatorProps,
   CommonProps,
   components,
-  MultiValue,
-  MultiValueProps,
   MultiValueRemoveProps,
   SingleValue,
   SingleValueProps,
@@ -40,14 +38,12 @@ const ClearIndicator = (
 export type DropdownProps = {
   options: OptionsType;
   className?: string;
-  // multi: PropTypes.bool,
   isSearchable?: boolean;
   isClearable?: boolean;
   disabled?: boolean;
   label?: string;
   labelPosition: "top" | "left" | "inner";
   components: SelectComponents<OptionType, boolean, GroupType>;
-  // labelWidth: PropTypes.number,
 } & CommonProps<OptionType, boolean, GroupType>;
 
 export const Dropdown = (props: DropdownProps) => {
@@ -57,7 +53,6 @@ export const Dropdown = (props: DropdownProps) => {
     isSearchable = false, // Set this to be off by default, react-select has it on by default
     label = "",
     labelPosition,
-    // labelWidth,
     className = "",
     components: propComponents,
     ...rest
@@ -102,10 +97,7 @@ export const Dropdown = (props: DropdownProps) => {
   return (
     <div className={containerClass}>
       {label && labelPosition !== "inner" && (
-        <div
-          className="st-react-dropdown--label st-typography-body"
-          // style={{ width: `${labelWidth}px` }}
-        >
+        <div className="st-react-dropdown--label st-typography-body">
           {label}
         </div>
       )}
@@ -114,7 +106,6 @@ export const Dropdown = (props: DropdownProps) => {
         components={selectComponents}
         isDisabled={disabled}
         isSearchable={isSearchable}
-        // menuIsOpen
         classNamePrefix="st-react-dropdown--rs"
         className="st-react-dropdown--rs"
         {...rest}
