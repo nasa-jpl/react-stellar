@@ -4,24 +4,24 @@
   flex-direction: column;
 
   .st-react-dropdown--label {
-    color: var(--st-gray-60);
+    color: var(--st-react-dropdown-label-color);
   }
 
   .st-react-dropdown--inner-label {
-    color: var(--st-gray-60);
+    color: var(--st-react-dropdown-inner-label-color);
   }
 
   .st-react-dropdown--rs__control {
-    background: var(--st-white);
-    border: 1px solid var(--st-gray-20);
+    background: var(--st-react-dropdown-control-color);
+    border: var(--st-react-dropdown-control-border);
     cursor: pointer;
-    min-height: calc(var(--st-grid-unit) * 3);
+    min-height: var(--st-react-dropdown-control-min-height);
     transition: none;
   }
 
   .st-react-dropdown--rs__control:hover {
-    background: var(--st-gray-10);
-    border: 1px solid var(--st-gray-20);
+    background: var(--st-react-dropdown-control-hover-background-color);
+    border: var(--st-react-dropdown-control-hover-border);
   }
 
   .st-react-dropdown--rs__control--menu-is-open {
@@ -46,20 +46,16 @@
 
   .st-react-dropdown--rs__placeholder {
     margin: 0;
-    color: var(--st-gray-50);
+    color: var(--st-react-dropdown-placeholder-color);
   }
 
-  // .st-react-dropdown--rs__input {
-  //   color: gray40;
-  // }
-
   .st-react-dropdown--rs__menu {
-    background-color: var(--st-white);
-    border: 1px solid var(--st-gray-20);
+    background-color: var(--st-react-dropdown-placeholder-background-color);
+    border: var(--st-react-dropdown-menu-border);
     border-top: none;
     box-shadow: none;
-    margin: -2px 0 0;
-    border-radius: 0 0 4px 4px;
+    margin: 0;
+    border-radius: var(--st-react-dropdown-menu-border-radius);
     z-index: 4;
   }
 
@@ -75,16 +71,16 @@
   // }
 
   .st-react-dropdown--rs__menu-list {
-    padding: 0;
-    padding-bottom: 4px;
+    padding: var(--st-react-dropdown-menu-list-padding-bottom) 0;
     z-index: 3;
-    border-radius: 4px;
-    box-shadow: 0 2px 3px 0 rgb(34 36 38 / 15%);
-    max-height: 310px !important;
+    border-radius: var(--st-react-dropdown-menu-list-border-radius);
+    border-radius: inherit;
+    box-shadow: var(--st-react-dropdown-menu-list-box-shadow);
+    max-height: var(--st-react-dropdown-menu-list-max-height) !important;
   }
 
   .st-react-dropdown--rs__menu-notice--no-options {
-    color: var(--st-gray-50);
+    color: var(--st-react-dropdown-menu-no-options-label-color);
     cursor: default;
   }
 
@@ -97,7 +93,7 @@
   }
 
   .st-react-dropdown--rs__indicator {
-    padding: 0 var(--st-grid-unit) !important;
+    padding: var(--st-react-dropdown-indicator-padding) !important;
     color: inherit !important;
   }
 
@@ -106,36 +102,39 @@
   }
 
   .st-react-dropdown--rs__indicator svg {
-    width: calc(var(--st-grid-unit) * 2);
-    height: calc(var(--st-grid-unit) * 2);
-    color: var(--st-gray-60);
+    width: var(--st-react-dropdown-indicator-svg-width);
+    height: var(--st-react-dropdown-indicator-svg-height);
+    color: var(--st-react-dropdown-indicator-svg-color);
   }
 
   .st-react-dropdown--rs__value-container {
-    padding: 0 var(--st-grid-unit) !important;
+    padding: var(--st-react-dropdown-value-container-padding) !important;
+    gap: var(--st-react-dropdown-value-container-flex-gap);
   }
 
   .st-react-dropdown--rs__input-container {
     display: flex;
-    color: var(--st-gray-80);
+    color: var(--st-react-dropdown-input-container-color);
     margin: 0;
   }
 
   .st-react-dropdown--rs__control--is-focused {
-    box-shadow: 0px 0px 0px 1px #4d90fe;
+    box-shadow: --st-react-dropdown-control-focus-box-shadow;
   }
 
-  .st-react-dropdown--rs__control--is-focused + .st-react-dropdown--rs__menu {
-    box-shadow: 0px 1px 0px 0px #4d90fe, 1px 0px 0px 0px #4d90fe,
-      -1px 0px 0px 0px #4d90fe;
+  .st-react-dropdown--rs__control--menu-is-open.st-react-dropdown--rs__control--is-focused {
+    box-shadow: var(--st-react-dropdown-control-focus-open-box-shadow);
+  }
+  .st-react-dropdown--rs__control--menu-is-open + .st-react-dropdown--rs__menu {
+    box-shadow: var(--st-react-dropdown-menu-focus-box-shadow);
   }
 
   .st-react-dropdown--rs__option {
     cursor: pointer;
-    margin: 0px 4px;
-    width: calc(100% - 8px);
-    padding: 4px;
-    border-radius: 4px;
+    margin: var(--st-react-dropdown-option-margin);
+    width: var(--st-react-dropdown-option-width);
+    padding: var(--st-react-dropdown-option-padding);
+    border-radius: var(--st-react-dropdown-option-border-radius);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -145,17 +144,17 @@
   .st-react-dropdown--rs__option--is-focused.st-react-dropdown--rs__option--is-focused,
   .st-react-dropdown--rs__option:hover,
   .st-react-dropdown--rs__option:focus {
-    background: var(--st-gray-15);
+    background: var(--st-react-dropdown-option-focus-background-color);
   }
 
   .st-react-dropdown--rs__option--is-disabled {
-    color: var(--st-gray-50);
+    color: var(--st-react-dropdown-option-disabled-color);
     cursor: not-allowed;
   }
 
   .st-react-dropdown--rs__option--is-selected {
-    background: inherit;
-    font-weight: 600;
+    background: var(--st-react-dropdown-option-selected-background-color);
+    font-weight: var(--st-react-dropdown-option-selected-font-weight);
   }
 
   .st-react-dropdown--rs__option--is-active,
@@ -164,20 +163,18 @@
   }
 
   .st-react-dropdown--clear-indicator {
-    border-radius: 4px;
     display: flex;
-    color: var(--st-gray-60);
+    color: var(--st-react-dropdown-clear-indicator-color);
   }
 
   .st-react-dropdown--clear-indicator:hover {
-    color: var(--st-gray-100);
+    color: var(--st-react-dropdown-clear-indicator-hover-color);
   }
 
   .st-react-dropdown--rs__multi-value {
     margin: 0;
-    margin-right: calc(var(--st-grid-unit) / 2);
-    height: 18px;
-    background: var(--st-gray-20);
+    height: var(--st-react-dropdown-multi-value-height);
+    background: var(--st-react-dropdown-multi-value-background-color);
   }
 
   .st-react-dropdown--rs__multi-value__label {
@@ -191,7 +188,7 @@
   }
 
   .st-react-dropdown--rs__multi-value__remove {
-    width: 18px;
+    width: var(--st-react-dropdown-multi-value-remove-width);
     padding: 0;
     margin: 0;
     display: flex;
