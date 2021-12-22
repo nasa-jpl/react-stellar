@@ -4,6 +4,7 @@ export * from "./components/Icons";
 export * from "./components/Multiselect";
 export * from "./components/Modal";
 export * from "./components/Alert";
+export * from "./components/Progress";
 export * from "./components/Checkbox";
 export * from "./components/Popover";
 export * from "./components/Tooltip";

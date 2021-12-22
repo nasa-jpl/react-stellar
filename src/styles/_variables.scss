@@ -35,6 +35,14 @@
   --st-react-modal-overlay-animation: 150ms cubic-bezier(0.16, 1, 0.3, 1) 0s 1
     normal none running fadeIn;
 
+  // Progress.
+  --st-react-progress-height: var(--st-grid-unit);
+  --st-react-progress-background: var(--st-gray-20);
+  --st-react-progress-border-radius: 99999px;
+  --st-react-progress-indicator-background: var(--st-blue);
+  --st-react-progress-indicator-transition: width 450ms
+    cubic-bezier(0.65, 0, 0.35, 1) 0s;
+
   // Popover.
   --st-react-popover-background: white;
   --st-react-popover-border-radius: 4px;
