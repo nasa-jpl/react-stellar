@@ -8,7 +8,7 @@ import ReactSelect, {
 } from "react-select";
 import { SelectComponents } from "react-select/dist/declarations/src/components";
 import classNames from "classnames";
-import { IconClose } from "index";
+import { IconClose } from "components/Icons";
 
 export type OptionType = { [string: string]: any };
 export type OptionsType = OptionType[];
