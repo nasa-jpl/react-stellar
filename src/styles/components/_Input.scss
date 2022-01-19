@@ -1,16 +1,4 @@
 .st-react-input {
-  display: inline;
-
-  .st-react-input--label-layout-wrapper {
-    display: flex;
-    justify-content: space-between;
-
-    .st-react-input--label-required {
-      font-family: "JetBrains Mono";
-      color: var(--st-gray-50);
-    }
-  }
-
   .st-react-input--container {
     font-family: var(--st-input-font-family);
     font-size: var(--st-input-font-size);
@@ -23,12 +11,9 @@
     color: var(--st-input-color);
     padding: var(--st-input-padding);
     display: flex;
+    gap: 0.5em;
 
-    > *:not(:last-child) {
-      margin-right: 0.5em;
-    }
-
-    .st-react-input--icon {
+    .st-react-input--adornment {
       display: flex;
     }
 
@@ -38,47 +23,5 @@
       width: 100%;
       padding: 0;
     }
-
-    // &.error {
-    //   background-color: var(--st-input-error-background-color);
-    //   border: 1px solid var(--st-error-red);
-    //   color: var(--st-error-red);
-
-    //   &::placeholder {
-    //     color: var(--st-error-red);
-    //   }
-
-    //   &:disabled {
-    //     background-color: var(--st-input-disabled-background-color);
-    //     border: 1px solid var(--st-error-red);
-    //     color: var(--st-input-disabled-color);
-    //     cursor: not-allowed;
-
-    //     &::placeholder {
-    //       color: var(--st-input-disabled-color);
-    //     }
-    //   }
-    // }
-
-    // &.warning {
-    //   background-color: var(--st-input-warning-background-color);
-    //   border: 1px solid var(--st-orange);
-    //   color: var(--st-orange);
-
-    //   &::placeholder {
-    //     color: var(--st-orange);
-    //   }
-
-    //   &:disabled {
-    //     background-color: var(--st-input-disabled-background-color);
-    //     border: 1px solid var(--st-orange);
-    //     color: var(--st-input-disabled-color);
-    //     cursor: not-allowed;
-
-    //     &::placeholder {
-    //       color: var(--st-input-disabled-color);
-    //     }
-    //   }
-    // }
   }
 }

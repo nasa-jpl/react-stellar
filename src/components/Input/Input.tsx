@@ -2,27 +2,21 @@ import classNames from "classnames";
 import React, { forwardRef, useCallback } from "react";
 
 export interface InputProps extends React.HTMLProps<HTMLInputElement> {
-  label?: string;
-  unit?: string;
-  icon?: JSX.Element;
   type: "string" | "number";
-  labelClassName?: string;
   inputClassName?: string;
-  error?: string;
+  error?: boolean;
+  leftAdornment?: string | JSX.Element | JSX.Element[];
+  rightAdornment?: string | JSX.Element | JSX.Element[];
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   (
     {
-      label,
-      unit,
       className,
-      icon,
-      labelClassName,
       inputClassName,
       error,
-      required,
-      onChange,
+      leftAdornment,
+      rightAdornment,
       ...inputProps
     }: InputProps,
     ref: React.ForwardedRef<HTMLInputElement>,
@@ -33,31 +27,25 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           ...(className ? { [className]: true } : {}),
         })}
       >
-        <div className="st-react-input--label-layout-wrapper">
-          <div className="st-react-input--label st-typography-label">
-            {label}
-          </div>
-          {required ? (
-            <div className="st-react-input--label-required st-typography-label">
-              Required
-            </div>
-          ) : null}
-        </div>
         <div
           className={classNames("st-react-input--container", {
-            error: !!error,
+            error,
           })}
         >
-          {icon ? <div className="st-react-input--icon">{icon}</div> : null}
+          {leftAdornment ? (
+            <div className="st-react-input--adornment">{leftAdornment}</div>
+          ) : null}
           <input
             className={classNames("st-input st-react-input--input", {
               ...(inputClassName ? { [inputClassName]: true } : {}),
-              error: !!error,
+              error,
             })}
             ref={ref}
             {...inputProps}
           />
-          {unit ? <div className="st-react-input--unit">{unit}</div> : null}
+          {rightAdornment ? (
+            <div className="st-react-input--adornment">{rightAdornment}</div>
+          ) : null}
         </div>
       </div>
     );
