@@ -2,7 +2,6 @@ import classNames from "classnames";
 import React, { forwardRef, useCallback } from "react";
 
 export interface InputProps extends React.HTMLProps<HTMLInputElement> {
-  type: "string" | "number";
   inputClassName?: string;
   error?: boolean;
   leftAdornment?: string | JSX.Element | JSX.Element[];
