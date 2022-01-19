@@ -1,11 +1,11 @@
 import classNames from "classnames";
-import React, { forwardRef, useCallback } from "react";
+import React, { forwardRef } from "react";
 
 export interface InputProps extends React.HTMLProps<HTMLInputElement> {
   inputClassName?: string;
   error?: boolean;
-  leftAdornment?: string | JSX.Element | JSX.Element[];
-  rightAdornment?: string | JSX.Element | JSX.Element[];
+  leftAdornment?: React.ReactNode;
+  rightAdornment?: React.ReactNode;
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -19,7 +19,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       ...inputProps
     }: InputProps,
     ref: React.ForwardedRef<HTMLInputElement>,
-  ): JSX.Element => {
+  ) => {
     return (
       <div
         className={classNames("st-react-input", {
