@@ -1,0 +1,10 @@
+.st-react-error {
+  font-family: var(--st-typography-label-font-family);
+  font-weight: var(--st-typography-label-font-weight);
+  font-size: var(--st-typography-label-font-size);
+  line-height: var(--st-typography-label-line-height);
+  letter-spacing: var(--st-typography-label-letter-spacing);
+  color: var(--st-error-red);
+  display: flex;
+  gap: 0.2rem;
+}

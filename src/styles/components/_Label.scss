@@ -1,0 +1,8 @@
+.st-react-label {
+  display: flex;
+  gap: 0.2rem;
+
+  .st-react-label--required-mark {
+    color: var(--st-error-red);
+  }
+}

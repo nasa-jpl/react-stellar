@@ -1,0 +1,14 @@
+.st-react-form-field {
+  display: flex;
+
+  &.st-react-form-field--horizontal {
+    flex-flow: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &.st-react-form-field--vertical {
+    flex-flow: column;
+    gap: 0.2em;
+  }
+}
