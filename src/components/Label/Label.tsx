@@ -18,9 +18,7 @@ export const Label = ({
         ...(className ? { [className]: true } : {}),
       })}
     >
-      {required ? (
-        <span className="st-react-label--required-mark">*</span>
-      ) : null}
+      {required && <span className="st-react-label--required-mark">*</span>}
       {children}
     </div>
   );
