@@ -4,20 +4,19 @@ import React from "react";
 export interface FormFieldProps {
   children: React.ReactNode;
   className?: string;
-  flow: "horizontal" | "vertical";
+  flow?: "horizontal" | "vertical";
 }
 
-export const FormField = ({ flow, className, children }: FormFieldProps) => {
-  return (
-    <div
-      className={classNames("st-react-form-field", {
-        ...(className ? { [className]: true } : {}),
-        ...(flow === "horizontal"
-          ? { "st-react-form-field--horizontal": true }
-          : { "st-react-form-field--vertical": true }),
-      })}
-    >
-      {children}
-    </div>
-  );
+export const FormField = ({
+  flow = "vertical",
+  className,
+  children,
+}: FormFieldProps) => {
+  const containerClassName = classNames("st-react-form-field", {
+    ...(className ? { [className]: true } : {}),
+    "st-react-form-field--vertical": flow === "vertical",
+    "st-react-form-field--horizontal": flow === "horizontal",
+  });
+
+  return <div className={containerClassName}>{children}</div>;
 };
