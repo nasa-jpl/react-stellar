@@ -11,8 +11,8 @@ export interface InputProps extends React.HTMLProps<HTMLInputElement> {
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   (
     {
-      className,
-      inputClassName,
+      className = "",
+      inputClassName = "",
       error,
       leftAdornment,
       rightAdornment,
@@ -23,7 +23,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div
         className={classNames("st-react-input", {
-          ...(className ? { [className]: true } : {}),
+          [className]: !!className,
         })}
       >
         <div
@@ -31,20 +31,20 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             error,
           })}
         >
-          {leftAdornment ? (
+          {leftAdornment && (
             <div className="st-react-input--adornment">{leftAdornment}</div>
-          ) : null}
+          )}
           <input
             className={classNames("st-input st-react-input--input", {
-              ...(inputClassName ? { [inputClassName]: true } : {}),
+              [inputClassName]: !!inputClassName,
               error,
             })}
             ref={ref}
             {...inputProps}
           />
-          {rightAdornment ? (
+          {rightAdornment && (
             <div className="st-react-input--adornment">{rightAdornment}</div>
-          ) : null}
+          )}
         </div>
       </div>
     );
