@@ -9,13 +9,13 @@ export interface LabelProps {
 
 export const Label = ({
   children,
-  className,
+  className = "",
   required,
 }: LabelProps): JSX.Element => {
   return (
     <div
       className={classNames("st-react-label st-typography-label", {
-        ...(className ? { [className]: true } : {}),
+        [className]: !!className,
       })}
     >
       {required && <span className="st-react-label--required-mark">*</span>}
