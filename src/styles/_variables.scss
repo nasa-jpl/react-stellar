@@ -1,4 +1,8 @@
 :root {
+  // Label.
+  --st-react-label-typography-line-height: 24px;
+  --st-react-label-required-spacing: 2px;
+
   // Multiselect.
   --st-react-multiselect-background: var(--st-gray-10);
   --st-react-multiselect-border-radius: 4px;

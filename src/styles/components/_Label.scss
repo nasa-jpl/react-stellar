@@ -1,8 +1,8 @@
 .st-react-label {
-  line-height: 1.5rem;
+  line-height: var(--st-react-label-typography-line-height);
 
   .st-react-label--required-mark {
     color: var(--st-error-red);
-    margin-right: 0.2rem;
+    margin-right: var(--st-react-label-required-spacing);
   }
 }
