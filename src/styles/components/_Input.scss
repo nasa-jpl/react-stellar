@@ -1,20 +1,35 @@
+@import "@gov.nasa.jpl.stellar/stellar/scss/mixins/_input";
+
 .st-react-input {
   .st-react-input--container {
-    font-family: var(--st-input-font-family);
-    font-size: var(--st-input-font-size);
-    font-weight: var(--st-input-font-weight);
-    line-height: var(--st-input-line-height);
-    letter-spacing: var(--st-input-letter-spacing);
-    background-color: var(--st-input-background-color);
-    border: var(--st-input-border);
-    border-radius: 4px;
-    color: var(--st-input-color);
-    padding: var(--st-input-padding);
+    font-family: var(--st-react-input-font-family);
+    font-size: var(--st-react-input-font-size);
+    font-weight: var(--st-react-input-font-weight);
+    line-height: var(--st-react-input-line-height);
+    letter-spacing: var(--st-react-input-letter-spacing);
+    background-color: var(--st-react-input-background-color);
+    border: var(--st-react-input-border);
+    border-radius: var(--st-react-input-border-radius);
+    color: var(--st-react-input-color);
+    padding: var(--st-react-input-padding);
     display: flex;
-    gap: 0.5rem;
+    gap: var(--st-grid-unit);
+
+    &.error {
+      @include st-input-error;
+    }
+
+    &.warning {
+      @include st-input-warning;
+    }
 
     .st-react-input--adornment {
       display: flex;
+      gap: var(--st-grid-unit);
+
+      * {
+        display: flex;
+      }
     }
 
     input.st-react-input--input {
@@ -22,6 +37,17 @@
       outline: none;
       width: 100%;
       padding: 0;
+      color: inherit;
+      background-color: inherit;
+
+      &::placeholder {
+        color: var(--st-react-input-placeholder-color);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
   }
 }

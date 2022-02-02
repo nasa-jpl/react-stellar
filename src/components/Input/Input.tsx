@@ -4,6 +4,7 @@ import React, { forwardRef } from "react";
 export interface InputProps extends React.HTMLProps<HTMLInputElement> {
   inputClassName?: string;
   error?: boolean;
+  warning?: boolean;
   leftAdornment?: React.ReactNode;
   rightAdornment?: React.ReactNode;
 }
@@ -14,6 +15,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       className = "",
       inputClassName = "",
       error,
+      warning,
       leftAdornment,
       rightAdornment,
       ...inputProps
@@ -29,15 +31,15 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         <div
           className={classNames("st-react-input--container", {
             error,
+            warning,
           })}
         >
           {leftAdornment && (
             <div className="st-react-input--adornment">{leftAdornment}</div>
           )}
           <input
-            className={classNames("st-input st-react-input--input", {
+            className={classNames("st-react-input--input", {
               [inputClassName]: !!inputClassName,
-              error,
             })}
             ref={ref}
             {...inputProps}
