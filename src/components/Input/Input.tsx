@@ -35,7 +35,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             <div className="st-react-input--adornment">{leftAdornment}</div>
           )}
           <input
-            className={classNames("st-input st-react-input--input", {
+            className={classNames("st-react-input--input", {
               [inputClassName]: !!inputClassName,
               error,
             })}
