@@ -13,10 +13,23 @@
     color: var(--st-react-input-color);
     padding: var(--st-react-input-padding);
     display: flex;
-    gap: 4px;
+    gap: var(--st-grid-unit);
+
+    &.error {
+      @include st-input-error;
+    }
+
+    &.warning {
+      @include st-input-warning;
+    }
 
     .st-react-input--adornment {
       display: flex;
+      gap: var(--st-grid-unit);
+
+      * {
+        display: flex;
+      }
     }
 
     input.st-react-input--input {
@@ -24,26 +37,16 @@
       outline: none;
       width: 100%;
       padding: 0;
+      color: inherit;
+      background-color: inherit;
 
       &::placeholder {
-        color: var(--st-input-placeholder-color);
+        color: var(--st-react-input-placeholder-color);
       }
 
       &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
-      }
-
-      &.error {
-        @include st-input-error;
-        border: none;
-        outline: none;
-      }
-
-      &.warning {
-        @include st-input-warning;
-        border: none;
-        outline: none;
       }
     }
   }

@@ -1,4 +1,8 @@
-import { IconSearch } from "components/Icons";
+import {
+  IconChevronLeft,
+  IconChevronRight,
+  IconSearch,
+} from "components/Icons";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Input } from "components/Input";
 
@@ -25,6 +29,20 @@ IconInput.args = {
   leftAdornment: <IconSearch />,
 };
 
+export const MultipleIconInput = Template.bind({});
+MultipleIconInput.args = {
+  rightAdornment: (
+    <>
+      <span>kg</span>
+      <div>
+        <IconChevronLeft />
+        <IconChevronRight />
+      </div>
+      <IconSearch />
+    </>
+  ),
+};
+
 export const UnitInput = Template.bind({});
 UnitInput.args = {
   leftAdornment: <IconSearch />,
@@ -35,6 +53,14 @@ export const ErrorInput = Template.bind({});
 ErrorInput.args = {
   error: true,
   value: "woops",
+  leftAdornment: <IconSearch />,
+  rightAdornment: "kg",
+};
+
+export const WarningInput = Template.bind({});
+WarningInput.args = {
+  warning: true,
+  value: "uh oh?",
   leftAdornment: <IconSearch />,
   rightAdornment: "kg",
 };
