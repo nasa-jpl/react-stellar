@@ -15,6 +15,14 @@
     display: flex;
     gap: var(--st-grid-unit);
 
+    &:focus,
+    &:focus-within {
+      outline-width: initial;
+      outline-style: auto;
+      outline-color: Highlight;
+      outline-color: -webkit-focus-ring-color;
+    }
+
     &.error {
       @include st-input-error;
     }
