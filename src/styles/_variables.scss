@@ -1,4 +1,8 @@
 :root {
+  // Label.
+  --st-react-label-typography-line-height: 24px;
+  --st-react-label-required-spacing: 2px;
+
   // Multiselect.
   --st-react-multiselect-background: var(--st-gray-10);
   --st-react-multiselect-border-radius: 4px;
@@ -137,4 +141,17 @@
   --st-react-input-color: var(--st-input-color);
   --st-react-input-padding: var(--st-input-padding);
   --st-react-input-placeholder-color: var(--st-input-placeholder-color);
+
+  // Error.
+  --st-react-error-font-family: var(--st-typography-label-font-family);
+  --st-react-error-font-weight: var(--st-typography-label-font-weight);
+  --st-react-error-font-size: var(--st-typography-label-font-size);
+  --st-react-error-line-height: var(--st-typography-label-line-height);
+  --st-react-error-letter-spacing: var(--st-typography-label-letter-spacing);
+  --st-react-error-color: var(--st-error-red);
+  --st-react-error-spacing: 2px;
+
+  // FormField.
+  --st-react-formfield-horizontal-grid-unit: 4px;
+  --st-react-formfield-vertical-grid-unit: 2px;
 }
