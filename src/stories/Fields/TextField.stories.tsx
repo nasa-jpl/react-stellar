@@ -1,9 +1,8 @@
-import { IconSearch } from "components/Icons";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { TextField } from "components/Fields/TextField";
 
 export default {
-  title: "Atoms/Fields/TextField",
+  title: "Molecules/Fields/TextField",
   component: TextField,
 } as ComponentMeta<typeof TextField>;
 

@@ -9,46 +9,42 @@ export interface InputProps extends React.HTMLProps<HTMLInputElement> {
   rightAdornment?: React.ReactNode;
 }
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(
-  (
-    {
-      className = "",
-      inputClassName = "",
-      error,
-      warning,
-      leftAdornment,
-      rightAdornment,
-      ...inputProps
-    }: InputProps,
-    ref: React.ForwardedRef<HTMLInputElement>,
-  ) => {
-    return (
+export const Input = ({
+  ref,
+  className = "",
+  inputClassName = "",
+  error,
+  warning,
+  leftAdornment,
+  rightAdornment,
+  ...inputProps
+}: InputProps) => {
+  return (
+    <div
+      className={classNames("st-react-input", {
+        [className]: !!className,
+      })}
+    >
       <div
-        className={classNames("st-react-input", {
-          [className]: !!className,
+        className={classNames("st-react-input--container", {
+          error,
+          warning,
         })}
       >
-        <div
-          className={classNames("st-react-input--container", {
-            error,
-            warning,
+        {leftAdornment && (
+          <div className="st-react-input--adornment">{leftAdornment}</div>
+        )}
+        <input
+          className={classNames("st-react-input--input", {
+            [inputClassName]: !!inputClassName,
           })}
-        >
-          {leftAdornment && (
-            <div className="st-react-input--adornment">{leftAdornment}</div>
-          )}
-          <input
-            className={classNames("st-react-input--input", {
-              [inputClassName]: !!inputClassName,
-            })}
-            ref={ref}
-            {...inputProps}
-          />
-          {rightAdornment && (
-            <div className="st-react-input--adornment">{rightAdornment}</div>
-          )}
-        </div>
+          ref={ref}
+          {...inputProps}
+        />
+        {rightAdornment && (
+          <div className="st-react-input--adornment">{rightAdornment}</div>
+        )}
       </div>
-    );
-  },
-);
+    </div>
+  );
+};

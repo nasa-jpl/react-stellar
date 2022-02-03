@@ -11,14 +11,14 @@ export interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
   error?: string;
   leftAdornment?: React.ReactNode;
   rightAdornment?: React.ReactNode;
-  flow: "horizontal" | "vertical";
+  flow?: "horizontal" | "vertical";
 }
 
 export const TextField = ({
   ref,
   inputClassName,
   label,
-  flow,
+  flow = "vertical",
   required,
   error,
   leftAdornment,
@@ -30,7 +30,12 @@ export const TextField = ({
       <Label required={required}>{label}</Label>
 
       <FormField flow="vertical">
-        <Input error={!!error} {...inputProps} />
+        <Input
+          ref={ref}
+          className={inputClassName}
+          error={!!error}
+          {...inputProps}
+        />
         <Error>{error}</Error>
       </FormField>
     </FormField>
