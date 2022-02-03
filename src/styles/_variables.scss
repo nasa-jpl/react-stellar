@@ -26,7 +26,8 @@
   --st-react-dropdown-control-hover-background-color: var(--st-gray-10);
   --st-react-dropdown-control-hover-border: 1px solid var(--st-gray-20);
   --st-react-dropdown-control-focus-box-shadow: 0px 0px 0px 1px #4d90fe;
-  --st-react-dropdown-control-focus-open-box-shadow: 1px -1px 0px 0px #4d90fe, -1px 0px 0px 0px #4d90fe;
+  --st-react-dropdown-control-focus-open-box-shadow: 1px -1px 0px 0px #4d90fe,
+    -1px 0px 0px 0px #4d90fe;
   --st-react-dropdown-menu-focus-box-shadow: 0px 1px 0px 0px #4d90fe,
     1px 0px 0px 0px #4d90fe, -1px 0px 0px 0px #4d90fe;
   --st-react-dropdown-placeholder-color: var(--st-gray-50);
@@ -123,4 +124,17 @@
   --st-react-tooltip-animation-right: slideRightAndFade;
   --st-react-tooltip-animation-bottom: slideDownAndFade;
   --st-react-tooltip-animation-left: slideLeftAndFade;
+
+  // Input.
+  --st-react-input-font-family: var(--st-input-font-family);
+  --st-react-input-font-size: var(--st-input-font-size);
+  --st-react-input-font-weight: var(--st-input-font-weight);
+  --st-react-input-line-height: var(--st-input-line-height);
+  --st-react-input-letter-spacing: var(--st-input-letter-spacing);
+  --st-react-input-background-color: var(--st-input-background-color);
+  --st-react-input-border: var(--st-input-border);
+  --st-react-input-border-radius: var(--st-input-border-radius, 4px);
+  --st-react-input-color: var(--st-input-color);
+  --st-react-input-padding: var(--st-input-padding);
+  --st-react-input-placeholder-color: var(--st-input-placeholder-color);
 }
