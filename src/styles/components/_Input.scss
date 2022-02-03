@@ -16,7 +16,7 @@
     gap: var(--st-grid-unit);
 
     &:focus,
-    &:focus-within {
+    &.focus {
       outline-width: initial;
       outline-style: auto;
       outline-color: Highlight;
@@ -33,6 +33,7 @@
 
     .st-react-input--adornment {
       display: flex;
+      align-items: center;
       gap: var(--st-grid-unit);
 
       * {
