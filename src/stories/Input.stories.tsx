@@ -5,6 +5,7 @@ import {
 } from "components/Icons";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Input } from "components/Input";
+import { Button } from "index";
 
 export default {
   title: "Atoms/Input",
@@ -29,14 +30,14 @@ IconInput.args = {
   leftAdornment: <IconSearch />,
 };
 
-export const MultipleIconInput = Template.bind({});
-MultipleIconInput.args = {
+export const MultipleButtonIconInput = Template.bind({});
+MultipleButtonIconInput.args = {
   rightAdornment: (
     <>
       <span>kg</span>
       <div>
-        <IconChevronLeft />
-        <IconChevronRight />
+        <Button icon={<IconChevronLeft />} variant="icon" />
+        <Button icon={<IconChevronRight />} variant="icon" />
       </div>
       <IconSearch />
     </>
