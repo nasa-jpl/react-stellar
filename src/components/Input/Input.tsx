@@ -9,66 +9,62 @@ export interface InputProps extends React.HTMLProps<HTMLInputElement> {
   rightAdornment?: React.ReactNode;
 }
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(
-  (
-    {
-      className = "",
-      inputClassName = "",
-      error,
-      warning,
-      leftAdornment,
-      rightAdornment,
-      onFocus,
-      onBlur,
-      ...inputProps
-    }: InputProps,
-    ref: React.ForwardedRef<HTMLInputElement>,
-  ) => {
-    const [isFocused, setIsFocused] = useState(false);
-    const focusCallback = useCallback(
-      (event) => {
-        setIsFocused(true);
-        onFocus?.(event);
-      },
-      [onFocus],
-    );
-    const blurCallback = useCallback(
-      (event) => {
-        setIsFocused(false);
-        onBlur?.(event);
-      },
-      [onBlur],
-    );
-    return (
+export const Input = ({
+  ref,
+  className = "",
+  inputClassName = "",
+  error,
+  warning,
+  leftAdornment,
+  rightAdornment,
+  onFocus,
+  onBlur,
+  ...inputProps
+}: InputProps) => {
+  const [isFocused, setIsFocused] = useState(false);
+  const focusCallback = useCallback(
+    (event) => {
+      setIsFocused(true);
+      onFocus?.(event);
+    },
+    [onFocus],
+  );
+  const blurCallback = useCallback(
+    (event) => {
+      setIsFocused(false);
+      onBlur?.(event);
+    },
+    [onBlur],
+  );
+  return (
+    <div
+      className={classNames("st-react-input", {
+        [className]: !!className,
+      })}
+    >
       <div
-        className={classNames("st-react-input", {
-          [className]: !!className,
+        className={classNames("st-react-input--container", {
+          focus: isFocused,
+          error,
+          warning,
         })}
       >
-        <div
-          className={classNames("st-react-input--container", {
-            focus: isFocused,
-            error,
-            warning,
+        {leftAdornment && (
+          <div className="st-react-input--adornment">{leftAdornment}</div>
+        )}
+        <input
+          className={classNames("st-react-input--input", {
+            [inputClassName]: !!inputClassName,
           })}
-        >
-          {leftAdornment && (
-            <div className="st-react-input--adornment">{leftAdornment}</div>
-          )}
-          <input
-            className={classNames("st-react-input--input", {
-              [inputClassName]: !!inputClassName,
-            })}
-            ref={ref}
-            {...inputProps}
-            onFocus={focusCallback}
-            onBlur={blurCallback}
-          />
-          {rightAdornment && (
-            <div className="st-react-input--adornment">{rightAdornment}</div>
-          )}
-        </div>
+          ref={ref}
+          {...inputProps}
+          onFocus={focusCallback}
+          onBlur={blurCallback}
+        />
+        {rightAdornment && (
+          <div className="st-react-input--adornment">{rightAdornment}</div>
+        )}
       </div>
-    );
-  },
-);
+    </div>
+  );
+};
