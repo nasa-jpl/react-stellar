@@ -1,9 +1,21 @@
-import * as React from 'react';
+import * as React from "react";
 
 function SvgCollision(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <g clipPath="url(#collision_svg__clip0_24:238)" fillRule="evenodd" clipRule="evenodd" fill="currentColor">
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <g
+        clipPath="url(#collision_svg__clip0_24:238)"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        fill="currentColor"
+      >
         <path d="M.293.293a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414z" />
         <path d="M.293.293a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414z" />
         <path d="M1 6a1 1 0 011-1h3V2a1 1 0 112 0v4a1 1 0 01-1 1H2a1 1 0 01-1-1zM15.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414z" />

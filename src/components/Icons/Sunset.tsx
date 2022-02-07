@@ -1,9 +1,21 @@
-import * as React from 'react';
+import * as React from "react";
 
 function SvgSunset(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <g opacity={0.7} fillRule="evenodd" clipRule="evenodd" fill="currentColor">
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <g
+        opacity={0.7}
+        fillRule="evenodd"
+        clipRule="evenodd"
+        fill="currentColor"
+      >
         <path d="M2.381 6.381a.875.875 0 011.238 0l1 1A.875.875 0 113.38 8.62l-1-1a.875.875 0 010-1.238zM.125 12c0-.483.392-.875.875-.875h1a.875.875 0 010 1.75H1A.875.875 0 01.125 12zM13.125 12c0-.483.392-.875.875-.875h1a.875.875 0 010 1.75h-1a.875.875 0 01-.875-.875zM13.619 6.381a.875.875 0 010 1.238l-1 1A.875.875 0 1111.38 7.38l1-1a.875.875 0 011.238 0zM.125 15c0-.483.392-.875.875-.875h14a.875.875 0 010 1.75H1A.875.875 0 01.125 15z" />
       </g>
       <path

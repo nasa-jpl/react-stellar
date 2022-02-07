@@ -1,10 +1,23 @@
-import * as React from 'react';
+import * as React from "react";
 
 function SvgM20SuperCam(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <path d="M2 13h6v3H2v-3z" fill="currentColor" />
-      <circle opacity={0.5} cx={12.214} cy={8.214} r={1.5} fill="currentColor" />
+      <circle
+        opacity={0.5}
+        cx={12.214}
+        cy={8.214}
+        r={1.5}
+        fill="currentColor"
+      />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
