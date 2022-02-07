@@ -1,6 +1,6 @@
 {
-  "name": "@gov.nasa.jpl.stellar/react-stellar",
-  "version": "0.0.52",
+  "name": "@nasa-jpl/react-stellar",
+  "version": "0.1.0",
   "description": "The React implementation of the Stellar Design System",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -18,17 +18,17 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "build-lib": "rollup -c",
-    "build-icons": "svgr -d src/components/Icons/ node_modules/@gov.nasa.jpl.stellar/icons/icons",
+    "build-icons": "svgr -d src/components/Icons/ node_modules/@nasa-jpl/stellar/icons/svg",
     "compile": "tsc -p ."
   },
   "repository": {
     "type": "git",
-    "url": "git@github.jpl.nasa.gov:stellar/react-stellar.git"
+    "url": "git@github.com:nasa-jpl/react-stellar.git"
   },
   "author": "Aaron Plave",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
-    "@gov.nasa.jpl.stellar/stellar": "^1.0.22",
+    "@nasa-jpl/stellar": "^1.0.1",
     "@radix-ui/react-tooltip": "^0.1.5",
     "@radix-ui/react-alert-dialog": "^0.1.4",
     "@radix-ui/react-checkbox": "^0.1.3",
@@ -40,7 +40,6 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-react": "^7.14.5",
-    "@gov.nasa.jpl.stellar/icons": "^1.0.3",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-node-resolve": "^13.1.1",
