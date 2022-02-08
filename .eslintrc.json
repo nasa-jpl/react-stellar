@@ -33,8 +33,6 @@
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
 
-    // >>> style rules carried over from tslint
-    // todo: finish going through tslint-old.json and transferring new rules over
     "@typescript-eslint/naming-convention": [
       "error",
       { "selector": "class", "format": ["PascalCase"] }
@@ -54,7 +52,7 @@
     ],
     // enforce unix line breaks
     "linebreak-style": ["error", "unix"],
-    // >>> things we do a lot but should improve someday - warn instead of error
+
     "@typescript-eslint/ban-ts-comment": ["warn"],
     "@typescript-eslint/no-empty-interface": ["warn"],
     "consistent-return": ["warn"],
