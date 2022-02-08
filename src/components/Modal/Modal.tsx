@@ -68,9 +68,7 @@ export const ModalBody = (props: ModalBodyProps) => (
 
 export type ModalProps = {
   title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
   children?: string | React.ReactNode;
-  actions?: React.ReactNode[];
   trigger?: React.ReactNode;
   className?: string;
 } & DialogPrimitive.DialogProps;
@@ -78,9 +76,7 @@ export type ModalProps = {
 export const Modal = (props: ModalProps) => {
   const {
     title,
-    // description,
     children,
-    // actions = [],
     trigger,
     className = "",
     ...modalProps
