@@ -20,6 +20,7 @@ export type ModalContentProps = {
   children?: string | React.ReactNode;
 } & DialogPrimitive.DialogContentProps;
 
+// test 1
 export const ModalContent = React.forwardRef(
   (props: ModalContentProps, forwardedRef) => {
     const { children, className = "", ...modalProps } = props;
@@ -74,13 +75,7 @@ export type ModalProps = {
 } & DialogPrimitive.DialogProps;
 
 export const Modal = (props: ModalProps) => {
-  const {
-    title,
-    children,
-    trigger,
-    className = "",
-    ...modalProps
-  } = props;
+  const { title, children, trigger, className = "", ...modalProps } = props;
 
   return (
     <DialogPrimitive.Root {...modalProps}>
