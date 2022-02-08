@@ -1,9 +1,9 @@
-import classNames from "classnames";
+import React from "react";
+
 import { Error } from "components/Error";
 import { FormField } from "components/FormField";
 import { Label } from "components/Label";
 import { Input } from "index";
-import React from "react";
 
 export interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
   inputClassName?: string;
@@ -33,6 +33,8 @@ export const TextField = ({
         <Input
           ref={ref}
           className={inputClassName}
+          leftAdornment={leftAdornment}
+          rightAdornment={rightAdornment}
           error={!!error}
           {...inputProps}
         />

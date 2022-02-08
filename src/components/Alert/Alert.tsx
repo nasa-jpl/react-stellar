@@ -3,6 +3,37 @@ import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import classNames from "classnames";
 import { ModalActionRow } from "components/Modal";
 
+export type ActionContentProps = {
+  children?: string | React.ReactNode;
+} & AlertDialog.DialogContentProps;
+
+export const AlertContent = React.forwardRef(
+  (props: ActionContentProps, forwardedRef) => {
+    const { children, className = "", ...alertProps } = props;
+    const modalClass = classNames({
+      "st-react-modal": true,
+      "st-react-alert": true,
+      [className]: !!className,
+    });
+    return (
+      <AlertDialog.Content
+        // @ts-ignore
+        ref={forwardedRef}
+        className={modalClass}
+        {...alertProps}
+      >
+        {children}
+      </AlertDialog.Content>
+    );
+  },
+);
+
+export const AlertTrigger = AlertDialog.Trigger;
+export const AlertTitle = AlertDialog.Title;
+export const AlertDescription = AlertDialog.Description;
+export const AlertCancel = AlertDialog.Cancel;
+export const AlertAction = AlertDialog.Action;
+
 export type AlertProps = {
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
@@ -47,34 +78,3 @@ export const Alert = (props: AlertProps) => {
     </AlertDialog.Root>
   );
 };
-
-export type ActionContentProps = {
-  children?: string | React.ReactNode;
-} & AlertDialog.DialogContentProps;
-
-export const AlertContent = React.forwardRef(
-  (props: ActionContentProps, forwardedRef) => {
-    const { children, className = "", ...alertProps } = props;
-    const modalClass = classNames({
-      "st-react-modal": true,
-      "st-react-alert": true,
-      [className]: !!className,
-    });
-    return (
-      <AlertDialog.Content
-        // @ts-ignore
-        ref={forwardedRef}
-        className={modalClass}
-        {...alertProps}
-      >
-        {children}
-      </AlertDialog.Content>
-    );
-  }
-);
-
-export const AlertTrigger = AlertDialog.Trigger;
-export const AlertTitle = AlertDialog.Title;
-export const AlertDescription = AlertDialog.Description;
-export const AlertCancel = AlertDialog.Cancel;
-export const AlertAction = AlertDialog.Action;

@@ -1,17 +1,17 @@
 import classNames from "classnames";
 
-type Option = {
+interface Option {
   value: string;
   label: string | JSX.Element;
-};
+}
 
-export type MultiselectProps = {
+export interface MultiselectProps {
   options: Array<Option>;
   onChange: (value: string) => any;
   selectedValue: string;
   size?: "medium" | "large";
   className?: string;
-};
+}
 
 export const Multiselect = (props: MultiselectProps) => {
   const {

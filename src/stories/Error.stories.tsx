@@ -1,6 +1,5 @@
 import { Error } from "components/Error";
-import { Label } from "components/Label";
-import { IconWarning, Input } from "index";
+import { IconWarning } from "index";
 
 import { ComponentMeta } from "@storybook/react";
 
