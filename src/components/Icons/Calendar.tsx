@@ -1,8 +1,15 @@
-import * as React from 'react';
+import * as React from "react";
 
 function SvgCalendar(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <path
         d="M.5 2A1.5 1.5 0 012 .5h12A1.5 1.5 0 0115.5 2v12a1.5 1.5 0 01-1.5 1.5H2A1.5 1.5 0 01.5 14V2z"
         stroke="currentColor"

@@ -1,8 +1,15 @@
-import * as React from 'react';
+import * as React from "react";
 
 function SvgRover(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <g clipPath="url(#rover_svg__clip0_3577:8866)" fill="currentColor">
         <path d="M1 9a2 2 0 012-2h10a2 2 0 012 2v.334a1 1 0 01-.79.978l-2.714.582c-.33.07-.649.182-.95.333l-.757.379a4 4 0 01-3.578 0l-.757-.379a3.998 3.998 0 00-.95-.333l-2.714-.582A1 1 0 011 9.334V9z" />
         <rect x={6} y={4} width={4} height={5} rx={1} />
