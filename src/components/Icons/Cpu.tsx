@@ -1,8 +1,15 @@
-import * as React from 'react';
+import * as React from "react";
 
 function SvgCpu(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <path
         clipRule="evenodd"
         d="M3 4a1 1 0 011-1h8a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"

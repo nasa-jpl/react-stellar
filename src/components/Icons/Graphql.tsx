@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 
 function SvgGraphql(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -7,8 +7,8 @@ function SvgGraphql(props: React.SVGProps<SVGSVGElement>) {
       width={16}
       height={16}
       style={{
-        msTransform: 'rotate(360deg)',
-        WebkitTransform: 'rotate(360deg)',
+        msTransform: "rotate(360deg)",
+        WebkitTransform: "rotate(360deg)",
       }}
       viewBox="0 0 24 24"
       transform="rotate(360)"

@@ -1,8 +1,15 @@
-import * as React from 'react';
+import * as React from "react";
 
 function SvgSatellite(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width={17} height={17} viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={17}
+      height={17}
+      viewBox="0 0 17 17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <rect
         opacity={0.7}
         x={3.071}
@@ -23,7 +30,15 @@ function SvgSatellite(props: React.SVGProps<SVGSVGElement>) {
         transform="rotate(45 12.97 9.607)"
         fill="currentColor"
       />
-      <rect x={8.728} y={3.95} width={6} height={6} rx={1} transform="rotate(45 8.728 3.95)" fill="currentColor" />
+      <rect
+        x={8.728}
+        y={3.95}
+        width={6}
+        height={6}
+        rx={1}
+        transform="rotate(45 8.728 3.95)"
+        fill="currentColor"
+      />
       <path
         opacity={0.7}
         fillRule="evenodd"

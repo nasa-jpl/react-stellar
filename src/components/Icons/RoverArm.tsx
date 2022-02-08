@@ -1,8 +1,15 @@
-import * as React from 'react';
+import * as React from "react";
 
 function SvgRoverArm(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <rect x={3} y={13} width={10} height={2} rx={1} fill="currentColor" />
       <path
         fillRule="evenodd"

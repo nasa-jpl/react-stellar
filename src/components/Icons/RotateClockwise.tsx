@@ -1,8 +1,15 @@
-import * as React from 'react';
+import * as React from "react";
 
 function SvgRotateClockwise(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <g clipPath="url(#rotate_clockwise_svg__clip0_5585:6804)">
         <path
           d="M14.397 6.5l-2.74-2.74a6 6 0 10-.915 9.24c1.083-.72 1.674-1.5 2.174-2.5"
