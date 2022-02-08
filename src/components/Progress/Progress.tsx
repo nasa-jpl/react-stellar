@@ -1,10 +1,10 @@
 import classNames from "classnames";
 import * as RadixProgress from "@radix-ui/react-progress";
 
-export type ProgressProps = {
+export interface ProgressProps {
   progress?: number;
   className?: string;
-};
+}
 
 export const Progress = (props: ProgressProps) => {
   const { progress, className = "" } = props;

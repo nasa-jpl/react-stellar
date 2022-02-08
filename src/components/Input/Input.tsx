@@ -1,5 +1,6 @@
+import React, { useCallback, useState } from "react";
+
 import classNames from "classnames";
-import React, { forwardRef, RefObject, useCallback, useState } from "react";
 
 export interface InputProps extends React.HTMLProps<HTMLInputElement> {
   inputClassName?: string;

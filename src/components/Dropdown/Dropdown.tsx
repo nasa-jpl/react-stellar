@@ -10,15 +10,17 @@ import { SelectComponents } from "react-select/dist/declarations/src/components"
 import classNames from "classnames";
 import { IconClose } from "components/Icons";
 
-export type OptionType = { [string: string]: any };
+export interface OptionType {
+  [string: string]: any;
+}
 export type OptionsType = OptionType[];
-export type GroupType = {
+export interface GroupType {
   [string: string]: any; // group label
   options: OptionsType;
-};
+}
 
 const ClearIndicator = (
-  props: ClearIndicatorProps<OptionType, boolean, GroupType>
+  props: ClearIndicatorProps<OptionType, boolean, GroupType>,
 ) => {
   const {
     children = <IconClose />,
@@ -67,9 +69,9 @@ export const Dropdown = (props: DropdownProps) => {
     [className]: !!className,
   });
   const SingleValueComponent: SingleValue<OptionType> = (
-    props: SingleValueProps
+    singleValueProps: SingleValueProps,
   ) => {
-    const { children, ...otherProps } = props;
+    const { children, ...otherProps } = singleValueProps;
     return (
       <components.SingleValue {...otherProps}>
         {labelPosition === "inner" && (
@@ -80,9 +82,11 @@ export const Dropdown = (props: DropdownProps) => {
     );
   };
 
-  const MultiValueRemove = (props: MultiValueRemoveProps<OptionType>) => {
+  const MultiValueRemove = (
+    multiValueProps: MultiValueRemoveProps<OptionType>,
+  ) => {
     return (
-      <components.MultiValueRemove {...props}>
+      <components.MultiValueRemove {...multiValueProps}>
         <IconClose />
       </components.MultiValueRemove>
     );
@@ -91,7 +95,7 @@ export const Dropdown = (props: DropdownProps) => {
   const selectComponents = Object.assign(
     {},
     { SingleValue: SingleValueComponent, ClearIndicator, MultiValueRemove },
-    propComponents
+    propComponents,
   );
 
   return (
