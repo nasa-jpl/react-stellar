@@ -14,7 +14,7 @@ export const StringTextField = Template.bind({});
 StringTextField.args = {
   type: "string",
   placeholder: "placeholder",
-  flow: "horizontal",
+  labelPosition: "left",
   label: "Name",
   required: true,
 };
@@ -24,7 +24,7 @@ StringTextErrorField.args = {
   type: "string",
   placeholder: "placeholder",
   error: "this field is required",
-  flow: "horizontal",
+  labelPosition: "top",
   label: "Name",
   required: true,
 };
