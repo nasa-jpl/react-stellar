@@ -1,6 +1,6 @@
 {
   "name": "@nasa-jpl/react-stellar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The React implementation of the Stellar Design System",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
