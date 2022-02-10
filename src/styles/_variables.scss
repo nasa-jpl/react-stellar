@@ -108,12 +108,15 @@
     drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
 
   // Checkbox.
-  --st-react-checkbox-hover-background: var(--st-gray-10);
-  --st-react-checkbox-indicator-checked-background: rgba(240, 228, 255, 0.24);
-  --st-react-checkbox-indicator-checked-border-color: var(--st-primary-50);
-  --st-react-checkbox-indicator-color: var(--st-primary-50);
-  --st-react-checkbox-indicator-border: 1px solid gray;
-  --st-react-checkbox-label-color: var(--st-gray-60);
+  --st-react-checkbox-unchecked-border-color: var(--st-gray-10);
+  --st-react-checkbox-unchecked-hover-border-color: var(--st-gray-10);
+  --st-react-checkbox-checked-background: rgba(240, 228, 255, 0.24);
+  --st-react-checkbox-checked-border-color: var(--st-primary-50);
+  --st-react-checkbox-checked-hover-background: rgba(240, 228, 255, 0.24);
+  --st-react-checkbox-checked-hover-border-color: var(--st-primary-50);
+  // --st-react-checkbox-color: var(--st-primary-50);
+  // --st-react-checkbox-border: 1px solid gray;
+  // --st-react-checkbox-label-color: var(--st-gray-60);
 
   // Tooltip.
   --st-react-tooltip-border-radius: calc(var(--st-grid-unit) / 2);

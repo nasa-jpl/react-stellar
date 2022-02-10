@@ -1,24 +1,29 @@
 .st-react-checkbox {
-  flex: 1;
-  cursor: pointer;
-  display: flex;
-  gap: var(--st-grid-unit);
-  align-items: center;
-  padding: calc(var(--st-grid-unit) / 2) var(--st-grid-unit);
-  background: none;
-  border: none;
-  border-radius: 4px;
-  position: relative;
-
-  &:hover {
-    background: var(--st-react-checkbox-hover-background);
+  // flex: 1;
+  &:not(.st-react-checkbox--unlabeled) {
+    display: flex;
+    align-items: center;
+    gap: var(--st-grid-unit);
   }
 
-  & label {
+  & button {
+    padding: 0;
+    background: none;
+    border: none;
     cursor: pointer;
   }
 
-  &[data-state="checked"] {
+  & button[data-state="unchecked"] {
+    &:hover {
+      border-color: var(--st-react-checkbox-hover-background);
+    }
+  }
+
+  & button[data-state="checked"] {
+    background: var(--st-react-checkbox-checked-background);
+    border-color: var(--st-react-checkbox-checked-border-color);
+    &:hover {
+    }
     .st-react-checkbox--indicator {
       background: var(--st-react-checkbox-indicator-checked-background);
       border-color: var(--st-react-checkbox-indicator-checked-border-color);

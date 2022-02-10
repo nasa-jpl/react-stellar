@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import classNames from "classnames";
+import { Label } from "components/Label";
 
 export type CheckboxProps = {
   label?: string;
@@ -43,27 +44,26 @@ export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(
       [className]: !!className,
     });
     return (
-      <CheckboxPrimitive.Root
-        id={label}
-        className={checkboxClass}
-        disabled={disabled}
-        {...other}
-        ref={ref}
-      >
-        <div className="st-react-checkbox--indicator">
-          <div className="st-react-checkbox--indicator-check">
-            <CheckSVG />
+      <div className={checkboxClass}>
+        <CheckboxPrimitive.Root
+          id={label}
+          className="st-react-checkbox--box"
+          disabled={disabled}
+          ref={ref}
+          {...other}
+        >
+          <div className="st-react-checkbox--indicator">
+            <div className="st-react-checkbox--indicator-check">
+              <CheckSVG />
+            </div>
           </div>
-        </div>
+        </CheckboxPrimitive.Root>
         {label && (
-          <label
-            className="st-react-checkbox--label st-typography-label"
-            htmlFor={label}
-          >
+          <Label htmlFor={label} className="st-react-checkbox--label">
             {label}
-          </label>
+          </Label>
         )}
-      </CheckboxPrimitive.Root>
+      </div>
     );
   },
 );

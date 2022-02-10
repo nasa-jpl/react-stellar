@@ -4,6 +4,7 @@ import { Input } from "index";
 
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Error } from "components/Error";
+import { Checkbox } from "@radix-ui/react-checkbox";
 
 export default {
   title: "Atoms/FormField",
@@ -36,6 +37,17 @@ VerticalFormField.args = {
     <>
       <Label required={true}>Name</Label>
       <Input value="foo" />
+    </>
+  ),
+};
+
+export const VerticalFormField2 = Template.bind({});
+VerticalFormField2.args = {
+  flow: "horizontal",
+  children: (
+    <>
+      <Label required={true}>Name</Label>
+      <Checkbox />
     </>
   ),
 };
