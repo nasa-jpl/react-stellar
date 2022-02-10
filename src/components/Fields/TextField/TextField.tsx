@@ -3,7 +3,7 @@ import React from "react";
 import { Error } from "components/Error";
 import { FormField } from "components/FormField";
 import { Label } from "components/Label";
-import { Input } from "index";
+import { Input } from "components/Input";
 
 export interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
   inputClassName?: string;
