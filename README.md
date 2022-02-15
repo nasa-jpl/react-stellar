@@ -38,7 +38,7 @@ Components are developed and demoed using Storybook. Storybook can be run locall
 To install the published library follow the steps below. These steps assume you already have NodeJS installed on your machine and that you are installing this library into a React project.
 
 1. Set up your JPL Artifactory credentials using the instructions above.
-2. Run `npm install --save-dev @nasa-jpl/react-stellar` in the root of your React application repository. 
+2. Run `npm install --save-dev @nasa-jpl/react-stellar` in the root of your React application repository.
 
 ## Importing Stellar Components in React
 
