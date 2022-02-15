@@ -120,12 +120,9 @@
   }
 
   .st-react-dropdown--rs__control--is-focused {
-    box-shadow: --st-react-dropdown-control-focus-box-shadow;
+    box-shadow: var(--st-react-dropdown-control-focus-box-shadow);
   }
 
-  .st-react-dropdown--rs__control--menu-is-open.st-react-dropdown--rs__control--is-focused {
-    box-shadow: var(--st-react-dropdown-control-focus-open-box-shadow);
-  }
   .st-react-dropdown--rs__control--menu-is-open + .st-react-dropdown--rs__menu {
     box-shadow: var(--st-react-dropdown-menu-focus-box-shadow);
   }
