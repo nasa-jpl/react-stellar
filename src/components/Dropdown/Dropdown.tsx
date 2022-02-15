@@ -2,7 +2,9 @@ import ReactSelect, {
   ClearIndicatorProps,
   CommonProps,
   components,
+  GroupBase,
   MultiValueRemoveProps,
+  Props,
   SingleValue,
   SingleValueProps,
 } from "react-select";
@@ -46,7 +48,8 @@ export type DropdownProps = {
   label?: string;
   labelPosition: "top" | "left" | "inner";
   components: SelectComponents<OptionType, boolean, GroupType>;
-} & CommonProps<OptionType, boolean, GroupType>;
+} & CommonProps<OptionType, boolean, GroupType> &
+  Props;
 
 export const Dropdown = (props: DropdownProps) => {
   const {
@@ -92,7 +95,9 @@ export const Dropdown = (props: DropdownProps) => {
     );
   };
 
-  const selectComponents = Object.assign(
+  const selectComponents:
+    | Partial<SelectComponents<unknown, boolean, GroupBase<unknown>>>
+    | undefined = Object.assign(
     {},
     { SingleValue: SingleValueComponent, ClearIndicator, MultiValueRemove },
     propComponents,
