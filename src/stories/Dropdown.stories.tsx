@@ -1,3 +1,4 @@
+import { action } from "@storybook/addon-actions";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Dropdown } from "components/Dropdown";
@@ -9,7 +10,7 @@ export default {
 } as ComponentMeta<typeof Dropdown>;
 
 const Template: ComponentStory<typeof Dropdown> = (args) => (
-  <Dropdown {...args} />
+  <Dropdown {...args} onChange={action('changed')} />
 );
 
 export const Default = Template.bind({});
