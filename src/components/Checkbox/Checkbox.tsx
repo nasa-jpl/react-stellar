@@ -52,10 +52,8 @@ export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(
           ref={ref}
           {...other}
         >
-          <div className="st-react-checkbox--indicator">
-            <div className="st-react-checkbox--indicator-check">
-              <CheckSVG />
-            </div>
+          <div className="st-react-checkbox--indicator-check">
+            <CheckSVG />
           </div>
         </CheckboxPrimitive.Root>
         {label && (
