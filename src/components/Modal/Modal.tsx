@@ -16,6 +16,7 @@ export const ModalDescription = (props: ModalDescriptionProps) => (
   </DialogPrimitive.Description>
 );
 
+// test 2
 export type ModalContentProps = {
   children?: string | React.ReactNode;
 } & DialogPrimitive.DialogContentProps;
