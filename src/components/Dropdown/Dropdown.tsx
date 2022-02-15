@@ -47,7 +47,7 @@ export type DropdownProps = {
   disabled?: boolean;
   label?: string;
   labelPosition: "top" | "left" | "inner";
-  components: SelectComponents<OptionType, boolean, GroupType>;
+  components?: SelectComponents<OptionType, boolean, GroupType>;
 } & CommonProps<OptionType, boolean, GroupType> &
   Props;
 
