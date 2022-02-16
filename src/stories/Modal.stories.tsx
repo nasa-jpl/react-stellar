@@ -8,7 +8,7 @@ import {
   ModalBody,
   ModalDescription,
 } from "components/Modal";
-import { Button } from "index";
+import { Button, Dropdown } from "index";
 
 export default {
   title: "Molecules/Modal",
@@ -41,6 +41,53 @@ Controlled.args = {
         <Button>Begin</Button>
       </ModalActionRow>
     </>
+  ),
+};
+
+export const WithScrollingContent = Template.bind({});
+WithScrollingContent.parameters = { docs: { disable: true } }; // disable docs for this modal since it will always be open and will interfere with doc viewing
+WithScrollingContent.args = {
+  title: "Modal Title",
+  open: true,
+  onOpenChange: action("open changed"),
+  children: (
+    <div style={{ maxHeight: "400px", overflow: "auto" }}>
+      <ModalBody>
+        <ModalDescription>
+          Somewhere, something incredible is waiting to be known.
+        </ModalDescription>
+        {/* @ts-ignore */}
+        <Dropdown
+          maxMenuHeight={100}
+          onChange={() => {}}
+          label="Label"
+          labelPosition="top"
+          options={[
+            { label: "Label 1", value: 1 },
+            { label: "Label 2", value: 2 },
+            { label: "Label 3", value: 3 },
+            { label: "Label 4", value: 4 },
+            { label: "Label 5", value: 5 },
+            { label: "Label 6", value: 6 },
+            { label: "Label 6", value: 6 },
+            { label: "Label 6", value: 6 },
+            { label: "Label 6", value: 6 },
+            { label: "Label 6", value: 6 },
+            { label: "Label 6", value: 6 },
+            { label: "Label 6", value: 6 },
+            { label: "Label 6", value: 6 },
+          ]}
+        />
+        <br />
+        <img width="100%" src={img} />
+      </ModalBody>
+      <ModalActionRow>
+        <ModalClose asChild>
+          <Button variant="secondary">Cancel</Button>
+        </ModalClose>
+        <Button>Begin</Button>
+      </ModalActionRow>
+    </div>
   ),
 };
 
