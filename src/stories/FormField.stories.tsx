@@ -40,14 +40,3 @@ VerticalFormField.args = {
     </>
   ),
 };
-
-export const VerticalFormField2 = Template.bind({});
-VerticalFormField2.args = {
-  flow: "horizontal",
-  children: (
-    <>
-      <Label required={true}>Name</Label>
-      <Checkbox />
-    </>
-  ),
-};
