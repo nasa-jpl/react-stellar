@@ -2,6 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Button } from "components/Button";
 import IconSol from "components/Icons/Sol";
+import { Heart } from "phosphor-react";
 
 export default {
   title: "Atoms/Button",
@@ -42,6 +43,12 @@ export const Icon = Template.bind({});
 Icon.args = {
   variant: "icon",
   icon: <IconSol />,
+};
+
+export const IconPhosphor = Template.bind({});
+IconPhosphor.args = {
+  variant: "icon",
+  icon: <Heart size="16" weight="fill" />,
 };
 
 export const Large = Template.bind({});
