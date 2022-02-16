@@ -10,7 +10,7 @@ export default {
 } as ComponentMeta<typeof Dropdown>;
 
 const Template: ComponentStory<typeof Dropdown> = (args) => (
-  <Dropdown {...args} onChange={action('changed')} />
+  <Dropdown {...args} onChange={action("changed")} />
 );
 
 export const Default = Template.bind({});
@@ -29,9 +29,18 @@ Default.args = {
 
 export const LongList = Template.bind({});
 const longListItems = [];
-for (let i = 0; i < 100; i++)
+for (let i = 0; i < 100; i++) {
   longListItems.push({ label: `Label ${i}`, value: i });
+}
 LongList.args = {
+  options: longListItems,
+  label: "Dropdown Label",
+  labelPosition: "top",
+};
+
+export const MaxHeight = Template.bind({});
+MaxHeight.args = {
+  maxMenuHeight: 72,
   options: longListItems,
   label: "Dropdown Label",
   labelPosition: "top",
