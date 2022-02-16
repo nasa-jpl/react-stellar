@@ -80,24 +80,26 @@ export const Modal = (props: ModalProps) => {
 
   return (
     <DialogPrimitive.Root {...modalProps}>
-      <DialogPrimitive.Overlay className="st-react-modal--overlay" />
-      <ModalContent className={className}>
-        <div className="st-react-modal--header">
-          <div className="st-react-modal--header--title-row">
-            <ModalTitle asChild>
-              <div className="st-react-modal--header--text st-typography-header">
-                {title}
-              </div>
-            </ModalTitle>
-            <DialogPrimitive.Close asChild>
-              <Button variant="icon">
-                <IconClose />
-              </Button>
-            </DialogPrimitive.Close>
+      <DialogPrimitive.Overlay className="st-react-modal--overlay">
+        <ModalContent className={className}>
+          <div className="st-react-modal--header">
+            <div className="st-react-modal--header--title-row">
+              <ModalTitle asChild>
+                <div className="st-react-modal--header--text st-typography-header">
+                  {title}
+                </div>
+              </ModalTitle>
+              <DialogPrimitive.Close asChild>
+                <Button variant="icon">
+                  <IconClose />
+                </Button>
+              </DialogPrimitive.Close>
+            </div>
           </div>
-        </div>
-        {children}
-      </ModalContent>
+          {children}
+        </ModalContent>
+      </DialogPrimitive.Overlay>
+
       {trigger && <ModalTrigger asChild>{trigger}</ModalTrigger>}
     </DialogPrimitive.Root>
   );
