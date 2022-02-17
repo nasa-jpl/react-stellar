@@ -19,7 +19,7 @@ export const Label = ({
   if (htmlFor) optionalProps.htmlFor = htmlFor;
   return (
     <label
-      className={classNames("st-react-label st-typography-label", {
+      className={classNames("st-react-label st-typography-body", {
         [className]: !!className,
       })}
       {...optionalProps}
