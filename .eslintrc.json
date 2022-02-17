@@ -37,7 +37,6 @@
       "error",
       { "selector": "class", "format": ["PascalCase"] }
     ],
-    "@typescript-eslint/consistent-type-definitions": ["warn", "interface"],
     "@typescript-eslint/unified-signatures": ["warn"],
     "@typescript-eslint/member-ordering": [
       "warn",
