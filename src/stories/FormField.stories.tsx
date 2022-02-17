@@ -4,6 +4,7 @@ import { Input } from "index";
 
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Error } from "components/Error";
+import { Checkbox } from "@radix-ui/react-checkbox";
 
 export default {
   title: "Atoms/FormField",
