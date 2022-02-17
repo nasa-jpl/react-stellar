@@ -2,12 +2,12 @@ import React from "react";
 
 import classNames from "classnames";
 
-export type LabelProps = {
+export interface LabelProps {
   children: React.ReactNode;
   htmlFor?: string;
   className?: string;
   required?: boolean;
-};
+}
 
 export const Label = ({
   children,
