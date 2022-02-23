@@ -28,20 +28,20 @@ const popoverChildren = (
       <div style={{ marginBottom: "8px" }} className="st-typography-small-caps">
         Option Group 1
       </div>
-      <Checkbox style={{ width: "100%" }} label="Group1 1" />
-      <Checkbox style={{ width: "100%" }} label="Group1 2" />
-      <Checkbox style={{ width: "100%" }} label="Group1 3" />
-      <Checkbox style={{ width: "100%" }} label="Group1 4" />
+      <Checkbox label="Group1 1" />
+      <Checkbox label="Group1 2" />
+      <Checkbox label="Group1 3" />
+      <Checkbox label="Group1 4" />
     </div>
     <br />
     <div>
       <div style={{ marginBottom: "8px" }} className="st-typography-small-caps">
         Option Group 2
       </div>
-      <Checkbox style={{ width: "100%" }} label="Group2 1" />
-      <Checkbox style={{ width: "100%" }} label="Group2 2" />
-      <Checkbox style={{ width: "100%" }} label="Group2 3" />
-      <Checkbox style={{ width: "100%" }} label="Group2 4" />
+      <Checkbox label="Group2 1" />
+      <Checkbox label="Group2 2" />
+      <Checkbox label="Group2 3" />
+      <Checkbox label="Group2 4" />
     </div>
     <br />
     <PopoverClose asChild>
