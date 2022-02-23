@@ -30,7 +30,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       "st-button": true,
       secondary: variant === "secondary",
       tertiary: variant === "tertiary",
-      "st-react-button-icon": variant === "icon", // TODO implement icon left and right once design settles
+      icon: variant === "icon",
       large: size === "large",
       [className]: !!className,
     });
@@ -47,5 +47,5 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {children}
       </button>
     );
-  }
+  },
 );
