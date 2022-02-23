@@ -49,19 +49,6 @@
   padding: var(--st-react-modal-action-row-padding);
   gap: var(--st-grid-unit);
   border-top: var(--st-react-modal-action-row-border-top);
-
-  & .st-button.secondary {
-    background: var(--st-react-modal-action-row-secondary-button-background);
-    border: var(--st-react-modal-action-row-secondary-button-border);
-
-    &:hover {
-      &:not([disabled]) {
-        background-color: var(
-          --st-react-modal-action-row-secondary-button-hover-background
-        );
-      }
-    }
-  }
 }
 
 .st-react-modal--overlay {
