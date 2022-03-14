@@ -91,6 +91,42 @@ WithScrollingContent.args = {
   ),
 };
 
+export const OverrideModalContentProps = Template.bind({});
+OverrideModalContentProps.parameters = { docs: { disable: true } }; // disable docs for this modal since it will always be open and will interfere with doc viewing
+OverrideModalContentProps.args = {
+  title: "Modal Title",
+  onOpenChange: action("open changed"),
+  trigger: (
+    <Button size="large" onClick={() => {}}>
+      Open Modal
+    </Button>
+  ),
+  modalContentProps: {
+    onEscapeKeyDown: (evt) => {
+      evt.preventDefault();
+    },
+    onPointerDownOutside: (evt) => {
+      evt.preventDefault();
+    },
+  },
+  children: (
+    <div>
+      <ModalBody>
+        <ModalDescription>
+          Escape and pointer down outside ModalContent events have been overridden to not automatically close the modal.
+        </ModalDescription>
+        <img width="100%" src={img} />
+      </ModalBody>
+      <ModalActionRow>
+        <ModalClose asChild>
+          <Button variant="secondary">Cancel</Button>
+        </ModalClose>
+        <Button>Begin</Button>
+      </ModalActionRow>
+    </div>
+  ),
+};
+
 export const ReactJSXExample = () => (
   <div>
     <Modal
