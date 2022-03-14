@@ -113,7 +113,8 @@ OverrideModalContentProps.args = {
     <div>
       <ModalBody>
         <ModalDescription>
-          Escape and pointer down outside ModalContent events have been overridden to not automatically close the modal.
+          Escape and pointer down outside ModalContent events have been
+          overridden to not automatically close the modal.
         </ModalDescription>
         <img width="100%" src={img} />
       </ModalBody>
