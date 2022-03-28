@@ -39,6 +39,7 @@ export type AlertProps = {
   description?: string | React.ReactNode;
   children?: string | React.ReactNode;
   trigger?: React.ReactNode;
+  alertContentProps?: AlertDialog.AlertDialogContentProps;
   className?: string;
 } & AlertDialog.DialogProps;
 
@@ -49,13 +50,14 @@ export const Alert = (props: AlertProps) => {
     children,
     trigger,
     className = "",
+    alertContentProps,
     ...alertProps
   } = props;
 
   return (
     <AlertDialog.Root {...alertProps}>
       <AlertDialog.Overlay className="st-react-modal--overlay" />
-      <AlertContent className={className}>
+      <AlertContent className={className} {...alertContentProps}>
         <div className="st-react-modal--header">
           <div className="st-react-modal--header--title-row">
             <AlertTitle asChild>

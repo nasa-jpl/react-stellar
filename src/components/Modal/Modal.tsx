@@ -73,15 +73,23 @@ export type ModalProps = {
   children?: string | React.ReactNode;
   trigger?: React.ReactNode;
   className?: string;
+  modalContentProps?: DialogPrimitive.DialogContentProps;
 } & DialogPrimitive.DialogProps;
 
 export const Modal = (props: ModalProps) => {
-  const { title, children, trigger, className = "", ...modalProps } = props;
+  const {
+    title,
+    children,
+    trigger,
+    className = "",
+    modalContentProps,
+    ...modalProps
+  } = props;
 
   return (
     <DialogPrimitive.Root {...modalProps}>
       <DialogPrimitive.Overlay className="st-react-modal--overlay">
-        <ModalContent className={className}>
+        <ModalContent className={className} {...modalContentProps}>
           <div className="st-react-modal--header">
             <div className="st-react-modal--header--title-row">
               <ModalTitle asChild>

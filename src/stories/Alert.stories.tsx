@@ -33,6 +33,37 @@ Controlled.args = {
   ),
 };
 
+export const OverrideContentProps = Template.bind({});
+OverrideContentProps.parameters = { docs: { disable: true } }; // disable docs for this modal since it will always be open and will interfere with doc viewing
+OverrideContentProps.args = {
+  title: "Are you sure?",
+  trigger: (
+    <Button size="large" onClick={() => {}}>
+      Open Alert
+    </Button>
+  ),
+  description:
+    "Escape has been overridden to not automatically close the alert.",
+  onOpenChange: action("open changed"),
+  alertContentProps: {
+    onEscapeKeyDown: (evt) => {
+      evt.preventDefault();
+    },
+  },
+  children: (
+    <>
+      <AlertCancel asChild>
+        <Button variant="secondary" onClick={action("action")}>
+          Cancel
+        </Button>
+      </AlertCancel>
+      <AlertAction asChild>
+        <Button onClick={action("action")}>Delete</Button>
+      </AlertAction>
+    </>
+  ),
+};
+
 export const ReactJSXExample = () => (
   <Alert
     title="Are you sure?"
