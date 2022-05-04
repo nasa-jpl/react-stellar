@@ -35,7 +35,7 @@ for (let i = 0; i < 100; i++) {
 LongList.args = {
   options: longListItems,
   label: "Dropdown Label",
-  labelPosition: "top",
+  labelPosition: "left",
 };
 
 export const MaxHeight = Template.bind({});

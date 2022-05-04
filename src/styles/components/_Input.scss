@@ -20,7 +20,7 @@
       outline-width: initial;
       outline-style: auto;
       outline-color: Highlight;
-      outline-color: -webkit-focus-ring-color;
+      outline-color: var(--st-react-input-outline);
     }
 
     &.error {
