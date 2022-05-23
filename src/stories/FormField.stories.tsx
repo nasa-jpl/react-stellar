@@ -23,7 +23,7 @@ HorizontalFormField.args = {
       <Label required={true}>Name</Label>
 
       <FormField flow="vertical">
-        <Input value="foo" />
+        <Input defaultValue="foo" />
         <Error>This is an error!</Error>
       </FormField>
     </>
@@ -36,7 +36,7 @@ VerticalFormField.args = {
   children: (
     <>
       <Label required={true}>Name</Label>
-      <Input value="foo" />
+      <Input defaultValue="foo" />
     </>
   ),
 };
