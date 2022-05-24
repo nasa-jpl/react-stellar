@@ -1,48 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { Error } from "components/Error";
 import { FormField } from "components/FormField";
 import { Label } from "components/Label";
-import { Input } from "components/Input";
+import { Input, InputProps } from "components/Input";
+import { Error } from "components/Error";
+import { Warning } from "components/Warning";
 
-export interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
+import { simpleUniqueId } from "../../../util";
+
+export interface TextFieldProps
+  extends Omit<InputProps, "ref" | "error" | "warning"> {
   inputClassName?: string;
   label?: string;
   error?: string;
+  warning?: string;
+  isError?: boolean;
+  isWarning?: boolean;
+  helperText?: string;
   leftAdornment?: React.ReactNode;
   rightAdornment?: React.ReactNode;
   labelPosition?: "top" | "left";
 }
 
-export const TextField = ({
-  ref,
-  inputClassName,
-  label,
-  labelPosition = "top",
-  required,
-  error,
-  leftAdornment,
-  rightAdornment,
-  ...inputProps
-}: TextFieldProps) => {
-  return (
-    <FormField
-      flow={labelPosition === "left" ? "horizontal" : "vertical"}
-      className="st-react-text-field"
-    >
-      <Label required={required}>{label}</Label>
+export const TextField = React.forwardRef(
+  (
+    {
+      inputClassName,
+      id,
+      label,
+      labelPosition = "top",
+      required,
+      error,
+      warning,
+      isError,
+      isWarning,
+      helperText,
+      leftAdornment,
+      rightAdornment,
+      ...inputProps
+    }: TextFieldProps,
+    forwardedRef: React.Ref<HTMLInputElement>,
+  ) => {
+    const [formId] = useState(() => id || simpleUniqueId("textfield-"));
+    return (
+      <FormField
+        flow={labelPosition === "left" ? "horizontal" : "vertical"}
+        className="st-react-text-field"
+      >
+        <Label required={required} htmlFor={formId}>
+          {label}
+        </Label>
 
-      <FormField flow="vertical">
-        <Input
-          ref={ref}
-          className={inputClassName}
-          leftAdornment={leftAdornment}
-          rightAdornment={rightAdornment}
-          error={!!error}
-          {...inputProps}
-        />
-        <Error>{error}</Error>
+        <FormField flow="vertical">
+          <Input
+            ref={forwardedRef}
+            id={formId}
+            className={inputClassName}
+            leftAdornment={leftAdornment}
+            rightAdornment={rightAdornment}
+            error={!!error || isError}
+            warning={!!warning || isWarning}
+            {...inputProps}
+          />
+          <div className="st-react-text-field-helper-text">
+            {error ? <Error>{error}</Error> : <></>}
+            {!error && warning ? <Warning>{warning}</Warning> : <></>}
+            {!error && !warning && helperText ? (
+              <span className="st-react-input-helper-text">{helperText}</span>
+            ) : (
+              <></>
+            )}
+          </div>
+        </FormField>
       </FormField>
-    </FormField>
-  );
-};
+    );
+  },
+);
+
+export default TextField;

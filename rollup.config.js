@@ -13,23 +13,26 @@ export default [
     input: "./src/index.ts",
     output: {
       dir: "dist",
-      format: "esm",
+      format: "cjs",
       preserveModules: true,
       preserveModulesRoot: "src",
-      sourcemap: true,
+      sourcemap: "inline",
+      exports: "named",
     },
     plugins: [
       external(),
       resolve(),
       commonjs(),
       typescript({
+        jsx: "react-jsx",
         tsconfig: "./tsconfig.build.json",
         declaration: true,
         declarationDir: "dist",
+        inlineSources: true,
       }),
       // terser(),
       scss({
-        output: './dist/stellar.css'
+        output: "./dist/stellar.css",
       }),
     ],
     external: EXTERNAL, // https://rollupjs.org/guide/en/#peer-dependencies

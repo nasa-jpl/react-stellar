@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ReactSelect, {
   ClearIndicatorProps,
   CommonProps,
@@ -10,8 +11,12 @@ import ReactSelect, {
 } from "react-select";
 import { SelectComponents } from "react-select/dist/declarations/src/components";
 import classNames from "classnames";
-import { IconClose } from "components/Icons";
 
+import { IconClose } from "components/Icons";
+import { Label } from "components/Label";
+import { FormField } from "components/FormField";
+
+import { simpleUniqueId } from "../../util";
 export interface OptionType {
   [string: string]: any;
 }
@@ -46,29 +51,28 @@ export type DropdownProps = {
   isClearable?: boolean;
   disabled?: boolean;
   label?: string;
-  labelPosition: "top" | "left" | "inner";
+  labelPosition?: "top" | "left" | "inner";
   components?: SelectComponents<OptionType, boolean, GroupType>;
-} & CommonProps<OptionType, boolean, GroupType> &
+} & Partial<CommonProps<OptionType, boolean, GroupType>> &
   Props;
 
 export const Dropdown = (props: DropdownProps) => {
   const {
+    id,
     options,
     disabled = false,
     isSearchable = false, // Set this to be off by default, react-select has it on by default
     label = "",
-    labelPosition,
+    labelPosition = "top",
     className = "",
     components: propComponents,
     ...rest
   } = props;
 
+  const [formId] = useState(() => id || simpleUniqueId("dropdown-"));
+
   const containerClass = classNames({
     "st-react-dropdown": true,
-    "st-react-dropdown--label-top": labelPosition === "top",
-    "st-react-dropdown--label-left": labelPosition === "left",
-    "st-react-dropdown--label-inner": labelPosition === "inner",
-    "st-react-dropdown--no-label": !label,
     [className]: !!className,
   });
   const SingleValueComponent: SingleValue<OptionType> = (
@@ -105,20 +109,27 @@ export const Dropdown = (props: DropdownProps) => {
 
   return (
     <div className={containerClass}>
-      {label && labelPosition !== "inner" && (
-        <div className="st-react-dropdown--label st-typography-body">
-          {label}
-        </div>
-      )}
-      <ReactSelect
-        options={options}
-        components={selectComponents}
-        isDisabled={disabled}
-        isSearchable={isSearchable}
-        classNamePrefix="st-react-dropdown--rs"
-        className="st-react-dropdown--rs"
-        {...rest}
-      />
+      <FormField
+        flow={labelPosition === "left" ? "horizontal" : "vertical"}
+        className="st-react-text-field"
+      >
+        {label && labelPosition !== "inner" && (
+          <Label htmlFor={formId}>{label}</Label>
+        )}
+
+        <FormField flow="vertical">
+          <ReactSelect
+            inputId={formId}
+            options={options}
+            components={selectComponents}
+            isDisabled={disabled}
+            isSearchable={isSearchable}
+            classNamePrefix="st-react-dropdown--rs"
+            className="st-react-dropdown--rs"
+            {...rest}
+          />
+        </FormField>
+      </FormField>
     </div>
   );
 };

@@ -53,7 +53,7 @@ UnitInput.args = {
 export const ErrorInput = Template.bind({});
 ErrorInput.args = {
   error: true,
-  value: "woops",
+  defaultValue: "woops",
   leftAdornment: <IconSearch />,
   rightAdornment: "kg",
 };
@@ -61,13 +61,13 @@ ErrorInput.args = {
 export const WarningInput = Template.bind({});
 WarningInput.args = {
   warning: true,
-  value: "uh oh?",
+  defaultValue: "uh oh?",
   leftAdornment: <IconSearch />,
   rightAdornment: "kg",
 };
 
 export const DisabledInput = Template.bind({});
 DisabledInput.args = {
-  value: "i am disabled",
+  defaultValue: "i am disabled",
   disabled: true,
 };

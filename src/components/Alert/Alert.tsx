@@ -8,7 +8,7 @@ export type ActionContentProps = {
 } & AlertDialog.DialogContentProps;
 
 export const AlertContent = React.forwardRef(
-  (props: ActionContentProps, forwardedRef) => {
+  (props: ActionContentProps, forwardedRef: React.Ref<HTMLDivElement>) => {
     const { children, className = "", ...alertProps } = props;
     const modalClass = classNames({
       "st-react-modal": true,
@@ -17,7 +17,6 @@ export const AlertContent = React.forwardRef(
     });
     return (
       <AlertDialog.Content
-        // @ts-ignore
         ref={forwardedRef}
         className={modalClass}
         {...alertProps}
