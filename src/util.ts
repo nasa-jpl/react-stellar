@@ -3,14 +3,5 @@ function gen4() {
 }
 
 export function simpleUniqueId(prefix: string = "") {
-  return `${prefix}${[
-    gen4(),
-    gen4(),
-    gen4(),
-    gen4(),
-    gen4(),
-    gen4(),
-    gen4(),
-    gen4(),
-  ].join("-")})`;
+  return `${prefix}${[gen4(), gen4(), gen4(), gen4()].join("-")})`;
 }
