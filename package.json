@@ -1,6 +1,6 @@
 {
   "name": "@nasa-jpl/react-stellar",
-  "version": "0.1.7",
+  "version": "1.0.0",
   "description": "The React implementation of the Stellar Design System",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -40,9 +40,9 @@
     "react-select": "^5.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/preset-react": "^7.14.5",
-    "@rollup/plugin-babel": "^5.3.0",
+    "@babel/core": "^7.21.8",
+    "@babel/preset-react": "^7.18.6",
+    "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-node-resolve": "^13.1.1",
     "@rollup/plugin-typescript": "^8.2.5",
