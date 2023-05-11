@@ -1,0 +1,13 @@
+import * as React from 'react';
+import { SVGProps } from 'react';
+const SvgPinPause = (props: SVGProps<SVGSVGElement>) => (
+  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M8.00001 16C8.00001 16 13.5385 8.27885 13.5385 5.33333C13.5385 2.38781 11.0588 0 8.00001 0C4.9412 0 2.46155 2.38781 2.46155 5.33333C2.46155 8.27885 8.00001 16 8.00001 16ZM7.38462 3H5.15386V8.61539H7.38462V3ZM10.8462 3H8.61539V8.61539H10.8462V3Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+export default SvgPinPause;

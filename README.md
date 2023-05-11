@@ -3,7 +3,7 @@
 
 # react-stellar
 
-React implementation of the Stellar design system. Written in Typescript and bundled with Rollup, sunshine, and rainbows.
+React implementation of the Stellar design system built on top of the base Stellar css. Written in Typescript and bundled with Rollup.
 
 ## What is Stellar?
 
@@ -12,7 +12,6 @@ React implementation of the Stellar design system. Written in Typescript and bun
   - Main Figma file: TODO
 - Who uses Stellar?
   - Mars 2020 GDS tools (ASTTRO, COCPIT, Marsviewer, Meeting Tracker, RASCAL, and more)
-  - AMMOS (Merlin, others?)
   - Europa Clipper (?)
   - Screenshots would be nice :)
 - Stellar Implementations

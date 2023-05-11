@@ -1,41 +1,25 @@
-import * as React from "react";
-
-function SvgM20MastcamZ(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      width={16}
-      height={16}
-      viewBox="0 0 16 16"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <mask id="M20_MastcamZ_svg__a" fill="#fff">
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M2 1a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V2a1 1 0 00-1-1H2zm3 3a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1V5a1 1 0 00-1-1H5z"
-        />
-      </mask>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M2 1a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V2a1 1 0 00-1-1H2zm3 3a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1V5a1 1 0 00-1-1H5z"
-        fill="currentColor"
-      />
-      <path
-        d="M2 2V0a2 2 0 00-2 2h2zm0 12V2H0v12h2zm0 0H0a2 2 0 002 2v-2zm12 0H2v2h12v-2zm0 0v2a2 2 0 002-2h-2zm0-12v12h2V2h-2zm0 0h2a2 2 0 00-2-2v2zM2 2h12V0H2v2zm3 3V3a2 2 0 00-2 2h2zm0 6V5H3v6h2zm0 0H3a2 2 0 002 2v-2zm6 0H5v2h6v-2zm0 0v2a2 2 0 002-2h-2zm0-6v6h2V5h-2zm0 0h2a2 2 0 00-2-2v2zM5 5h6V3H5v2z"
-        fill="currentColor"
-        mask="url(#M20_MastcamZ_svg__a)"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M5 5.5a.5.5 0 01.5-.5h3a.5.5 0 010 1h-3a.5.5 0 01-.5-.5zM5 7.5a.5.5 0 01.5-.5h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
-
-export default SvgM20MastcamZ;
+import * as React from 'react';
+import { SVGProps } from 'react';
+const SvgM20MastCamZ = (props: SVGProps<SVGSVGElement>) => (
+  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M2 1C1.44772 1 1 1.44772 1 2V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V2C15 1.44772 14.5523 1 14 1H2ZM5 4C4.44772 4 4 4.44772 4 5V11C4 11.5523 4.44772 12 5 12H11C11.5523 12 12 11.5523 12 11V5C12 4.44772 11.5523 4 11 4H5Z"
+      fill="currentColor"
+    />
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M5 5.5C5 5.22386 5.22386 5 5.5 5H8.5C8.77614 5 9 5.22386 9 5.5C9 5.77614 8.77614 6 8.5 6H5.5C5.22386 6 5 5.77614 5 5.5Z"
+      fill="currentColor"
+    />
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M5 7.5C5 7.22386 5.22386 7 5.5 7H6.5C6.77614 7 7 7.22386 7 7.5C7 7.77614 6.77614 8 6.5 8H5.5C5.22386 8 5 7.77614 5 7.5Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+export default SvgM20MastCamZ;

@@ -1,23 +1,13 @@
-import * as React from "react";
-
-function SvgCursorDefault(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      width={16}
-      height={16}
-      viewBox="0 0 16 16"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M9.84 9.516l4.646-1.651L2 1l3.64 13.776 2.726-4.108 3.264 4.177 1.474-1.152-3.263-4.177z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
-
+import * as React from 'react';
+import { SVGProps } from 'react';
+const SvgCursorDefault = (props: SVGProps<SVGSVGElement>) => (
+  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M9.84066 9.51607L14.4865 7.86494L2 1L5.64025 14.7764L8.36628 10.668L11.63 14.8454L13.1044 13.6935L9.84066 9.51607V9.51607Z"
+      fill="currentColor"
+    />
+  </svg>
+);
 export default SvgCursorDefault;
