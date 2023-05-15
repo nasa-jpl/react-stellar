@@ -2,6 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { Meta, StoryObj } from "@storybook/react";
 import { Alert, AlertAction, AlertCancel } from "components/Alert";
 import { Button } from "index";
+import { useState } from "react";
 
 export default { component: Alert } as Meta<typeof Alert>;
 type Story = StoryObj<typeof Alert>;
@@ -25,7 +26,9 @@ export const Default: Story = {
           </Button>
         </AlertCancel>
         <AlertAction asChild>
-          <Button onClick={action("action")}>Delete</Button>
+          <Button style={{ background: "var(--st-error-red)" }} onClick={action("action")}>
+            Delete
+          </Button>
         </AlertAction>
       </>
     ),
@@ -33,7 +36,6 @@ export const Default: Story = {
 };
 
 export const OverrideContentProps: Story = {
-  parameters: { docs: { disable: true } },
   args: {
     ...Default.args,
     alertContentProps: {
@@ -47,11 +49,27 @@ export const OverrideContentProps: Story = {
   },
 };
 
+/** Directly control the modal using the `open` prop instead of
+ * providing a `trigger` `React.ReactNode` prop.
+ */
 export const Controlled: Story = {
-  parameters: { docs: { disable: true } },
   args: {
     ...Default.args,
-    open: true,
-    title: "Are you sure?",
+    trigger: null,
+  },
+  render: (args) => {
+    const [open, setOpen] = useState(false);
+    const toggleOpen = () => setOpen(!open);
+    return (
+      <div>
+        <span className="st-typography-medium">
+          Open State: {open.toString()}{" "}
+        </span>
+        <Button size="large" onClick={toggleOpen}>
+          Open Alert
+        </Button>
+        <Alert open={open} {...args} onOpenChange={toggleOpen} />
+      </div>
+    );
   },
 };
