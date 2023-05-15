@@ -27,6 +27,13 @@ export const CheckSVG = () => (
   </svg>
 );
 
+/** A control that allows the user to toggle between checked and not checked.
+ * Built using Radix Dialog, styled for Stellar. Refer to the Radix docs for complete documentation of available properties aside from the ones
+ * added by this wrapper component.
+ *
+ * [Figma Link](https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-Design-System?type=design&node-id=5379%3A7122&t=hcGqixx7MZ4qSgbd-1),
+ * [Radix Docs](https://www.radix-ui.com/docs/primitives/components/checkbox)
+ */
 export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(
   (props, ref) => {
     const {

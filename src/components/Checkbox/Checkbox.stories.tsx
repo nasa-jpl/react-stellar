@@ -1,34 +1,24 @@
 import { action } from "@storybook/addon-actions";
-import { StoryFn, Meta } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { Checkbox } from "components/Checkbox";
 
-export default {
-  component: Checkbox,
-} as Meta<typeof Checkbox>;
+export default { component: Checkbox } as Meta<typeof Checkbox>;
+type Story = StoryObj<typeof Checkbox>;
 
-const Template: StoryFn<typeof Checkbox> = (args) => (
-  <Checkbox onCheckedChange={action("checked changed")} {...args} />
-);
-
-export const LabelLeft = {
-  render: Template,
-
+export const LabelLeft: Story = {
   args: {
-    label: "This is a label",
+    onCheckedChange: action("checked changed"),
+    label: "Checkbox label",
   },
 };
 
 export const LabelRight = {
-  render: Template,
-
   args: {
-    required: true,
-    label: "This is a label",
+    ...LabelLeft.args,
     labelPosition: "right",
   },
 };
 
 export const Unlabeled = {
-  render: Template,
   args: {},
 };
