@@ -3,14 +3,22 @@ import { IconWarning } from "index";
 
 import { Meta } from "@storybook/react";
 
-export default {
-  component: Error,
-} as Meta<typeof Error>;
+export default { component: Error } as Meta<typeof Error>;
 
-export const ErrorString = () => <Error>Uh oh. This is an error!</Error>;
+export const Default: Story = {
+  args: {
+    children: "An error has occurred",
+  },
+};
 
-export const ErrorWithIcon = () => (
-  <Error>
-    <IconWarning /> Uh oh. This is an error! <IconWarning />
-  </Error>
-);
+export const ErrorWithIcon: Story = {
+  args: {
+    children: (
+      <>
+        <IconWarning />
+        Uh oh. This is an error!
+        <IconWarning />
+      </>
+    ),
+  },
+};
