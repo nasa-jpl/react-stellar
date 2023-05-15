@@ -1,11 +1,8 @@
 import { StoryObj, Meta } from "@storybook/react";
-
 import { Button } from "components/Button";
 import IconSol from "components/Icons/Sol";
 
-const meta: Meta<typeof Button> = { component: Button };
-
-export default meta;
+export default { component: Button } as Meta<typeof Button>;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {

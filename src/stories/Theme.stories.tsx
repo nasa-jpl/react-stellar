@@ -22,8 +22,7 @@ export const Theme = () => (
       className="st-theme-dark"
       style={{
         padding: "8px",
-        border: "1px solid black",
-        background: "white",
+        background: "var(--st-gray-80)",
       }}
     >
       <div className="st-typography-header">Scoped Dark Theme</div>
@@ -35,7 +34,7 @@ export const Theme = () => (
       <div
         style={{
           padding: "8px",
-          border: "1px solid black",
+          border: "1px solid var(--st-gray-40)",
         }}
         className="my-theme"
       >

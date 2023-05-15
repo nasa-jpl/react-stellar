@@ -1,11 +1,10 @@
-import { Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/react";
 import { TextField } from "components/Fields/TextField";
 
-export default {
-  component: TextField,
-} as Meta<typeof TextField>;
+export default { component: TextField } as Meta<typeof TextField>;
+type Story = StoryObj<typeof TextField>;
 
-export const StringTextField = {
+export const Default: Story = {
   args: {
     type: "string",
     placeholder: "placeholder",
@@ -15,28 +14,23 @@ export const StringTextField = {
   },
 };
 
-export const StringTextErrorField = {
+export const StringTextErrorField: Story = {
   args: {
-    type: "string",
-    placeholder: "placeholder",
+    ...Default.args,
     error: "this field is required",
     labelPosition: "top",
-    label: "Name",
-    required: true,
   },
 };
 
-export const StringTextWarningField = {
+export const StringTextWarningField: Story = {
   args: {
+    ...Default.args,
     type: "string",
-    placeholder: "placeholder",
     warning: "this field has a warning",
-    labelPosition: "left",
-    label: "Name",
   },
 };
 
-export const TextFieldWithHelper = {
+export const TextFieldWithHelper: Story = {
   args: {
     type: "string",
     placeholder: "placeholder",
@@ -45,51 +39,3 @@ export const TextFieldWithHelper = {
     label: "Name",
   },
 };
-
-export const MultipleVerticalTextFields = () => (
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "200px 200px 200px",
-      alignItems: "center",
-    }}
-  >
-    <TextField placeholder="text 1" label="TextField 1" labelPosition="top" />
-    <TextField
-      placeholder="text 1"
-      label="TextField 1"
-      labelPosition="top"
-      error="oops"
-    />
-    <TextField
-      placeholder="text 1"
-      label="TextField 1"
-      labelPosition="top"
-      warning="uh oh"
-    />
-  </div>
-);
-
-export const MultipleHorizontalTextFields = () => (
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "auto auto auto",
-      alignItems: "center",
-    }}
-  >
-    <TextField placeholder="text 1" label="TextField 1" labelPosition="left" />
-    <TextField
-      placeholder="text 1"
-      label="TextField 1"
-      labelPosition="left"
-      error="oops"
-    />
-    <TextField
-      placeholder="text 1"
-      label="TextField 1"
-      labelPosition="left"
-      warning="uh oh"
-    />
-  </div>
-);

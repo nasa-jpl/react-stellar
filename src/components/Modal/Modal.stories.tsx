@@ -8,6 +8,7 @@ import {
   ModalDescription,
 } from "components/Modal";
 import { Button, Dropdown } from "index";
+import { useState } from "react";
 
 export default { component: Modal } as Meta<typeof Modal>;
 type Story = StoryObj<typeof Modal>;
@@ -50,16 +51,32 @@ export const Default: Story = {
   },
 };
 
-export const Controlled = {
-  parameters: { docs: { disable: true } },
+/** Directly control the modal using the `open` prop instead of
+ * providing a `trigger` `React.ReactNode` prop.
+ */
+export const Controlled: Story = {
   args: {
     ...Default.args,
-    open: true,
+    trigger: null,
+  },
+  render: (args) => {
+    const [open, setOpen] = useState(false);
+    const toggleOpen = () => setOpen(!open);
+    return (
+      <div>
+        <span className="st-typography-medium">
+          Open State: {open.toString()}{" "}
+        </span>
+        <Button size="large" onClick={toggleOpen}>
+          Open Modal
+        </Button>
+        <Modal open={open} {...args} onOpenChange={toggleOpen} />
+      </div>
+    );
   },
 };
 
-export const WithScrollingContent = {
-  parameters: { docs: { disable: true } },
+export const WithScrollingContent: Story = {
   args: {
     ...Default.args,
     children: (
@@ -105,8 +122,7 @@ export const WithScrollingContent = {
   },
 };
 
-export const OverrideModalContentProps = {
-  parameters: { docs: { disable: true } },
+export const OverrideModalContentProps: Story = {
   args: {
     ...Default.args,
     modalContentProps: {

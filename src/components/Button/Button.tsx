@@ -12,6 +12,9 @@ export type ButtonProps = {
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
+/**
+ * [Figma Link](https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-Design-System?type=design&node-id=4835-60&t=zo3DlK1qdZkFhVCG-4)
+ */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => {
     const {
