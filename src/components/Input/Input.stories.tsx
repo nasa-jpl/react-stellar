@@ -3,76 +3,80 @@ import {
   IconChevronRight,
   IconSearch,
 } from "components/Icons";
-import { StoryFn, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/react";
 import { Input } from "components/Input";
 import { Button } from "components/Button";
 
-export default {
-  component: Input,
-} as Meta<typeof Input>;
+export default { component: Input } as Meta<typeof Input>;
+type Story = StoryObj<typeof Input>;
 
-export const StringInput = {
+export const Default: Story = {
   args: {
-    type: "string",
     placeholder: "placeholder",
   },
 };
 
-export const NumberInput = {
+export const NumberInput: Story = {
   args: {
     type: "number",
   },
 };
 
-export const IconInput = {
+export const IconInput: Story = {
   args: {
     leftAdornment: <IconSearch />,
+    placeholder: "placeholder",
   },
 };
 
-export const MultipleButtonIconInput = {
+export const MultipleButtonIconInput: Story = {
   args: {
+    placeholder: "placeholder",
     rightAdornment: (
-      <>
+      <div style={{ display: "flex", height: "16px", alignItems: "center" }}>
         <span>kg</span>
         <div>
           <Button icon={<IconChevronLeft />} variant="icon" />
           <Button icon={<IconChevronRight />} variant="icon" />
         </div>
         <IconSearch />
-      </>
+      </div>
     ),
   },
 };
 
-export const UnitInput = {
+export const UnitInput: Story = {
   args: {
+    placeholder: "placeholder",
     leftAdornment: <IconSearch />,
     rightAdornment: "kg",
   },
 };
 
-export const ErrorInput = {
+export const ErrorInput: Story = {
   args: {
+    placeholder: "placeholder",
     error: true,
-    defaultValue: "woops",
+    defaultValue: "text",
     leftAdornment: <IconSearch />,
     rightAdornment: "kg",
   },
 };
 
-export const WarningInput = {
+export const WarningInput: Story = {
   args: {
+    placeholder: "placeholder",
     warning: true,
-    defaultValue: "uh oh?",
+    defaultValue: "text",
     leftAdornment: <IconSearch />,
     rightAdornment: "kg",
   },
 };
 
-export const DisabledInput = {
+export const DisabledInput: Story = {
   args: {
-    defaultValue: "i am disabled",
+    placeholder: "placeholder",
+    defaultValue: "text",
     disabled: true,
   },
 };

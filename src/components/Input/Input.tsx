@@ -10,6 +10,9 @@ export interface InputProps extends React.HTMLProps<HTMLInputElement> {
   rightAdornment?: React.ReactNode;
 }
 
+/**
+ * [Figma Link](https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-Design-System?type=design&node-id=5981-14044&t=Ib4BYaUOqoKlAPlk-4)
+ */
 export const Input = React.forwardRef(
   (
     {
@@ -27,14 +30,14 @@ export const Input = React.forwardRef(
   ) => {
     const [isFocused, setIsFocused] = useState(false);
     const focusCallback = useCallback(
-      (event) => {
+      (event: FocusEvent) => {
         setIsFocused(true);
         onFocus?.(event);
       },
       [onFocus],
     );
     const blurCallback = useCallback(
-      (event) => {
+      (event: FocusEvent) => {
         setIsFocused(false);
         onBlur?.(event);
       },
