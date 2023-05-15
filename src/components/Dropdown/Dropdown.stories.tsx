@@ -26,11 +26,22 @@ export const Default: Story = {
     label: "Dropdown Label",
     labelPosition: "top",
   },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          height: "200px",
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const DefaultLeftLabel = {
+  ...Default,
   args: {
-    ...Default.args,
     options: [
       { label: "Label 1", value: 1 },
       { label: "Label 2", value: 2 },
@@ -45,17 +56,28 @@ export const DefaultLeftLabel = {
 };
 
 export const LongList = {
+  ...Default,
   args: {
-    ...Default.args,
     options: longListItems,
     label: "Dropdown Label",
     labelPosition: "top",
   },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          height: "350px",
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const MaxHeight = {
+  ...Default,
   args: {
-    ...Default.args,
     maxMenuHeight: 72,
     options: longListItems,
     label: "Dropdown Label",
@@ -64,8 +86,8 @@ export const MaxHeight = {
 };
 
 export const Searchable = {
+  ...Default,
   args: {
-    ...Default.args,
     options: longListItems,
     label: "Dropdown Label",
     labelPosition: "top",
@@ -74,8 +96,8 @@ export const Searchable = {
 };
 
 export const Clearable = {
+  ...Default,
   args: {
-    ...Default.args,
     options: longListItems,
     label: "Dropdown Label",
     labelPosition: "top",
@@ -84,8 +106,8 @@ export const Clearable = {
 };
 
 export const InnerLabel = {
+  ...Default,
   args: {
-    ...Default.args,
     options: longListItems,
     label: "Dropdown Label",
     labelPosition: "inner",
@@ -93,8 +115,8 @@ export const InnerLabel = {
 };
 
 export const MultipleSelection = {
+  ...Default,
   args: {
-    ...Default.args,
     options: [
       { label: "Label 1", value: 1 },
       { label: "Label 2", value: 2 },
@@ -110,8 +132,8 @@ export const MultipleSelection = {
 };
 
 export const JSXOptions = {
+  ...Default,
   args: {
-    ...Default.args,
     options: [
       {
         label: (
