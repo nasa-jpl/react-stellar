@@ -1,10 +1,8 @@
 import { Label } from "components/Label";
 
-import { Meta, StoryFn } from "@storybook/react";
+import { Meta } from "@storybook/react";
 
-export default {
-  component: Label,
-} as Meta<typeof Label>;
+export default { component: Label } as Meta<typeof Label>;
 
 export const StringLabel = {
   args: {
