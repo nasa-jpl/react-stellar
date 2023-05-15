@@ -1,5 +1,4 @@
 [![npm version](https://img.shields.io/npm/v/@nasa-jpl/react-stellar.svg)](https://www.npmjs.com/package/@nasa-jpl/react-stellar)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/nasa-jpl/react-stellar.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/nasa-jpl/react-stellar/context:javascript)
 
 # react-stellar
 
