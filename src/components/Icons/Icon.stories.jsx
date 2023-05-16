@@ -2,10 +2,7 @@ import * as IconComponents from "components/Icons";
 import "./Icon.stories.css";
 
 export const icons = () => (
-  <div
-    className="icon-stories"
-    style={{ lineHeight: "100px", margin: "50px", height: "100%" }}
-  >
+  <div className="icon-stories">
     {Object.keys(IconComponents)
       .filter((key) => typeof IconComponents[key] === "function")
       .sort()
