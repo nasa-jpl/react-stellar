@@ -8,6 +8,7 @@ export interface FormFieldProps {
 }
 
 /** Provides styling for child form components such as Label, Input, Warning, and Error.
+ *
  * [Figma Link](https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-Design-System?type=design&node-id=5981-14044&t=Ib4BYaUOqoKlAPlk-4)
  */
 export const FormField = ({

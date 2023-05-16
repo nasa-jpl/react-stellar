@@ -1,10 +1,6 @@
 import { Button } from "components/Button";
 import "./Theme.stories.css";
 
-export default {
-  title: "System/Theme",
-};
-
 const component = () => {
   return (
     <div style={{ display: "flex", gap: "8px" }}>
@@ -48,3 +44,5 @@ export const Theme = () => (
     <br />
   </div>
 );
+
+export default { component: Theme };
