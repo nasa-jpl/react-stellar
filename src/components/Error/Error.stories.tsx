@@ -16,7 +16,7 @@ export const ErrorWithIcon: Story = {
     children: (
       <>
         <IconWarning />
-        Uh oh. This is an error!
+        An error has occurred
         <IconWarning />
       </>
     ),

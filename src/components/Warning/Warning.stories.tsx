@@ -3,16 +3,22 @@ import { IconWarning } from "index";
 
 import { Meta } from "@storybook/react";
 
-export default {
-  component: Warning,
-} as Meta<typeof Warning>;
+export default { component: Warning } as Meta<typeof Warning>;
 
-export const WarningString = () => (
-  <Warning>Uh oh. This is an warning!</Warning>
-);
+export const Default: Story = {
+  args: {
+    children: "Warning, something is awry",
+  },
+};
 
-export const WarningWithIcon = () => (
-  <Warning>
-    <IconWarning /> Uh oh. This is an error! <IconWarning />
-  </Warning>
-);
+export const WarningWithIcon: Story = {
+  args: {
+    children: (
+      <>
+        <IconWarning />
+        Warning, something is awry
+        <IconWarning />
+      </>
+    ),
+  },
+};
