@@ -2,13 +2,13 @@ import { FormField } from "components/FormField";
 import { Label } from "components/Label";
 import { Input } from "components/Input";
 
-import { Meta, StoryFn } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { Error } from "components/Error";
-import { Checkbox } from "@radix-ui/react-checkbox";
 
 export default { component: FormField } as Meta<typeof FormField>;
+type Story = StoryObj<typeof FormField>;
 
-export const HorizontalFormField = {
+export const HorizontalFormField: Story = {
   args: {
     flow: "horizontal",
     children: (
@@ -24,7 +24,7 @@ export const HorizontalFormField = {
   },
 };
 
-export const VerticalFormField = {
+export const VerticalFormField: Story = {
   args: {
     flow: "vertical",
     children: (
