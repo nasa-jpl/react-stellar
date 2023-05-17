@@ -6,6 +6,13 @@ export interface ProgressProps {
   className?: string;
 }
 
+/** Displays a discrete or indeterminate progress bar.
+ * Built using Radix Progress, styled for Stellar. Refer to the Radix docs for complete documentation of available properties aside from the ones
+ * added by this wrapper component.
+ *
+ * Figma Design TODO
+ * [Radix Docs](https://www.radix-ui.com/docs/primitives/components/progress)
+ */
 export const Progress = (props: ProgressProps) => {
   const { progress, className = "" } = props;
 

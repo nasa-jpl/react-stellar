@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-
 import { FormField } from "components/FormField";
 import { Label } from "components/Label";
 import { Input, InputProps } from "components/Input";
 import { Error } from "components/Error";
 import { Warning } from "components/Warning";
-
 import { simpleUniqueId } from "../../../util";
 
 export interface TextFieldProps
@@ -22,6 +20,10 @@ export interface TextFieldProps
   labelPosition?: "top" | "left";
 }
 
+/** Configurable form component
+ *
+ * [Figma Link](https://www.figma.com/file/rWFjkQTNSOwbx2UJgX84WK/%2356%3A-Component-Property-Refactor?type=design&node-id=4834-0&t=T5nPBuxTNuzVE26h-4)
+ */
 export const TextField = React.forwardRef(
   (
     {
