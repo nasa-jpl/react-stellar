@@ -1,14 +1,24 @@
-import * as React from 'react';
-import { SVGProps } from 'react';
-const SvgRemoveAll = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path
-      d="M3.33331 9.99998H2.66665C2.31302 9.99998 1.97389 9.8595 1.72384 9.60946C1.47379 9.35941 1.33331 9.02027 1.33331 8.66665V2.66665C1.33331 2.31302 1.47379 1.97389 1.72384 1.72384C1.97389 1.47379 2.31302 1.33331 2.66665 1.33331H8.66665C9.02027 1.33331 9.35941 1.47379 9.60946 1.72384C9.8595 1.97389 9.99998 2.31302 9.99998 2.66665V3.33331M8.58331 8.58329L12.0833 12.0833M8.58331 12.0833L12.0833 8.58329M7.33331 5.99998H13.3333C14.0697 5.99998 14.6666 6.59693 14.6666 7.33331V13.3333C14.6666 14.0697 14.0697 14.6666 13.3333 14.6666H7.33331C6.59693 14.6666 5.99998 14.0697 5.99998 13.3333V7.33331C5.99998 6.59693 6.59693 5.99998 7.33331 5.99998Z"
-      stroke="currentColor"
-      strokeWidth={1.33333}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
+import * as React from "react";
+
+function SvgRemoveAll(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M3.333 10h-.666a1.333 1.333 0 01-1.334-1.333v-6a1.333 1.333 0 011.334-1.334h6A1.333 1.333 0 0110 2.667v.666m-1.417 5.25l3.5 3.5m-3.5 0l3.5-3.5M7.333 6h6c.737 0 1.334.597 1.334 1.333v6c0 .737-.597 1.334-1.334 1.334h-6A1.333 1.333 0 016 13.333v-6C6 6.597 6.597 6 7.333 6z"
+        stroke="currentColor"
+        strokeWidth={1.333}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default SvgRemoveAll;

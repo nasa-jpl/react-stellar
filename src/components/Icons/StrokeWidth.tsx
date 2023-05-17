@@ -1,10 +1,21 @@
-import * as React from 'react';
-import { SVGProps } from 'react';
-const SvgStrokeWidth = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <rect x={2} y={2} width={12} height={0.741667} fill="currentColor" />
-    <rect x={2} y={5.70825} width={12} height={1.48333} fill="currentColor" />
-    <rect x={2} y={10.1583} width={12} height={2.96667} fill="currentColor" />
-  </svg>
-);
+import * as React from "react";
+
+function SvgStrokeWidth(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        fill="currentColor"
+        d="M2 2h12v.742H2zM2 5.708h12v1.483H2zM2 10.158h12v2.967H2z"
+      />
+    </svg>
+  );
+}
+
 export default SvgStrokeWidth;

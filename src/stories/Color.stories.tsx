@@ -1,3 +1,8 @@
+// TODO do we even need this? It's just a dupe of the base stellar CSS?
+export default {
+  title: "System/Color",
+};
+
 const ColorComponent = (props: { title: string }) => (
   <div style={{ marginBottom: "16px", alignItems: "center", display: "flex" }}>
     <div
@@ -41,6 +46,7 @@ const colorClassNames = [
   "primary-90",
   "primary-100",
 ];
+
 export const Color = () => (
   <div className="story-dark">
     {colorClassNames.map((c) => (
@@ -48,5 +54,3 @@ export const Color = () => (
     ))}
   </div>
 );
-
-export default { component: Color };

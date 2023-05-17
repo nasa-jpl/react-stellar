@@ -9,10 +9,6 @@ export interface LabelProps {
   required?: boolean;
 }
 
-/** Component used to label various user input components
- *
- * [Figma Link](https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-Design-System?type=design&node-id=1-4445&t=Ib4BYaUOqoKlAPlk-4)
- */
 export const Label = ({
   children,
   className = "",

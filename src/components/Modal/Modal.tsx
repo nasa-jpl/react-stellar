@@ -16,10 +16,12 @@ export const ModalDescription = (props: ModalDescriptionProps) => (
   </DialogPrimitive.Description>
 );
 
+// test 2
 export type ModalContentProps = {
   children?: string | React.ReactNode;
 } & DialogPrimitive.DialogContentProps;
 
+// test 1
 export const ModalContent = React.forwardRef(
   (props: ModalContentProps, forwardedRef) => {
     const { children, className = "", ...modalProps } = props;
@@ -74,13 +76,6 @@ export type ModalProps = {
   modalContentProps?: DialogPrimitive.DialogContentProps;
 } & DialogPrimitive.DialogProps;
 
-/** A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.
- * Built using Radix Dialog, styled for Stellar. Refer to the Radix docs for complete documentation of available properties aside from the ones
- * added by this wrapper component.
- *
- * [Figma Link](https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-Design-System?type=design&node-id=5489-8659&t=zo3DlK1qdZkFhVCG-4),
- * [Radix Docs](https://www.radix-ui.com/docs/primitives/components/dialog)
- */
 export const Modal = (props: ModalProps) => {
   const {
     title,
@@ -93,27 +88,25 @@ export const Modal = (props: ModalProps) => {
 
   return (
     <DialogPrimitive.Root {...modalProps}>
-      <DialogPrimitive.Portal>
-        <DialogPrimitive.Overlay className="st-react-modal--overlay">
-          <ModalContent className={className} {...modalContentProps}>
-            <div className="st-react-modal--header">
-              <div className="st-react-modal--header--title-row">
-                <ModalTitle asChild>
-                  <div className="st-react-modal--header--text st-typography-header">
-                    {title}
-                  </div>
-                </ModalTitle>
-                <DialogPrimitive.Close asChild>
-                  <Button variant="icon">
-                    <IconClose />
-                  </Button>
-                </DialogPrimitive.Close>
-              </div>
+      <DialogPrimitive.Overlay className="st-react-modal--overlay">
+        <ModalContent className={className} {...modalContentProps}>
+          <div className="st-react-modal--header">
+            <div className="st-react-modal--header--title-row">
+              <ModalTitle asChild>
+                <div className="st-react-modal--header--text st-typography-header">
+                  {title}
+                </div>
+              </ModalTitle>
+              <DialogPrimitive.Close asChild>
+                <Button variant="icon">
+                  <IconClose />
+                </Button>
+              </DialogPrimitive.Close>
             </div>
-            {children}
-          </ModalContent>
-        </DialogPrimitive.Overlay>
-      </DialogPrimitive.Portal>
+          </div>
+          {children}
+        </ModalContent>
+      </DialogPrimitive.Overlay>
 
       {trigger && <ModalTrigger asChild>{trigger}</ModalTrigger>}
     </DialogPrimitive.Root>

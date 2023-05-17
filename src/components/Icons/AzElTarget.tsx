@@ -1,19 +1,36 @@
-import * as React from 'react';
-import { SVGProps } from 'react';
-const SvgAzElTarget = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <ellipse opacity={0.8} cx={8} cy={5.99999} rx={4} ry={1.6} fill="currentColor" />
-    <path
-      d="M8 2C5.79086 2 4 3.79086 4 6L4.13754 6.05501C6.61701 7.0468 9.38299 7.0468 11.8625 6.05501L12 6C12 3.79086 10.2091 2 8 2Z"
-      fill="currentColor"
-    />
-    <path
-      opacity={0.6}
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M6.53846 8.48982L7.50617 14.5907C7.59535 15.153 8.40465 15.153 8.49383 14.5907L9.46154 8.48982C9.00881 8.56094 8.51581 8.59999 8 8.59999C7.48419 8.59999 6.99119 8.56094 6.53846 8.48982Z"
-      fill="currentColor"
-    />
-  </svg>
-);
+import * as React from "react";
+
+function SvgAzElTarget(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <ellipse
+        opacity={0.8}
+        cx={8}
+        cy={6}
+        rx={4}
+        ry={1.6}
+        fill="currentColor"
+      />
+      <path
+        d="M8 2a4 4 0 00-4 4l.138.055a10.4 10.4 0 007.725 0L12 6a4 4 0 00-4-4z"
+        fill="currentColor"
+      />
+      <path
+        opacity={0.6}
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M6.538 8.49l.968 6.1c.09.563.899.563.988 0l.968-6.1A9.47 9.47 0 018 8.6a9.47 9.47 0 01-1.462-.11z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
 export default SvgAzElTarget;

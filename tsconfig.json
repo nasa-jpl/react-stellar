@@ -20,5 +20,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "rollup.config.mjs"]
+  "include": ["src", "rollup.config.js"]
 }

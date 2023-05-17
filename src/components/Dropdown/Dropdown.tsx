@@ -56,13 +56,6 @@ export type DropdownProps = {
 } & Partial<CommonProps<OptionType, boolean, GroupType>> &
   Props;
 
-/** Displays a list of options for the user to pick from.
- * Built using react-select, styled for Stellar. Refer to the react-select docs for complete documentation of available properties aside from the ones
- * added by this wrapper component.
- *
- * [Figma Link](https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-Design-System?type=design&node-id=5379%3A7122&t=hcGqixx7MZ4qSgbd-1),
- * [react-select Docs](https://react-select.com/home)
- */
 export const Dropdown = (props: DropdownProps) => {
   const {
     id,

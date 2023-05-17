@@ -1,13 +1,50 @@
-import * as React from 'react';
-import { SVGProps } from 'react';
-const SvgLayers = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M8.91843 0.234833C8.42445 -0.0121562 7.62355 -0.0121563 7.12957 0.234833L0.918397 3.34042C0.424418 3.58741 0.424418 3.98786 0.918396 4.23485L4.02397 5.78763L0.918397 7.34042C0.424418 7.58741 0.424418 7.98786 0.918396 8.23485L3.85316 9.70223L1.24758 11.005C0.383117 11.4373 0.383119 12.138 1.24758 12.5703L6.4587 15.1758C7.32316 15.6081 8.72473 15.6081 9.5892 15.1758L14.8004 12.5702C15.6648 12.138 15.6648 11.4372 14.8004 11.005L12.1948 9.7022L15.1295 8.23482C15.6235 7.98783 15.6235 7.58738 15.1295 7.34039L12.024 5.7876L15.1295 4.23482C15.6235 3.98783 15.6235 3.58738 15.1295 3.34039L8.91843 0.234833ZM5.36561 6.45846L7.12951 7.34041C7.62349 7.5874 8.42439 7.5874 8.91837 7.34041L10.6823 6.45842L13.3407 7.7876L8.02394 10.446L2.70725 7.78763L5.36561 6.45846ZM2.58922 11.6758L5.1948 10.3731L7.12951 11.3404C7.62349 11.5874 8.42439 11.5874 8.91837 11.3404L10.8531 10.373L13.4587 11.6758C13.5822 11.7376 13.5822 11.8377 13.4587 11.8994L8.24755 14.505C8.12406 14.5668 7.92383 14.5668 7.80034 14.505L2.58922 11.8995C2.46573 11.8377 2.46573 11.7376 2.58922 11.6758Z"
-      fill="currentColor"
-    />
-  </svg>
-);
+import * as React from "react";
+
+function SvgLayers(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <g clipPath="url(#layers_svg__clip0_1489:6323)">
+        <path
+          d="M5.24 9.88l-3.346 1.673c-.494.247-.494.647 0 .894l5.212 2.606c.494.247 1.294.247 1.788 0l5.212-2.606c.494-.247.494-.647 0-.894l-3.26-1.63"
+          stroke="currentColor"
+          strokeWidth={1.5}
+        />
+        <mask id="layers_svg__a" fill="#fff">
+          <rect
+            width={8.944}
+            height={8.944}
+            rx={1}
+            transform="matrix(.89443 .44721 -.89443 .44721 8 4)"
+          />
+        </mask>
+        <rect
+          width={8.944}
+          height={8.944}
+          rx={1}
+          transform="matrix(.89443 .44721 -.89443 .44721 8 4)"
+          stroke="currentColor"
+          strokeWidth={3}
+          mask="url(#layers_svg__a)"
+        />
+        <rect
+          y={0.447}
+          width={7.944}
+          height={7.944}
+          rx={0.5}
+          transform="scale(1.26491 .63246) rotate(45 2.849 8.212)"
+          fill="currentColor"
+          stroke="currentColor"
+        />
+      </g>
+    </svg>
+  );
+}
+
 export default SvgLayers;

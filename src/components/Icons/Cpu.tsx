@@ -1,35 +1,34 @@
-import * as React from 'react';
-import { SVGProps } from 'react';
-const SvgCpu = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M3 4C3 3.44772 3.44772 3 4 3H12C12.5523 3 13 3.44772 13 4V12C13 12.5523 12.5523 13 12 13H4C3.44772 13 3 12.5523 3 12V4Z"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M6 7C6 6.44772 6.44772 6 7 6H9C9.55228 6 10 6.44772 10 7V9C10 9.55228 9.55228 10 9 10H7C6.44772 10 6 9.55228 6 9V7Z"
-      fill="currentColor"
-    />
-    <path d="M5 1C5 0.447715 5.44772 0 6 0C6.55228 0 7 0.447715 7 1V3H5V1Z" fill="currentColor" />
-    <path d="M9 1C9 0.447715 9.44772 0 10 0C10.5523 0 11 0.447715 11 1V3H9V1Z" fill="currentColor" />
-    <path d="M5 15C5 15.5523 5.44772 16 6 16C6.55228 16 7 15.5523 7 15V13H5V15Z" fill="currentColor" />
-    <path d="M9 15C9 15.5523 9.44772 16 10 16C10.5523 16 11 15.5523 11 15V13H9V15Z" fill="currentColor" />
-    <path d="M15 5C15.5523 5 16 5.44772 16 6C16 6.55228 15.5523 7 15 7L13 7L13 5L15 5Z" fill="currentColor" />
-    <path d="M15 9C15.5523 9 16 9.44772 16 10C16 10.5523 15.5523 11 15 11L13 11L13 9L15 9Z" fill="currentColor" />
-    <path
-      d="M1 5C0.447715 5 -1.95703e-08 5.44772 -4.37114e-08 6C-6.78525e-08 6.55228 0.447715 7 1 7L3 7L3 5L1 5Z"
-      fill="currentColor"
-    />
-    <path
-      d="M1 9C0.447715 9 -1.95703e-08 9.44772 -4.37114e-08 10C-6.78525e-08 10.5523 0.447715 11 1 11L3 11L3 9L1 9Z"
-      fill="currentColor"
-    />
-  </svg>
-);
+import * as React from "react";
+
+function SvgCpu(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width={16}
+      height={16}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        clipRule="evenodd"
+        d="M3 4a1 1 0 011-1h8a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M6 7a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 01-1 1H7a1 1 0 01-1-1V7z"
+        fill="currentColor"
+      />
+      <path
+        d="M5 1a1 1 0 012 0v2H5V1zM9 1a1 1 0 012 0v2H9V1zM5 15a1 1 0 102 0v-2H5v2zM9 15a1 1 0 102 0v-2H9v2zM15 5a1 1 0 110 2h-2V5h2zM15 9a1 1 0 110 2h-2V9h2zM1 5a1 1 0 000 2h2V5H1zM1 9a1 1 0 000 2h2V9H1z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
 export default SvgCpu;

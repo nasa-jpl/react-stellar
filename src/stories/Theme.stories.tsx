@@ -1,6 +1,10 @@
 import { Button } from "components/Button";
 import "./Theme.stories.css";
 
+export default {
+  title: "System/Theme",
+};
+
 const component = () => {
   return (
     <div style={{ display: "flex", gap: "8px" }}>
@@ -18,7 +22,8 @@ export const Theme = () => (
       className="st-theme-dark"
       style={{
         padding: "8px",
-        background: "var(--st-gray-80)",
+        border: "1px solid black",
+        background: "white",
       }}
     >
       <div className="st-typography-header">Scoped Dark Theme</div>
@@ -30,7 +35,7 @@ export const Theme = () => (
       <div
         style={{
           padding: "8px",
-          border: "1px solid var(--st-gray-40)",
+          border: "1px solid black",
         }}
         className="my-theme"
       >
@@ -44,5 +49,3 @@ export const Theme = () => (
     <br />
   </div>
 );
-
-export default { component: Theme };

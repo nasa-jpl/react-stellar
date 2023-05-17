@@ -41,10 +41,6 @@
       }
     }
 
-    &:not(.error):not(.warning) .st-react-input--adornment {
-      color: var(--st-gray-50);
-    }
-
     input.st-react-input--input {
       font-family: inherit;
       font-size: inherit;

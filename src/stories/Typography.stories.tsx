@@ -1,4 +1,8 @@
-const typography = (
+export default {
+  title: "Atoms/Typography",
+};
+
+export const AllTypography = () => (
   <div>
     <div className="st-typography-displayH1">Display H1</div>
     <div className="st-typography-displayH2">Display H2</div>
@@ -12,6 +16,3 @@ const typography = (
     <div className="st-typography-small-caps">Small Caps</div>
   </div>
 );
-
-export default { component: typography };
-export const Typography = () => typography;
