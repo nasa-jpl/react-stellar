@@ -39,6 +39,13 @@ export type PopoverProps = {
   contentProps?: PopoverPrimitive.PopoverContentProps;
 } & PopoverPrimitive.PopoverProps;
 
+/** Displays rich content in a portal, triggered by a button.
+ * Built using Radix Popover, styled for Stellar. Refer to the Radix docs for complete documentation of available properties aside from the ones
+ * added by this wrapper component.
+ *
+ * Figma Design TODO,
+ * [Radix Docs](https://www.radix-ui.com/docs/primitives/components/popover)
+ */
 export const Popover = (props: PopoverProps) => {
   const {
     children,

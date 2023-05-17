@@ -1,23 +1,25 @@
-import * as React from "react";
-
-function SvgHamburger(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      width={16}
-      height={16}
-      viewBox="0 0 16 16"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M1 2a1 1 0 011-1h12a1 1 0 110 2H2a1 1 0 01-1-1zM1 8a1 1 0 011-1h12a1 1 0 110 2H2a1 1 0 01-1-1zM1 14a1 1 0 011-1h12a1 1 0 110 2H2a1 1 0 01-1-1z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
-
+import * as React from 'react';
+import { SVGProps } from 'react';
+const SvgHamburger = (props: SVGProps<SVGSVGElement>) => (
+  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M1 2C1 1.44772 1.44772 1 2 1H14C14.5523 1 15 1.44772 15 2C15 2.55228 14.5523 3 14 3H2C1.44772 3 1 2.55228 1 2Z"
+      fill="currentColor"
+    />
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M1 8C1 7.44772 1.44772 7 2 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H2C1.44772 9 1 8.55228 1 8Z"
+      fill="currentColor"
+    />
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M1 14C1 13.4477 1.44772 13 2 13H14C14.5523 13 15 13.4477 15 14C15 14.5523 14.5523 15 14 15H2C1.44772 15 1 14.5523 1 14Z"
+      fill="currentColor"
+    />
+  </svg>
+);
 export default SvgHamburger;
