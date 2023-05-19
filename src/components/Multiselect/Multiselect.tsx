@@ -7,12 +7,17 @@ interface Option {
 
 export interface MultiselectProps {
   options: Array<Option>;
-  onChange: (value: string) => any;
+  onChange: (value: string) => unknown;
   selectedValue: string;
   size?: "medium" | "large";
   className?: string;
 }
 
+/** A linear set of two or more options, each of which functions as a button.
+ * This component does not have any internal state and is meant to be controlled by a parent component.
+ *
+ * [Figma Link](https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-Design-System?type=design&node-id=4837-8852&t=8XeOQ2eDM7SxDmLO-4)
+ */
 export const Multiselect = (props: MultiselectProps) => {
   const {
     options,
