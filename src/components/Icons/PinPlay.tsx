@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgPinPlay = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 16 16" {...props}>
     <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M7.99999 16C7.99999 16 13.5385 8.27885 13.5385 5.33333C13.5385 2.38781 11.0588 0 7.99999 0C4.94119 0 2.46153 2.38781 2.46153 5.33333C2.46153 8.27885 7.99999 16 7.99999 16ZM6.46153 8.20316L11.0769 5.53846L6.46153 2.87377L6.46153 8.20316Z"
       fill="currentColor"
+      fillRule="evenodd"
+      d="M8 16s5.539-7.721 5.539-10.667C13.539 2.388 11.059 0 8 0 4.941 0 2.462 2.388 2.462 5.333 2.462 8.28 8 16 8 16ZM6.462 8.203l4.615-2.665-4.615-2.664v5.33Z"
+      clipRule="evenodd"
     />
   </svg>
 );

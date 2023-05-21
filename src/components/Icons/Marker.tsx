@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgMarker = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={15} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" width={15} height={16} fill="none" viewBox="0 0 15 16" {...props}>
     <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M7.5 16C7.5 16 13 8.27885 13 5.33333C13 2.38781 10.5376 0 7.5 0C4.46243 0 2 2.38781 2 5.33333C2 8.27885 7.5 16 7.5 16ZM7.5 9C9.70914 9 11.5 7.20914 11.5 5C11.5 2.79086 9.70914 1 7.5 1C5.29086 1 3.5 2.79086 3.5 5C3.5 7.20914 5.29086 9 7.5 9Z"
       fill="currentColor"
+      fillRule="evenodd"
+      d="M7.5 16S13 8.279 13 5.333C13 2.388 10.538 0 7.5 0S2 2.388 2 5.333C2 8.28 7.5 16 7.5 16Zm0-7a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+      clipRule="evenodd"
     />
-    <circle cx={7.5} cy={5} r={4} fill="white" />
+    <circle cx={7.5} cy={5} r={4} fill="#fff" />
   </svg>
 );
 export default SvgMarker;

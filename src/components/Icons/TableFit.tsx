@@ -1,18 +1,17 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgTableFit = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 16 16" {...props}>
     <path
-      d="M12.1716 10.8284L9.34315 8L12.1716 5.17157L12.1716 10.8284Z"
       fill="currentColor"
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
+      d="M12.172 10.828 9.343 8l2.829-2.828v5.656Z"
     />
-    <rect x={0.5} y={1.5} width={7} height={13} rx={0.5} fill="none" stroke="currentColor" />
-    <rect x={11} y={7} width={5} height={2} rx={1} fill="currentColor" />
-    <line x1={2} y1={5} x2={6} y2={5} stroke="currentColor" strokeWidth={2} />
-    <line x1={2} y1={9} x2={5} y2={9} stroke="currentColor" strokeWidth={2} />
+    <rect width={7} height={13} x={0.5} y={1.5} stroke="currentColor" rx={0.5} />
+    <rect width={5} height={2} x={11} y={7} fill="currentColor" rx={1} />
+    <path stroke="currentColor" strokeWidth={2} d="M2 5h4M2 9h3" />
   </svg>
 );
 export default SvgTableFit;

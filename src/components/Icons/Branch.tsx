@@ -1,19 +1,19 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgBranch = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 16 16" {...props}>
     <path
-      d="M1 4H4.72C5.82457 4 6.72 4.89543 6.72 6V9C6.72 10.1046 7.61543 11 8.72 11H14"
       stroke="currentColor"
-      strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M1 4h3.72a2 2 0 0 1 2 2v3a2 2 0 0 0 2 2H14"
     />
     <path
-      d="M15.3675 10.5827C15.667 10.7803 15.667 11.2197 15.3675 11.4173L11.5254 13.9525C11.1929 14.1718 10.75 13.9334 10.75 13.5352L10.75 8.46485C10.75 8.06657 11.1929 7.82816 11.5254 8.04751L15.3675 10.5827Z"
       fill="currentColor"
+      d="M15.367 10.583a.5.5 0 0 1 0 .834l-3.842 2.536a.5.5 0 0 1-.775-.418v-5.07a.5.5 0 0 1 .775-.417l3.842 2.535Z"
     />
-    <path opacity={0.5} d="M10 4L15 4" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" />
+    <path stroke="currentColor" strokeLinecap="round" strokeWidth={1.5} d="M10 4h5" opacity={0.5} />
   </svg>
 );
 export default SvgBranch;

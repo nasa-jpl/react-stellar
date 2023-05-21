@@ -4,8 +4,15 @@ module.exports = {
   svgoConfig: {
     plugins: [
       {
-        name: "removeViewBox",
-        active: false,
+        name: "preset-default",
+        params: {
+          overrides: {
+            // SVGO by default strips viewBoxes even though viewBoxes are required to resize SVGs with CSS.
+            // @see https://github.com/svg/svgo/issues/1128
+            // Quite the heated issue...
+            removeViewBox: false,
+          },
+        },
       },
     ],
   },

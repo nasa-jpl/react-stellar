@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgTimeline = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <rect x={4} y={4} width={4} height={2} rx={1} fill="currentColor" />
-    <rect x={6} y={7} width={4} height={2} rx={1} fill="currentColor" />
-    <rect x={8} y={10} width={4} height={2} rx={1} fill="currentColor" />
+  <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 16 16" {...props}>
+    <rect width={4} height={2} x={4} y={4} fill="currentColor" rx={1} />
+    <rect width={4} height={2} x={6} y={7} fill="currentColor" rx={1} />
+    <rect width={4} height={2} x={8} y={10} fill="currentColor" rx={1} />
     <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M2.75 2.75V13.25H13.25V2.75H2.75ZM2 1C1.44772 1 1 1.44772 1 2V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V2C15 1.44772 14.5523 1 14 1H2Z"
       fill="currentColor"
+      fillRule="evenodd"
+      d="M2.75 2.75v10.5h10.5V2.75H2.75ZM2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2Z"
+      clipRule="evenodd"
     />
   </svg>
 );

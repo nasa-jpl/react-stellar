@@ -1,18 +1,15 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgAzElTarget = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <ellipse opacity={0.8} cx={8} cy={5.99999} rx={4} ry={1.6} fill="currentColor" />
+  <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 16 16" {...props}>
+    <ellipse cx={8} cy={6} fill="currentColor" opacity={0.8} rx={4} ry={1.6} />
+    <path fill="currentColor" d="M8 2a4 4 0 0 0-4 4l.138.055a10.4 10.4 0 0 0 7.725 0L12 6a4 4 0 0 0-4-4Z" />
     <path
-      d="M8 2C5.79086 2 4 3.79086 4 6L4.13754 6.05501C6.61701 7.0468 9.38299 7.0468 11.8625 6.05501L12 6C12 3.79086 10.2091 2 8 2Z"
       fill="currentColor"
-    />
-    <path
-      opacity={0.6}
       fillRule="evenodd"
+      d="m6.538 8.49.968 6.1c.09.563.899.563.988 0l.968-6.1A9.47 9.47 0 0 1 8 8.6a9.47 9.47 0 0 1-1.462-.11Z"
       clipRule="evenodd"
-      d="M6.53846 8.48982L7.50617 14.5907C7.59535 15.153 8.40465 15.153 8.49383 14.5907L9.46154 8.48982C9.00881 8.56094 8.51581 8.59999 8 8.59999C7.48419 8.59999 6.99119 8.56094 6.53846 8.48982Z"
-      fill="currentColor"
+      opacity={0.6}
     />
   </svg>
 );

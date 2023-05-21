@@ -1,24 +1,24 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgDiagonalCollapseWithCenterLine = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M15 5L11 5L11 1L13 3L15 5Z" fill="currentColor" />
+  <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 16 16" {...props}>
+    <path fill="currentColor" d="M15 5h-4V1l2 2 2 2Z" />
     <path
-      d="M15 1L11 5M11 5L15 5L11 1L11 5Z"
       stroke="currentColor"
-      strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-    />
-    <path d="M1 11L5 11L5 15L3 13L1 11Z" fill="currentColor" />
-    <path
-      d="M1 15L5 11M5 11L1 11L5 15L5 11Z"
-      stroke="currentColor"
       strokeWidth={2}
+      d="m15 1-4 4m0 0h4l-4-4v4Z"
+    />
+    <path fill="currentColor" d="M1 11h4v4l-2-2-2-2Z" />
+    <path
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
+      strokeWidth={2}
+      d="m1 15 4-4m0 0H1l4 4v-4Z"
     />
-    <line x1={13.2929} y1={13.7071} x2={1.97918} y2={2.3934} stroke="currentColor" strokeWidth={2} />
+    <path stroke="currentColor" strokeWidth={2} d="M13.293 13.707 1.979 2.393" />
   </svg>
 );
 export default SvgDiagonalCollapseWithCenterLine;
