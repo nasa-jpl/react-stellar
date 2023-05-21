@@ -1,5 +1,9 @@
 :root {
+  // General.
   --st-react-input-outline: -webkit-focus-ring-color;
+  --st-react-overlay-border: 1px solid rgba(0, 0, 0, 0.16);
+  --st-react-overlay-filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.05))
+    drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
 
   // Label.
   --st-react-label-color: var(--st-gray-60);
@@ -102,10 +106,9 @@
   // Popover.
   --st-react-popover-background: white;
   --st-react-popover-border-radius: 4px;
-  --st-react-popover-border: 1px solid rgba(0, 0, 0, 0.16);
+  --st-react-popover-border: var(--st-react-overlay-border);
   --st-react-popover-padding: calc(var(--st-grid-unit) * 1.5);
-  --st-react-popover-filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.05))
-    drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+  --st-react-popover-filter: var(--st-react-overlay-filter);
 
   // Checkbox.
   --st-react-checkbox-label-color: var(--st-gray-60);
@@ -166,4 +169,39 @@
   --st-react-avatar-letter-spacing: var(--st-typography-medium-letter-spacing);
   --st-react-avatar-color: var(--st-gray-100);
   --st-react-avatar-background: var(--st-gray-20);
+
+  // Menu.
+  --st-react-menu-background: var(--st-white);
+  --st-react-menu-border-radius: calc(var(--st-grid-unit) / 2);
+  --st-react-menu-border: var(--st-react-overlay-border);
+  --st-react-menu-padding: calc(var(--st-grid-unit) / 2);
+  --st-react-menu-filter: var(--st-react-overlay-filter);
+  --st-react-menu-item-font-family: var(--st-typography-label-font-family);
+  --st-react-menu-item-font-weight: var(--st-typography-label-font-weight);
+  --st-react-menu-item-font-size: var(--st-typography-label-font-size);
+  --st-react-menu-item-line-height: var(--st-typography-label-line-height);
+  --st-react-menu-item-letter-spacing: var(
+    --st-typography-label-letter-spacing
+  );
+  --st-react-menu-item-color: var(--st-typography-label-tertiary-color);
+  --st-react-menu-item-open-color: var(--st-primary-40);
+  --st-react-menu-item-open-background: var(--st-primary-10);
+  --st-react-menu-item-highlighted-color: var(--st-gray-10);
+  --st-react-menu-item-highlighted-background: var(--st-primary-50);
+  --st-react-menu-item-disabled-color: var(--st-gray-30);
+
+  --st-react-menu-label-font-family: var(--st-typography-label-font-family);
+  --st-react-menu-label-font-weight: var(--st-typography-label-font-weight);
+  --st-react-menu-label-font-size: var(--st-typography-label-font-size);
+  --st-react-menu-label-line-height: 24px;
+  --st-react-menu-label-letter-spacing: var(
+    --st-typography-label-letter-spacing
+  );
+  --st-react-menu-label-color: var(--st-gray-50);
+
+  --st-react-menu-separator-background: var(--st-gray-20);
+
+  --st-react-menu-arrow-filter: drop-shadow(0px 1px 0px #d6d6d6);
+
+  --st-react-menu-right-slot-color: var(--st-gray-50);
 }
