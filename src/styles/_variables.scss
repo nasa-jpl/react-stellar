@@ -161,6 +161,50 @@
   // FormField.
   --st-react-formfield-horizontal-grid-unit: 4px;
   --st-react-formfield-vertical-grid-unit: 2px;
+
+  // Navbar.
+  --st-react-navbar-brand-title-font-family: var(
+    --st-typography-header-font-family
+  );
+  --st-react-navbar-brand-title-font-weight: var(
+    --st-typography-header-font-weight
+  );
+  --st-react-navbar-brand-title-font-size: var(
+    --st-typography-header-font-size
+  );
+  --st-react-navbar-brand-title-line-height: var(
+    --st-typography-header-line-height
+  );
+  --st-react-navbar-brand-title-letter-spacing: var(
+    --st-typography-header-letter-spacing
+  );
+  --st-react-navbar-brand-title-color: var(--st-gray-70);
+
+  --st-react-navbar-brand-version-font-family: var(
+    --st-typography-label-font-family
+  );
+  --st-react-navbar-brand-version-font-weight: var(
+    --st-typography-label-font-weight
+  );
+  --st-react-navbar-brand-version-font-size: var(
+    --st-typography-label-font-size
+  );
+  --st-react-navbar-brand-version-line-height: var(
+    --st-typography-label-line-height
+  );
+  --st-react-navbar-brand-version-letter-spacing: var(
+    --st-typography-label-letter-spacing
+  );
+  --st-react-navbar-brand-version-color: var(--st-gray-50);
+
+  --st-react-navbar-link-font-family: var(--st-button-font-family);
+  --st-react-navbar-link-font-weight: var(--st-button-font-weight);
+  --st-react-navbar-link-font-size: var(--st-button-font-size);
+  --st-react-navbar-link-line-height: var(--st-button-line-height);
+  --st-react-navbar-link-letter-spacing: var(--st-button-letter-spacing);
+  --st-react-navbar-link-color: var(--st-button-tertiary-color);
+  --st-react-navbar-link-hover-background-color: var(--st-gray-15);
+
   // Avatar.
   --st-react-avatar-font-family: var(--st-typography-medium-font-family);
   --st-react-avatar-font-weight: var(--st-typography-medium-font-weight);
