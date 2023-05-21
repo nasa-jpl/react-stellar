@@ -158,4 +158,12 @@
   // FormField.
   --st-react-formfield-horizontal-grid-unit: 4px;
   --st-react-formfield-vertical-grid-unit: 2px;
+  // Avatar.
+  --st-react-avatar-font-family: var(--st-typography-medium-font-family);
+  --st-react-avatar-font-weight: var(--st-typography-medium-font-weight);
+  --st-react-avatar-font-size: var(--st-typography-medium-font-size);
+  --st-react-avatar-line-height: var(--st-typography-medium-line-height);
+  --st-react-avatar-letter-spacing: var(--st-typography-medium-letter-spacing);
+  --st-react-avatar-color: var(--st-gray-100);
+  --st-react-avatar-background: var(--st-gray-20);
 }
