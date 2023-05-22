@@ -14,7 +14,6 @@ import {
   MenuGroup,
   MenuItem,
   MenuLabel,
-  MenuProps,
   MenuRadioGroup,
   MenuRadioItem,
   MenuRightSlot,
