@@ -3,6 +3,7 @@
     flex: 1;
     text-align: left;
     user-select: none;
+    color: var(--st-react-checkbox-label-color);
     cursor: pointer;
   }
   &:hover .st-react-checkbox--label {
