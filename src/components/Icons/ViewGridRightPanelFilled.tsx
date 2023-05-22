@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgViewGridRightPanelFilled = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={20} height={20} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <g clipPath="url(#clip0_309_61088)">
-      <rect width={20} height={20} />
-      <rect x={0.5} y={0.5} width={19} height={19} rx={0.75} stroke="currentColor" />
-      <rect x={12.5} y={0.5} width={7} height={19} rx={0.75} fill="currentColor" stroke="currentColor" />
+  <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="none" viewBox="0 0 20 20" {...props}>
+    <g clipPath="url(#a)">
+      <path d="M0 0h20v20H0z" />
+      <rect width={19} height={19} x={0.5} y={0.5} stroke="currentColor" rx={0.75} />
+      <rect width={7} height={19} x={12.5} y={0.5} fill="currentColor" stroke="currentColor" rx={0.75} />
     </g>
     <defs>
-      <clipPath id="clip0_309_61088">
-        <rect width={20} height={20} fill="white" />
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h20v20H0z" />
       </clipPath>
     </defs>
   </svg>

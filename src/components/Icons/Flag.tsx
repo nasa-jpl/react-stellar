@@ -1,17 +1,14 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgFlag = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 16 16" {...props}>
+    <path fill="currentColor" d="M3 10.156c4-2.925 7 2.924 11 0V2.844c-4 2.925-7-2.924-11 0" />
     <path
-      d="M3 10.1557C7 7.23115 10 13.0803 14 10.1557V2.84426C10 5.76885 7 -0.0803363 3 2.84426"
-      fill="currentColor"
-    />
-    <path
-      d="M3 10.1557C7 7.23115 10 13.0803 14 10.1557V2.84426C10 5.76885 7 -0.0803364 3 2.84426V10.1557ZM3 10.1557V15"
       stroke="currentColor"
-      strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
+      strokeWidth={2}
+      d="M3 10.156c4-2.925 7 2.924 11 0V2.844c-4 2.925-7-2.924-11 0v7.312Zm0 0V15"
     />
   </svg>
 );

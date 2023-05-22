@@ -1,22 +1,22 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgExpand = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M11 1L15 1L15 5L13 3L11 1Z" fill="currentColor" />
+  <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 16 16" {...props}>
+    <path fill="currentColor" d="M11 1h4v4l-2-2-2-2Z" />
     <path
-      d="M10 6L15 1M15 1L11 1L15 5L15 1Z"
       stroke="currentColor"
-      strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
+      strokeWidth={2}
+      d="m10 6 5-5m0 0h-4l4 4V1Z"
     />
-    <path d="M5 15L1 15L1 11L3 13L5 15Z" fill="currentColor" />
+    <path fill="currentColor" d="M5 15H1v-4l2 2 2 2Z" />
     <path
-      d="M6 10L1 15M1 15L5 15L1 11L1 15Z"
       stroke="currentColor"
-      strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
+      strokeWidth={2}
+      d="m6 10-5 5m0 0h4l-4-4v4Z"
     />
   </svg>
 );

@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgTreeLeaf = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 16 16" {...props}>
     <path
-      opacity={0.4}
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M1.5 7V2H3.5V7C3.5 7.55228 3.94772 8 4.5 8H6V10H4.5C2.84315 10 1.5 8.65685 1.5 7Z"
       fill="currentColor"
+      fillRule="evenodd"
+      d="M1.5 7V2h2v5a1 1 0 0 0 1 1H6v2H4.5a3 3 0 0 1-3-3Z"
+      clipRule="evenodd"
+      opacity={0.4}
     />
-    <rect x={8} y={4} width={3} height={8} fill="currentColor" />
+    <path fill="currentColor" d="M8 4h3v8H8z" />
   </svg>
 );
 export default SvgTreeLeaf;

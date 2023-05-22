@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgFourArrowsDiagonal = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 16 16" {...props}>
     <path
-      d="M13.2426 13.2427L10.6971 13.2427L13.2426 10.6971L13.2426 13.2427ZM13.2426 13.2427L2.7574 2.75741M2.7574 13.2427L5.30299 13.2427L2.7574 10.6971L2.7574 13.2427ZM2.7574 13.2427L13.2427 2.75742M13.2427 2.75742L10.6971 2.75742L13.2427 5.303L13.2427 2.75742ZM2.7574 2.75741L2.7574 5.303L5.30298 2.75741L2.7574 2.75741Z"
       stroke="currentColor"
-      strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M13.243 13.243h-2.546l2.546-2.546v2.546Zm0 0L2.757 2.757m0 10.486h2.546l-2.546-2.546v2.546Zm0 0L13.243 2.757m0 0h-2.546l2.546 2.546V2.757Zm-10.486 0v2.546l2.546-2.546H2.757Z"
     />
   </svg>
 );

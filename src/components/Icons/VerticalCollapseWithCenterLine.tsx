@@ -1,22 +1,22 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const SvgVerticalCollapseWithCenterLine = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M3.07156 5.17157L5.89999 8L3.07156 10.8284L3.07156 8L3.07156 5.17157Z" fill="currentColor" />
+  <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 16 16" {...props}>
+    <path fill="currentColor" d="M3.072 5.172 5.9 8l-2.828 2.828V5.172Z" />
     <path
-      d="M0.792288 8L5.89999 8M5.89999 8L3.07156 5.17157L3.07156 10.8284L5.89999 8Z"
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
+      d="M.792 8H5.9m0 0L3.072 5.172v5.656L5.9 8Z"
     />
-    <path d="M12.9289 5.17157L10.1005 8L12.9289 10.8284L12.9289 8L12.9289 5.17157Z" fill="currentColor" />
+    <path fill="currentColor" d="M12.929 5.172 10.1 8l2.829 2.828V5.172Z" />
     <path
-      d="M15.3181 8L10.1005 8M10.1005 8L12.9289 5.17157L12.9289 10.8284L10.1005 8Z"
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
+      d="M15.318 8h-5.217m0 0 2.828-2.828v5.656L10.1 8Z"
     />
-    <path d="M8 15.7782V0.15282" stroke="currentColor" strokeWidth={2} />
+    <path stroke="currentColor" strokeWidth={2} d="M8 15.778V.153" />
   </svg>
 );
 export default SvgVerticalCollapseWithCenterLine;
