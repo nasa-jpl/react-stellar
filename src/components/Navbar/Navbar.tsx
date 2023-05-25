@@ -1,17 +1,14 @@
-import React, {
-  useCallback,
-  useContext,
-  useEffect,
-  useLayoutEffect,
-  useState,
-} from "react";
+import React, { useCallback, useLayoutEffect, useState } from "react";
 import classNames from "classnames";
 import { IconClose, IconHamburger } from "components/Icons";
 import { Button } from "components/Button";
 
 type ReactJSXElement = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   type: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   props: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   key: any;
 };
 
@@ -194,12 +191,18 @@ export const Navbar = (props: NavbarProps) => {
     </>
   );
 
+  const mobileMenuSpacer = showMobileMenu && (
+    <div className="st-react-navbar--mobile-spacer" />
+  );
+
   return (
     <>
       <div className={navbarClass}>
         {mobileMenuPosition === "left" && mobileMenuComponent}
+        {mobileMenuPosition !== "left" && mobileMenuSpacer}
         {visibleChildren}
         {mobileMenuPosition === "right" && mobileMenuComponent}
+        {mobileMenuPosition !== "right" && mobileMenuSpacer}
       </div>
       {showMobileMenu && mobileMenuOpen && mobileMenu}
     </>

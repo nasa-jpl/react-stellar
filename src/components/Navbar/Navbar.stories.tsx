@@ -96,4 +96,95 @@ export const Primary: Story = {
       </NavbarPrimitive.Navbar>
     );
   },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          height: "150px",
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
+};
+
+export const CenteredContent: Story = {
+  render: (args) => {
+    return (
+      <NavbarPrimitive.Navbar {...args}>
+        <NavbarPrimitive.NavbarContent responsiveBreakpointMin={800}>
+          <NavbarPrimitive.NavbarBrand
+            title="Stellar"
+            version="1.0.0"
+            icon={<IconSol />}
+          />
+        </NavbarPrimitive.NavbarContent>
+        <NavbarPrimitive.NavbarContent
+          full
+          align="center"
+          responsiveBreakpointMax={800}
+        >
+          <NavbarPrimitive.NavbarBrand title="Stellar" icon={<IconSol />} />
+        </NavbarPrimitive.NavbarContent>
+        <NavbarPrimitive.NavbarContent responsiveBreakpointMin={800}>
+          {navigationLinks}
+        </NavbarPrimitive.NavbarContent>
+        <NavbarPrimitive.NavbarContent
+          full
+          align="right"
+          responsiveBreakpointMin={800}
+        >
+          <div
+            style={{
+              display: "flex",
+              gap: "var(--st-grid-unit2x)",
+              alignItems: "center",
+            }}
+          >
+            <Button key="1" variant="secondary">
+              Action 1
+            </Button>
+            <Button key="2">Action 2</Button>
+            <Menu
+              {...args}
+              trigger={
+                <Button
+                  size="large"
+                  variant="tertiary"
+                  style={{ padding: "0 var(--st-grid-unit)", gap: "4px" }}
+                >
+                  <Avatar text="K" />
+                  <IconChevronDown />
+                </Button>
+              }
+            >
+              <MenuLabel>Welcome kjaneway</MenuLabel>
+              <MenuItem>Account Settings</MenuItem>
+              <MenuItem>
+                Logout
+                <MenuRightSlot>
+                  <IconArrowRight />
+                </MenuRightSlot>
+              </MenuItem>
+            </Menu>
+          </div>
+        </NavbarPrimitive.NavbarContent>
+        <NavbarPrimitive.NavbarMobileMenu>
+          {mobileNavigationLinks}
+        </NavbarPrimitive.NavbarMobileMenu>
+      </NavbarPrimitive.Navbar>
+    );
+  },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          height: "150px",
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
