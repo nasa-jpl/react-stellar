@@ -39,6 +39,7 @@ export const Primary: Story = {
             icon={<IconSol />}
           />
         </NavbarPrimitive.NavbarContent>
+        {/* TODO some option / functionality to ensure that "center" is actually in the center */}
         <NavbarPrimitive.NavbarContent
           full
           align="center"
