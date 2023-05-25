@@ -87,7 +87,7 @@ export const NavbarLink = (props: NavbarLinkProps) => {
 };
 
 export type NavbarBrandProps = {
-  icon?: React.ReactNode;
+  logo?: React.ReactNode;
   title?: React.ReactNode;
   version?: React.ReactNode;
   className?: string;
@@ -97,7 +97,7 @@ export type NavbarBrandProps = {
  * [Figma Link](TODO)
  */
 export const NavbarBrand = (props: NavbarBrandProps) => {
-  const { icon, title, version, className = "" } = props;
+  const { logo, title, version, className = "" } = props;
 
   const navbarBrandClass = classNames({
     "st-react-navbar-brand": true,
@@ -105,7 +105,7 @@ export const NavbarBrand = (props: NavbarBrandProps) => {
   });
   return (
     <div className={navbarBrandClass}>
-      {icon && <div className="st-react-navbar-brand--icon">{icon}</div>}
+      {logo && <div className="st-react-navbar-brand--logo">{logo}</div>}
       {title && <div className="st-react-navbar-brand--title">{title}</div>}
       {version && (
         <div className="st-react-navbar-brand--version">{version}</div>

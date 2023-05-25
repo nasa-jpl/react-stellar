@@ -225,6 +225,15 @@
   --st-react-navbar-link-letter-spacing: var(--st-button-letter-spacing);
   --st-react-navbar-link-color: var(--st-button-tertiary-color);
   --st-react-navbar-link-hover-background-color: var(--st-gray-15);
+  --st-react-navbar-link-height: 100%;
+  --st-react-navbar-mobile-link-height: 40px;
+  --st-react-navbar-link-gap: var(--st-grid-unit);
+  --st-react-navbar-link-padding: 0 var(--st-grid-unit3x);
+
+  --st-react-navbar-height: 48px;
+  --st-react-navbar-padding: 0px 16px;
+
+  --st-react-navbar-mobile-spacer-width: 24px;
 
   // Avatar.
   --st-react-avatar-font-family: var(--st-typography-medium-font-family);
@@ -265,8 +274,6 @@
   --st-react-menu-label-color: var(--st-gray-50);
 
   --st-react-menu-separator-background: var(--st-gray-20);
-
   --st-react-menu-arrow-filter: drop-shadow(0px 1px 0px #d6d6d6);
-
   --st-react-menu-right-slot-color: var(--st-gray-50);
 }

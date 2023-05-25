@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   background: var(--st-gray-10);
-  height: 48px;
-  padding: 0px 16px;
+  height: var(--st-react-navbar-height);
+  padding: var(--st-react-navbar-padding);
 }
 
 .st-react-navbar-brand {
@@ -12,13 +12,8 @@
   gap: calc(var(--st-grid-unit));
   margin-right: var(--st-grid-unit2x);
 
-  .st-react-navbar-brand--icon {
+  .st-react-navbar-brand--logo {
     display: flex;
-
-    & svg {
-      height: 24px;
-      width: 24px;
-    }
   }
 
   .st-react-navbar-brand--title {
@@ -29,6 +24,7 @@
     letter-spacing: var(--st-react-navbar-brand-title-letter-spacing);
     color: var(--st-react-navbar-brand-title-color);
     white-space: nowrap;
+    user-select: none;
   }
 
   .st-react-navbar-brand--version {
@@ -63,15 +59,8 @@
   justify-content: center;
 }
 
-.st-react-navbar-right-content {
-  flex: 1;
-  justify-content: flex-end;
-  display: flex;
-  gap: var(--st-grid-unit2x);
-}
-
 .st-react-navbar-link {
-  height: 100%;
+  height: var(--st-react-navbar-link-height);
   display: flex;
   align-items: center;
   font-family: var(--st-react-navbar-link-font-family);
@@ -81,8 +70,9 @@
   letter-spacing: var(--st-react-navbar-link-letter-spacing);
   color: var(--st-react-navbar-link-color);
   text-decoration: none;
-  padding: 0 var(--st-grid-unit2x);
+  padding: var(--st-react-navbar-link-padding);
   white-space: nowrap;
+  gap: var(--st-react-navbar-link-gap);
 
   &:hover {
     background: var(--st-react-navbar-link-hover-background-color);
@@ -105,7 +95,7 @@
   background-color: var(--st-gray-10);
 
   & .st-react-navbar-link {
-    height: 40px;
+    height: var(--st-react-navbar-mobile-link-height);
 
     &:active {
       background: var(--st-react-navbar-link-hover-background-color);
@@ -114,5 +104,5 @@
 }
 
 .st-react-navbar--mobile-spacer {
-  width: 24px;
+  width: var(--st-react-navbar-mobile-spacer-width);
 }
