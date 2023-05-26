@@ -25,6 +25,9 @@
     color: var(--st-react-navbar-brand-title-color);
     white-space: nowrap;
     user-select: none;
+    gap: var(--st-grid-unit2x);
+    display: flex;
+    align-items: baseline;
   }
 
   .st-react-navbar-brand--version {

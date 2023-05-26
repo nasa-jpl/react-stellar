@@ -1,4 +1,4 @@
-import React, { useCallback, useLayoutEffect, useState } from "react";
+import { useCallback, useLayoutEffect, useState } from "react";
 import classNames from "classnames";
 import { IconClose, IconHamburger } from "components/Icons";
 import { Button } from "components/Button";
@@ -106,9 +106,13 @@ export const NavbarBrand = (props: NavbarBrandProps) => {
   return (
     <div className={navbarBrandClass}>
       {logo && <div className="st-react-navbar-brand--logo">{logo}</div>}
-      {title && <div className="st-react-navbar-brand--title">{title}</div>}
-      {version && (
-        <div className="st-react-navbar-brand--version">{version}</div>
+      {title && (
+        <div className="st-react-navbar-brand--title">
+          {title}
+          {version && (
+            <div className="st-react-navbar-brand--version">{version}</div>
+          )}
+        </div>
       )}
     </div>
   );
@@ -117,19 +121,22 @@ export const NavbarBrand = (props: NavbarBrandProps) => {
 export type NavbarProps = {
   children?: React.ReactNode[];
   enableMobileMenu?: boolean;
-  mobileBreakPoint?: number;
+  mobileBreakpoint?: number;
   mobileMenuPosition?: "left" | "right";
   className?: string;
 };
 
-/**
+/** A component that appears at the top of an app screen to help users navigate through the application content and access
+ * global functionality. The react-stellar Navbar is designed to be composed to suit different needs and provides solutions
+ * for responsive content rendering.
+ *
  * [Figma Link](TODO)
  */
 export const Navbar = (props: NavbarProps) => {
   const {
     children,
     enableMobileMenu = true,
-    mobileBreakPoint = 800,
+    mobileBreakpoint = 800,
     mobileMenuPosition = "left",
     className = "",
   } = props;
@@ -139,7 +146,7 @@ export const Navbar = (props: NavbarProps) => {
   const toggleMobileMenuOpen = () => setMobileMenuOpen(!mobileMenuOpen);
 
   const showMobileMenu =
-    enableMobileMenu && document.body.clientWidth < mobileBreakPoint;
+    enableMobileMenu && document.body.clientWidth < mobileBreakpoint;
 
   const navbarClass = classNames({
     "st-react-navbar": true,
@@ -149,7 +156,7 @@ export const Navbar = (props: NavbarProps) => {
 
   const handleResize = useCallback(() => {
     setClientWidth(document.body.clientWidth);
-    if (mobileMenuOpen && document.body.clientWidth >= mobileBreakPoint) {
+    if (mobileMenuOpen && document.body.clientWidth >= mobileBreakpoint) {
       setMobileMenuOpen(false);
     }
   }, [clientWidth]);
@@ -171,7 +178,7 @@ export const Navbar = (props: NavbarProps) => {
       if (
         !(
           (typeof child.props.responsiveBreakpointMin === "number" &&
-            clientWidth < child.props.responsiveBreakpointMin) ||
+            clientWidth <= child.props.responsiveBreakpointMin) ||
           (typeof child.props.responsiveBreakpointMax === "number" &&
             clientWidth > child.props.responsiveBreakpointMax)
         )
