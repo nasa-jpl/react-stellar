@@ -23,6 +23,12 @@ npm install --save-dev @nasa-jpl/react-stellar
 
 ## Importing Stellar Components in React
 
+Include react-stellar and stellar styles using the following import in your app:
+
+```JS
+import "@nasa-jpl/react-stellar/dist/esm/stellar.css";
+```
+
 You can import a Stellar component using the following syntax:
 
 ```JS

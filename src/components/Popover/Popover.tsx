@@ -1,6 +1,6 @@
-import React from "react";
 import classNames from "classnames";
 import * as PopoverPrimitive from "@radix-ui/react-popover";
+import { forwardRef } from "react";
 
 export const PopoverTrigger = PopoverPrimitive.Trigger;
 export const PopoverClose = PopoverPrimitive.Close;
@@ -10,7 +10,7 @@ export type PopoverContentProps = {
   children?: React.ReactNode;
 } & PopoverPrimitive.PopoverContentProps;
 
-export const PopoverContent = React.forwardRef(
+export const PopoverContent = forwardRef(
   (props: PopoverContentProps, forwardedRef) => {
     const { children, className = "", ...popoverContentProps } = props;
     const popoverContentClass = classNames({
