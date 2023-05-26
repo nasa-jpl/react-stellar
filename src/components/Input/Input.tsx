@@ -1,4 +1,4 @@
-import { forwardRef, useCallback, useState } from "react";
+import { FocusEvent, forwardRef, useCallback, useState } from "react";
 import classNames from "classnames";
 
 export interface InputProps extends React.HTMLProps<HTMLInputElement> {
@@ -29,14 +29,14 @@ export const Input = forwardRef(
   ) => {
     const [isFocused, setIsFocused] = useState(false);
     const focusCallback = useCallback(
-      (event: FocusEvent) => {
+      (event: FocusEvent<HTMLInputElement, Element>) => {
         setIsFocused(true);
         onFocus?.(event);
       },
       [onFocus],
     );
     const blurCallback = useCallback(
-      (event: FocusEvent) => {
+      (event: FocusEvent<HTMLInputElement, Element>) => {
         setIsFocused(false);
         onBlur?.(event);
       },
