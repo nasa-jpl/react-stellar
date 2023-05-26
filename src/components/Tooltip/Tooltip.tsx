@@ -1,4 +1,3 @@
-import React from "react";
 import classNames from "classnames";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 
@@ -9,6 +8,8 @@ export type TooltipProps = {
   className?: string;
   contentProps?: TooltipPrimitive.TooltipContentProps;
 } & TooltipPrimitive.TooltipProps;
+
+export const TooltipProvider = TooltipPrimitive.TooltipProvider;
 
 /** A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
  * Built using Radix Tooltip, styled for Stellar. Refer to the Radix docs for complete documentation of available properties aside from the ones

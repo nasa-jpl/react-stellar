@@ -1,6 +1,5 @@
-import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { Meta, StoryObj } from "@storybook/react";
-import { Tooltip } from "components/Tooltip";
+import { Tooltip, TooltipProvider } from "components/Tooltip";
 import { Button, IconSol } from "index";
 
 export default {

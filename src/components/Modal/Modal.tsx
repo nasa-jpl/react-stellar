@@ -1,8 +1,8 @@
-import React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { Button } from "components/Button";
 import { IconClose } from "components/Icons";
 import classNames from "classnames";
+import { forwardRef } from "react";
 
 export interface ModalDescriptionProps {
   children?: string | React.ReactNode;
@@ -20,7 +20,7 @@ export type ModalContentProps = {
   children?: string | React.ReactNode;
 } & DialogPrimitive.DialogContentProps;
 
-export const ModalContent = React.forwardRef(
+export const ModalContent = forwardRef(
   (props: ModalContentProps, forwardedRef) => {
     const { children, className = "", ...modalProps } = props;
     const modalClass = classNames({
