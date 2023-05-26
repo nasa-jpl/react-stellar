@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
-import React from "react";
 import { IconCheck, IconMinus } from "components/Icons";
 
 export type MenuContentProps = {

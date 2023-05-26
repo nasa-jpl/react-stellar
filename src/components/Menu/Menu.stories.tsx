@@ -22,7 +22,7 @@ import {
   MenuSubContent,
   MenuSubTrigger,
 } from "components/Menu";
-import React from "react";
+import { useState } from "react";
 
 export default { component: Menu } as Meta<typeof Menu>;
 type Story = StoryObj<typeof Menu>;
@@ -30,8 +30,8 @@ type Story = StoryObj<typeof Menu>;
 export const Default: Story = {
   args: {},
   render: (args) => {
-    const [itemChecked, setItemChecked] = React.useState(true);
-    const [radioItem, setRadioItem] = React.useState("item 1");
+    const [itemChecked, setItemChecked] = useState(true);
+    const [radioItem, setRadioItem] = useState("item 1");
 
     return (
       <Menu
@@ -112,7 +112,11 @@ export const Multiple: Story = {
         <Menu
           {...args}
           trigger={
-            <Button size="large" variant="tertiary" style={{padding: "0 var(--st-grid-unit)", gap: "4px"}}>
+            <Button
+              size="large"
+              variant="tertiary"
+              style={{ padding: "0 var(--st-grid-unit)", gap: "4px" }}
+            >
               <Avatar text="K" />
               <IconChevronDown />
             </Button>
