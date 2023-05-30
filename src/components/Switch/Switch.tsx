@@ -10,12 +10,11 @@ export type SwitchProps = {
   disabled?: boolean;
 } & SwitchPrimitive.SwitchProps;
 
-/** A control that allows the user to toggle between checked and not checked.
+/** A control that allows the user to toggle between checked and not checked. Intended for usage in a list where the parent element will supply a width.
 
  * Built using Radix Switch, styled for Stellar. Refer to the Radix docs for complete documentation of available properties aside from the ones
  * added by this wrapper component.
  *
- * TODO figma link, call this Toggle or Switch? Stellar says toggle but Radix also has a toggle button component which we could do?
  * [Figma Link](https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-Design-System?type=design&node-id=5379%3A7122&t=hcGqixx7MZ4qSgbd-1),
  * [Radix Docs](https://www.radix-ui.com/docs/primitives/components/switch)
  */
@@ -37,6 +36,11 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
     });
     return (
       <div className={switchClass}>
+        {label && (
+          <Label htmlFor={label} className="st-react-switch--label">
+            {label}
+          </Label>
+        )}
         <SwitchPrimitive.Root
           id={label}
           className="st-react-switch--box"
@@ -46,11 +50,6 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
         >
           <SwitchPrimitive.Thumb className="st-react-switch--thumb" />
         </SwitchPrimitive.Root>
-        {label && (
-          <Label htmlFor={label} className="st-react-switch--label">
-            {label}
-          </Label>
-        )}
       </div>
     );
   },

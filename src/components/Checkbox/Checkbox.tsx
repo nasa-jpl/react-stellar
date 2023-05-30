@@ -27,7 +27,8 @@ export const CheckSVG = () => (
   </svg>
 );
 
-/** A control that allows the user to toggle between checked and not checked.
+/** A control that allows the user to toggle between checked and not checked. Intended for usage in a list where the parent element will supply a width.
+ *
  * Built using Radix Dialog, styled for Stellar. Refer to the Radix docs for complete documentation of available properties aside from the ones
  * added by this wrapper component.
  *
@@ -52,6 +53,11 @@ export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(
     });
     return (
       <div className={checkboxClass}>
+        {label && (
+          <Label htmlFor={label} className="st-react-checkbox--label">
+            {label}
+          </Label>
+        )}
         <CheckboxPrimitive.Root
           id={label}
           className="st-react-checkbox--box"
@@ -63,11 +69,6 @@ export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(
             <CheckSVG />
           </div>
         </CheckboxPrimitive.Root>
-        {label && (
-          <Label htmlFor={label} className="st-react-checkbox--label">
-            {label}
-          </Label>
-        )}
       </div>
     );
   },
