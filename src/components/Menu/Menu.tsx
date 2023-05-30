@@ -1,13 +1,14 @@
 import classNames from "classnames";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { IconCheck, IconMinus } from "components/Icons";
+import { forwardRef } from "react";
 
 export type MenuContentProps = {
   children?: React.ReactNode;
   className?: string;
 } & DropdownMenuPrimitive.DropdownMenuContentProps;
 
-export const MenuContent = React.forwardRef<HTMLDivElement, MenuContentProps>(
+export const MenuContent = forwardRef<HTMLDivElement, MenuContentProps>(
   ({ children, className = "", ...props }, forwardedRef) => {
     return (
       <DropdownMenuPrimitive.Portal>
@@ -133,7 +134,7 @@ export type MenuCheckboxItemProps = {
   children?: React.ReactNode;
 } & DropdownMenuPrimitive.DropdownMenuCheckboxItemProps;
 
-export const MenuCheckboxItem = React.forwardRef<
+export const MenuCheckboxItem = forwardRef<
   HTMLDivElement,
   MenuCheckboxItemProps
 >(({ children, className = "", ...props }, forwardedRef) => {
@@ -159,23 +160,22 @@ export type MenuRadioItemProps = {
   children?: React.ReactNode;
 } & DropdownMenuPrimitive.DropdownMenuRadioItemProps;
 
-export const MenuRadioItem = React.forwardRef<
-  HTMLDivElement,
-  MenuRadioItemProps
->(({ children, className = "", ...props }, forwardedRef) => {
-  return (
-    <DropdownMenuPrimitive.RadioItem
-      className={classNames("st-react-menu-radio-item", className)}
-      {...props}
-      ref={forwardedRef}
-    >
-      {children}
-      <MenuItemIndicator>
-        <IconCheck />
-      </MenuItemIndicator>
-    </DropdownMenuPrimitive.RadioItem>
-  );
-});
+export const MenuRadioItem = forwardRef<HTMLDivElement, MenuRadioItemProps>(
+  ({ children, className = "", ...props }, forwardedRef) => {
+    return (
+      <DropdownMenuPrimitive.RadioItem
+        className={classNames("st-react-menu-radio-item", className)}
+        {...props}
+        ref={forwardedRef}
+      >
+        {children}
+        <MenuItemIndicator>
+          <IconCheck />
+        </MenuItemIndicator>
+      </DropdownMenuPrimitive.RadioItem>
+    );
+  },
+);
 
 export type MenuSeparatorProps = {
   className?: string;
@@ -223,22 +223,21 @@ export type MenuSubContentProps = {
   children?: React.ReactNode;
 } & DropdownMenuPrimitive.DropdownMenuSubContentProps;
 
-export const MenuSubContent = React.forwardRef<
-  HTMLDivElement,
-  MenuSubContentProps
->(({ children, className = "", ...props }, forwardedRef) => {
-  return (
-    <DropdownMenuPrimitive.Portal>
-      <DropdownMenuPrimitive.SubContent
-        className={classNames("st-react-menu-subcontent", className)}
-        {...props}
-        ref={forwardedRef}
-      >
-        {children}
-      </DropdownMenuPrimitive.SubContent>
-    </DropdownMenuPrimitive.Portal>
-  );
-});
+export const MenuSubContent = forwardRef<HTMLDivElement, MenuSubContentProps>(
+  ({ children, className = "", ...props }, forwardedRef) => {
+    return (
+      <DropdownMenuPrimitive.Portal>
+        <DropdownMenuPrimitive.SubContent
+          className={classNames("st-react-menu-subcontent", className)}
+          {...props}
+          ref={forwardedRef}
+        >
+          {children}
+        </DropdownMenuPrimitive.SubContent>
+      </DropdownMenuPrimitive.Portal>
+    );
+  },
+);
 
 export type MenuRightSlotProps = {
   className?: string;
