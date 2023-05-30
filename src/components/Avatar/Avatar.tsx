@@ -6,7 +6,7 @@ export type AvatarProps = {
   text?: string;
   size?: "medium" | "large";
   className?: string;
-} & AlertDialog.DialogProps;
+};
 
 /** An image element with a fallback for representing the user.
  *
