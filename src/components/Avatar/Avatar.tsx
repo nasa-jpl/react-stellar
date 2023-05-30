@@ -4,7 +4,6 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar";
 export type AvatarProps = {
   src?: string;
   text?: string;
-  size?: "medium" | "large";
   className?: string;
 };
 
@@ -17,14 +16,10 @@ export type AvatarProps = {
  * [Radix Docs](https://www.radix-ui.com/docs/primitives/components/avatar)
  */
 export const Avatar = (props: AvatarProps) => {
-  const { src, text, size = "medium", className = "" } = props;
-
-  const rootClasses = classNames("st-react-avatar", className, {
-    large: size === "large",
-  });
+  const { src, text, className = "" } = props;
 
   return (
-    <AvatarPrimitive.Root className={rootClasses}>
+    <AvatarPrimitive.Root className={classNames("st-react-avatar", className)}>
       <AvatarPrimitive.Image
         className="st-react-avatar--image"
         src={src}
