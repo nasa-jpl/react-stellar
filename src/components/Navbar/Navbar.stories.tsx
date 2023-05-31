@@ -6,10 +6,13 @@ import {
   IconArrowRight,
   IconCalendar,
   IconChevronDown,
+  IconChevronUp,
+  IconHamburger,
   IconHelicopter,
   IconRover,
   IconSatellite,
   IconSol,
+  IconStar,
 } from "components/Icons";
 import { Menu, MenuItem, MenuLabel, MenuRightSlot } from "components/Menu";
 import * as NavbarPrimitive from "components/Navbar";
@@ -63,55 +66,77 @@ const userMenu = (
   </Menu>
 );
 
+const moreNavigationLinks = navigationLinks.concat([
+  <NavbarPrimitive.NavbarLink key="4" href="#">
+    <IconCalendar /> Page 4
+  </NavbarPrimitive.NavbarLink>,
+]);
+
 export const Default: Story = {
+  args: {
+    mobileBreakpoint: 800,
+  },
   render: (args) => {
     return (
       <NavbarPrimitive.Navbar {...args}>
-        {/* Content to show when screen width is at least 800px */}
-        <NavbarPrimitive.NavbarContent responsiveBreakpointMin={800}>
+        {/* Content to show when screen width is 1100px or more */}
+        <NavbarPrimitive.NavbarBreakpoint min={1100}>
           <NavbarPrimitive.NavbarBrand
             title="Stellar"
             version="1.0.0"
             logo={logo}
+            link="#"
           />
-          {navigationLinks}
-        </NavbarPrimitive.NavbarContent>
-
-        <NavbarPrimitive.NavbarContent
-          full
-          align="right"
-          responsiveBreakpointMin={800}
-        >
-          <div
-            style={{
-              display: "flex",
-              gap: "var(--st-grid-unit2x)",
-              alignItems: "center",
-            }}
+          {moreNavigationLinks}
+          <NavbarPrimitive.NavbarContent
+            full
+            align="right"
+            responsiveBreakpointMin={1100}
           >
-            <Button key="1" variant="secondary">
-              Action 1
-            </Button>
-            <Button key="2">Action 2</Button>
-            {userMenu}
-          </div>
-        </NavbarPrimitive.NavbarContent>
+            <div
+              style={{
+                display: "flex",
+                gap: "var(--st-grid-unit2x)",
+                alignItems: "center",
+              }}
+            >
+              <Button variant="secondary">Action 1</Button>
+              <Button>Action 2</Button>
+              <Button variant="tertiary">Help</Button>
+              {userMenu}
+            </div>
+          </NavbarPrimitive.NavbarContent>
+        </NavbarPrimitive.NavbarBreakpoint>
+
+        {/* Content to show when screen width is 800-1100px */}
+        <NavbarPrimitive.NavbarBreakpoint min={800} max={1100}>
+          <NavbarPrimitive.NavbarBrand version="1.0.0" title="Stellar" />
+          {navigationLinks}
+          <NavbarPrimitive.NavbarContent full align="right">
+            <div
+              style={{
+                display: "flex",
+                gap: "var(--st-grid-unit2x)",
+                alignItems: "center",
+              }}
+            >
+              <Button variant="secondary">Action 1</Button>
+              <Button>Action 2</Button>
+              {userMenu}
+            </div>
+          </NavbarPrimitive.NavbarContent>
+        </NavbarPrimitive.NavbarBreakpoint>
 
         {/* Content to show when screen width is below 800px */}
-        <NavbarPrimitive.NavbarContent
-          full
-          align="center"
-          responsiveBreakpointMax={800}
-        >
-          <NavbarPrimitive.NavbarBrand title="Stellar" logo={logo} />
-        </NavbarPrimitive.NavbarContent>
+        <NavbarPrimitive.NavbarBreakpoint max={800}>
+          <NavbarPrimitive.NavbarContent full align="center">
+            <NavbarPrimitive.NavbarBrand title="Stellar" />
+          </NavbarPrimitive.NavbarContent>
 
-        <NavbarPrimitive.NavbarContent
-          align="right"
-          responsiveBreakpointMax={800}
-        >
-          {userMenu}
-        </NavbarPrimitive.NavbarContent>
+          <NavbarPrimitive.NavbarContent align="right">
+            {userMenu}
+          </NavbarPrimitive.NavbarContent>
+        </NavbarPrimitive.NavbarBreakpoint>
 
         {/* Mobile menu that will only be shown when screen width is less than the NavbarPrimitive.Navbar mobileBreakPoint prop */}
         <NavbarPrimitive.NavbarMobileMenu>
@@ -133,115 +158,20 @@ export const Default: Story = {
   ],
 };
 
-const moreNavigationLinks = navigationLinks.concat([
-  <NavbarPrimitive.NavbarLink key="4" href="#">
-    <IconCalendar /> Page 4
-  </NavbarPrimitive.NavbarLink>,
-]);
-
-/**
- * This example demonstrates the usage of multiple responsive breakpoint windows to create a more dynamic navbar.
- * The navbar as composed here will display different content from 0-800px, 800-1100px, and > 1100px.
+/** Customize the mobile menu toggle by supplying a `renderMobileMenuToggle` prop that
+ * returns an element when provided with `open` and `toggleOpen`.
  */
-export const MoreResponsiveBreakpoints: Story = {
+export const CustomMobileMenuToggle: Story = {
   args: {
     mobileBreakpoint: 800,
+    renderMobileMenuToggle: (open, toggleOpen) => {
+      return (
+        <Button variant="icon" onClick={toggleOpen}>
+          {!open ? <IconChevronDown /> : <IconChevronUp />}
+        </Button>
+      );
+    },
   },
-  render: (args) => {
-    return (
-      <NavbarPrimitive.Navbar {...args}>
-        {/* Content to show when screen width is 1100px or more */}
-        <NavbarPrimitive.NavbarContent
-          align="left"
-          responsiveBreakpointMin={1100}
-        >
-          <NavbarPrimitive.NavbarBrand
-            title="Stellar"
-            version="1.0.0"
-            logo={logo}
-          />
-          {moreNavigationLinks}
-        </NavbarPrimitive.NavbarContent>
-
-        <NavbarPrimitive.NavbarContent
-          full
-          align="right"
-          responsiveBreakpointMin={1100}
-        >
-          <div
-            style={{
-              display: "flex",
-              gap: "var(--st-grid-unit2x)",
-              alignItems: "center",
-            }}
-          >
-            <Button variant="secondary">Action 1</Button>
-            <Button>Action 2</Button>
-            <Button variant="tertiary">Help</Button>
-            {userMenu}
-          </div>
-        </NavbarPrimitive.NavbarContent>
-
-        {/* Content to show when screen width is 800 to 1100px */}
-        <NavbarPrimitive.NavbarContent
-          responsiveBreakpointMin={800}
-          responsiveBreakpointMax={1100}
-        >
-          <NavbarPrimitive.NavbarBrand version="1.0.0" title="Stellar" />
-          {navigationLinks}
-        </NavbarPrimitive.NavbarContent>
-
-        <NavbarPrimitive.NavbarContent
-          full
-          align="right"
-          responsiveBreakpointMin={800}
-          responsiveBreakpointMax={1100}
-        >
-          <div
-            style={{
-              display: "flex",
-              gap: "var(--st-grid-unit2x)",
-              alignItems: "center",
-            }}
-          >
-            <Button variant="secondary">Action 1</Button>
-            <Button>Action 2</Button>
-            {userMenu}
-          </div>
-        </NavbarPrimitive.NavbarContent>
-
-        {/* Content to show when screen width is below 800px */}
-        <NavbarPrimitive.NavbarContent
-          full
-          align="center"
-          responsiveBreakpointMax={800}
-        >
-          <NavbarPrimitive.NavbarBrand title="Stellar" />
-        </NavbarPrimitive.NavbarContent>
-
-        <NavbarPrimitive.NavbarContent
-          align="right"
-          responsiveBreakpointMax={800}
-        >
-          {userMenu}
-        </NavbarPrimitive.NavbarContent>
-
-        {/* Mobile menu that will only be shown when screen width is less than the NavbarPrimitive.Navbar mobileBreakPoint prop */}
-        <NavbarPrimitive.NavbarMobileMenu>
-          {mobileNavigationLinks}
-        </NavbarPrimitive.NavbarMobileMenu>
-      </NavbarPrimitive.Navbar>
-    );
-  },
-  decorators: [
-    (Story) => (
-      <div
-        style={{
-          height: "150px",
-        }}
-      >
-        <Story />
-      </div>
-    ),
-  ],
+  render: Default.render,
+  decorators: Default.decorators,
 };

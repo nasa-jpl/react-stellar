@@ -11,6 +11,8 @@
   align-items: center;
   gap: calc(var(--st-grid-unit));
   margin-right: var(--st-grid-unit2x);
+  color: inherit;
+  text-decoration: none;
 
   .st-react-navbar-brand--logo {
     display: flex;

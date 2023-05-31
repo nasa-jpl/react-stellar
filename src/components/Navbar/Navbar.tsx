@@ -1,7 +1,13 @@
-import { useCallback, useLayoutEffect, useState } from "react";
+import {
+  AnchorHTMLAttributes,
+  useCallback,
+  useLayoutEffect,
+  useState,
+} from "react";
 import classNames from "classnames";
 import { IconClose, IconHamburger } from "components/Icons";
 import { Button } from "components/Button";
+import { PropsWithChildren } from "react";
 
 type ReactJSXElement = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -30,6 +36,15 @@ export const NavbarMobileMenu = (props: NavbarMobileMenuProps) => {
   return <div className={navbarMobileMenuClass}>{children}</div>;
 };
 
+type NavbarBreakpointProps = {
+  min?: number;
+  max?: number;
+} & PropsWithChildren;
+
+export const NavbarBreakpoint = (props: NavbarBreakpointProps) => {
+  return <>{props.children}</>;
+};
+
 type NavbarContentProps = {
   full?: boolean;
   children?: React.ReactNode;
@@ -39,9 +54,6 @@ type NavbarContentProps = {
   className?: string;
 };
 
-/**
- * [Figma Link](TODO)
- */
 export const NavbarContent = (props: NavbarContentProps) => {
   const { children, align = "left", full = false, className = "" } = props;
 
@@ -90,21 +102,20 @@ export type NavbarBrandProps = {
   logo?: React.ReactNode;
   title?: React.ReactNode;
   version?: React.ReactNode;
+  link?: string;
   className?: string;
-};
+} & AnchorHTMLAttributes<HTMLAnchorElement>;
 
-/**
- * [Figma Link](TODO)
- */
 export const NavbarBrand = (props: NavbarBrandProps) => {
-  const { logo, title, version, className = "" } = props;
+  const { logo, title, version, link = "", className = "", ...args } = props;
 
   const navbarBrandClass = classNames({
     "st-react-navbar-brand": true,
     [className]: !!className,
   });
-  return (
-    <div className={navbarBrandClass}>
+
+  const innerContent = (
+    <>
       {logo && <div className="st-react-navbar-brand--logo">{logo}</div>}
       {title && (
         <div className="st-react-navbar-brand--title">
@@ -114,15 +125,31 @@ export const NavbarBrand = (props: NavbarBrandProps) => {
           )}
         </div>
       )}
-    </div>
+    </>
+  );
+
+  return !link ? (
+    <div className={navbarBrandClass}>{innerContent}</div>
+  ) : (
+    <a className={navbarBrandClass} href={link} {...args}>
+      {innerContent}
+    </a>
   );
 };
+
+export const NavbarSpacer = () => (
+  <div className="st-react-navbar--mobile-spacer" />
+);
 
 export type NavbarProps = {
   children?: React.ReactNode[];
   enableMobileMenu?: boolean;
   mobileBreakpoint?: number;
   mobileMenuPosition?: "left" | "right";
+  renderMobileMenuToggle?: (
+    open: boolean,
+    toggleOpen: () => void,
+  ) => JSX.Element;
   className?: string;
 };
 
@@ -138,6 +165,7 @@ export const Navbar = (props: NavbarProps) => {
     enableMobileMenu = true,
     mobileBreakpoint = 800,
     mobileMenuPosition = "left",
+    renderMobileMenuToggle,
     className = "",
   } = props;
 
@@ -169,62 +197,45 @@ export const Navbar = (props: NavbarProps) => {
 
   const visibleChildren: React.ReactNode[] = [];
   let mobileMenu;
-  let hasLeftContent = false;
-  let hasRightContent = false;
   ((children as ReactJSXElement[]) || []).forEach((child) => {
     if (child.type.displayName === NavbarMobileMenu.name) {
       // Pull out the mobile menu as we will render it separately
       mobileMenu = child;
-
-      // Detect left and right content
-      if (mobileMenuPosition === "left") {
-        hasLeftContent = showMobileMenu && mobileMenuPosition === "left";
-      }
-      if (mobileMenuPosition === "right") {
-        hasRightContent = showMobileMenu && mobileMenuPosition === "right";
-      }
-    } else if (child.type.displayName === NavbarContent.name) {
+    } else if (child.type.displayName === NavbarBreakpoint.name) {
       // Enforce min and max breakpoints
-      const childProps = child.props as NavbarContentProps;
+      const childProps = child.props as NavbarBreakpointProps;
       if (
         !(
-          (typeof childProps.responsiveBreakpointMin === "number" &&
-            clientWidth <= childProps.responsiveBreakpointMin) ||
-          (typeof childProps.responsiveBreakpointMax === "number" &&
-            clientWidth > childProps.responsiveBreakpointMax)
+          (typeof childProps.min === "number" &&
+            clientWidth <= childProps.min) ||
+          (typeof childProps.max === "number" && clientWidth > childProps.max)
         )
       ) {
         visibleChildren.push(child);
-
-        // Detect left and right content
-        if (childProps.align === "left") hasLeftContent = true;
-        if (childProps.align === "right") hasRightContent = true;
       }
     } else {
       visibleChildren.push(child);
     }
   });
 
-  const mobileMenuComponent = showMobileMenu && (
-    <>
-      <Button variant="icon" onClick={toggleMobileMenuOpen}>
-        {!mobileMenuOpen ? <IconHamburger /> : <IconClose />}
-      </Button>
-    </>
-  );
-
-  const mobileMenuSpacer = showMobileMenu && (
-    <div className="st-react-navbar--mobile-spacer" />
-  );
+  const mobileMenuComponent =
+    showMobileMenu &&
+    (typeof renderMobileMenuToggle === "function" ? (
+      renderMobileMenuToggle(mobileMenuOpen, toggleMobileMenuOpen)
+    ) : (
+      <>
+        <Button variant="icon" onClick={toggleMobileMenuOpen}>
+          {!mobileMenuOpen ? <IconHamburger /> : <IconClose />}
+        </Button>
+      </>
+    ));
 
   return (
     <>
       <div className={navbarClass}>
         {mobileMenuPosition === "left" && mobileMenuComponent}
-        {!hasLeftContent && mobileMenuSpacer}
         {visibleChildren}
         {mobileMenuPosition === "right" && mobileMenuComponent}
-        {!hasRightContent && mobileMenuSpacer}
       </div>
       {showMobileMenu && mobileMenuOpen && mobileMenu}
     </>
