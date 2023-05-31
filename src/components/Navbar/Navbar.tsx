@@ -169,21 +169,36 @@ export const Navbar = (props: NavbarProps) => {
 
   const visibleChildren: React.ReactNode[] = [];
   let mobileMenu;
+  let hasLeftContent = false;
+  let hasRightContent = false;
   ((children as ReactJSXElement[]) || []).forEach((child) => {
     if (child.type.displayName === NavbarMobileMenu.name) {
       // Pull out the mobile menu as we will render it separately
       mobileMenu = child;
+
+      // Detect left and right content
+      if (mobileMenuPosition === "left") {
+        hasLeftContent = showMobileMenu && mobileMenuPosition === "left";
+      }
+      if (mobileMenuPosition === "right") {
+        hasRightContent = showMobileMenu && mobileMenuPosition === "right";
+      }
     } else if (child.type.displayName === NavbarContent.name) {
       // Enforce min and max breakpoints
+      const childProps = child.props as NavbarContentProps;
       if (
         !(
-          (typeof child.props.responsiveBreakpointMin === "number" &&
-            clientWidth <= child.props.responsiveBreakpointMin) ||
-          (typeof child.props.responsiveBreakpointMax === "number" &&
-            clientWidth > child.props.responsiveBreakpointMax)
+          (typeof childProps.responsiveBreakpointMin === "number" &&
+            clientWidth <= childProps.responsiveBreakpointMin) ||
+          (typeof childProps.responsiveBreakpointMax === "number" &&
+            clientWidth > childProps.responsiveBreakpointMax)
         )
       ) {
         visibleChildren.push(child);
+
+        // Detect left and right content
+        if (childProps.align === "left") hasLeftContent = true;
+        if (childProps.align === "right") hasRightContent = true;
       }
     } else {
       visibleChildren.push(child);
@@ -206,10 +221,10 @@ export const Navbar = (props: NavbarProps) => {
     <>
       <div className={navbarClass}>
         {mobileMenuPosition === "left" && mobileMenuComponent}
-        {mobileMenuPosition !== "left" && mobileMenuSpacer}
+        {!hasLeftContent && mobileMenuSpacer}
         {visibleChildren}
         {mobileMenuPosition === "right" && mobileMenuComponent}
-        {mobileMenuPosition !== "right" && mobileMenuSpacer}
+        {!hasRightContent && mobileMenuSpacer}
       </div>
       {showMobileMenu && mobileMenuOpen && mobileMenu}
     </>

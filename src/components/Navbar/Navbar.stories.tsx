@@ -106,6 +106,13 @@ export const Default: Story = {
           <NavbarPrimitive.NavbarBrand title="Stellar" logo={logo} />
         </NavbarPrimitive.NavbarContent>
 
+        <NavbarPrimitive.NavbarContent
+          align="right"
+          responsiveBreakpointMax={800}
+        >
+          {userMenu}
+        </NavbarPrimitive.NavbarContent>
+
         {/* Mobile menu that will only be shown when screen width is less than the NavbarPrimitive.Navbar mobileBreakPoint prop */}
         <NavbarPrimitive.NavbarMobileMenu>
           {mobileNavigationLinks}
@@ -210,6 +217,13 @@ export const MoreResponsiveBreakpoints: Story = {
           responsiveBreakpointMax={800}
         >
           <NavbarPrimitive.NavbarBrand title="Stellar" />
+        </NavbarPrimitive.NavbarContent>
+
+        <NavbarPrimitive.NavbarContent
+          align="right"
+          responsiveBreakpointMax={800}
+        >
+          {userMenu}
         </NavbarPrimitive.NavbarContent>
 
         {/* Mobile menu that will only be shown when screen width is less than the NavbarPrimitive.Navbar mobileBreakPoint prop */}
