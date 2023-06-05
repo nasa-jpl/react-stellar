@@ -1,5 +1,9 @@
 :root {
+  // General.
   --st-react-input-outline: -webkit-focus-ring-color;
+  --st-react-overlay-border: 1px solid rgba(0, 0, 0, 0.16);
+  --st-react-overlay-filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.05))
+    drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
 
   // Label.
   --st-react-label-color: var(--st-gray-60);
@@ -102,10 +106,9 @@
   // Popover.
   --st-react-popover-background: white;
   --st-react-popover-border-radius: 4px;
-  --st-react-popover-border: 1px solid rgba(0, 0, 0, 0.16);
+  --st-react-popover-border: var(--st-react-overlay-border);
   --st-react-popover-padding: calc(var(--st-grid-unit) * 1.5);
-  --st-react-popover-filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.05))
-    drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+  --st-react-popover-filter: var(--st-react-overlay-filter);
 
   // Checkbox.
   --st-react-checkbox-label-color: var(--st-gray-60);
@@ -118,6 +121,27 @@
   --st-react-checkbox-checked-hover-background: rgba(240, 228, 255, 0.48);
   --st-react-checkbox-checked-hover-border-color: var(--st-primary-80);
   --st-react-checkbox-checked-hover-color: var(--st-primary-80);
+
+  // Checkbox.
+  --st-react-checkbox-label-color: var(--st-gray-60);
+  --st-react-checkbox-label-hover-color: var(--st-gray-70);
+  --st-react-checkbox-unchecked-border-color: var(--st-gray-50);
+  --st-react-checkbox-unchecked-hover-border-color: var(--st-gray-60);
+  --st-react-checkbox-checked-background: rgba(240, 228, 255, 0.24);
+  --st-react-checkbox-checked-color: var(--st-primary-70);
+  --st-react-checkbox-checked-border-color: var(--st-primary-70);
+  --st-react-checkbox-checked-hover-background: rgba(240, 228, 255, 0.48);
+  --st-react-checkbox-checked-hover-border-color: var(--st-primary-80);
+  --st-react-checkbox-checked-hover-color: var(--st-primary-80);
+
+  // Switch.
+  --st-react-switch-label-color: var(--st-gray-60);
+  --st-react-switch-label-hover-color: var(--st-gray-70);
+  --st-react-switch-unchecked-background: var(--st-gray-40);
+  --st-react-switch-unchecked-hover-background: var(--st-gray-50);
+  --st-react-switch-unchecked-hover-border-color: var(--st-gray-60);
+  --st-react-switch-checked-background: var(--st-primary-70);
+  --st-react-switch-checked-hover-background: var(--st-primary-80);
 
   // Tooltip.
   --st-react-tooltip-border-radius: calc(var(--st-grid-unit) / 2);
@@ -158,4 +182,98 @@
   // FormField.
   --st-react-formfield-horizontal-grid-unit: 4px;
   --st-react-formfield-vertical-grid-unit: 2px;
+
+  // Navbar.
+  --st-react-navbar-brand-title-font-family: var(
+    --st-typography-header-font-family
+  );
+  --st-react-navbar-brand-title-font-weight: var(
+    --st-typography-header-font-weight
+  );
+  --st-react-navbar-brand-title-font-size: var(
+    --st-typography-header-font-size
+  );
+  --st-react-navbar-brand-title-line-height: var(
+    --st-typography-header-line-height
+  );
+  --st-react-navbar-brand-title-letter-spacing: var(
+    --st-typography-header-letter-spacing
+  );
+  --st-react-navbar-brand-title-color: var(--st-gray-70);
+
+  --st-react-navbar-brand-version-font-family: var(
+    --st-typography-label-font-family
+  );
+  --st-react-navbar-brand-version-font-weight: var(
+    --st-typography-label-font-weight
+  );
+  --st-react-navbar-brand-version-font-size: var(
+    --st-typography-label-font-size
+  );
+  --st-react-navbar-brand-version-line-height: var(
+    --st-typography-label-line-height
+  );
+  --st-react-navbar-brand-version-letter-spacing: var(
+    --st-typography-label-letter-spacing
+  );
+  --st-react-navbar-brand-version-color: var(--st-gray-50);
+
+  --st-react-navbar-link-font-family: var(--st-button-font-family);
+  --st-react-navbar-link-font-weight: var(--st-button-font-weight);
+  --st-react-navbar-link-font-size: var(--st-button-font-size);
+  --st-react-navbar-link-line-height: var(--st-button-line-height);
+  --st-react-navbar-link-letter-spacing: var(--st-button-letter-spacing);
+  --st-react-navbar-link-color: var(--st-button-tertiary-color);
+  --st-react-navbar-link-hover-background-color: var(--st-gray-15);
+  --st-react-navbar-link-height: 100%;
+  --st-react-navbar-mobile-link-height: 40px;
+  --st-react-navbar-link-gap: var(--st-grid-unit);
+  --st-react-navbar-link-padding: 0 var(--st-grid-unit3x);
+
+  --st-react-navbar-height: 48px;
+  --st-react-navbar-padding: 0px 16px;
+
+  --st-react-navbar-mobile-spacer-width: 24px;
+
+  // Avatar.
+  --st-react-avatar-font-family: var(--st-typography-medium-font-family);
+  --st-react-avatar-font-weight: var(--st-typography-medium-font-weight);
+  --st-react-avatar-font-size: var(--st-typography-medium-font-size);
+  --st-react-avatar-line-height: var(--st-typography-medium-line-height);
+  --st-react-avatar-letter-spacing: var(--st-typography-medium-letter-spacing);
+  --st-react-avatar-color: var(--st-gray-100);
+  --st-react-avatar-background: var(--st-gray-20);
+
+  // Menu.
+  --st-react-menu-background: var(--st-white);
+  --st-react-menu-border-radius: calc(var(--st-grid-unit) / 2);
+  --st-react-menu-border: var(--st-react-overlay-border);
+  --st-react-menu-padding: calc(var(--st-grid-unit) / 2);
+  --st-react-menu-filter: var(--st-react-overlay-filter);
+  --st-react-menu-item-font-family: var(--st-typography-label-font-family);
+  --st-react-menu-item-font-weight: var(--st-typography-label-font-weight);
+  --st-react-menu-item-font-size: var(--st-typography-label-font-size);
+  --st-react-menu-item-line-height: var(--st-typography-label-line-height);
+  --st-react-menu-item-letter-spacing: var(
+    --st-typography-label-letter-spacing
+  );
+  --st-react-menu-item-color: var(--st-typography-label-tertiary-color);
+  --st-react-menu-item-open-color: var(--st-primary-40);
+  --st-react-menu-item-open-background: var(--st-primary-10);
+  --st-react-menu-item-highlighted-color: var(--st-gray-10);
+  --st-react-menu-item-highlighted-background: var(--st-primary-50);
+  --st-react-menu-item-disabled-color: var(--st-gray-30);
+
+  --st-react-menu-label-font-family: var(--st-typography-label-font-family);
+  --st-react-menu-label-font-weight: var(--st-typography-label-font-weight);
+  --st-react-menu-label-font-size: var(--st-typography-label-font-size);
+  --st-react-menu-label-line-height: 24px;
+  --st-react-menu-label-letter-spacing: var(
+    --st-typography-label-letter-spacing
+  );
+  --st-react-menu-label-color: var(--st-gray-50);
+
+  --st-react-menu-separator-background: var(--st-gray-20);
+  --st-react-menu-arrow-filter: drop-shadow(0px 1px 0px #d6d6d6);
+  --st-react-menu-right-slot-color: var(--st-gray-50);
 }

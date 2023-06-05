@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { Ref, forwardRef } from "react";
 import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import classNames from "classnames";
 import { ModalActionRow } from "components/Modal";
@@ -8,7 +8,7 @@ export type ActionContentProps = {
 } & AlertDialog.DialogContentProps;
 
 export const AlertContent = forwardRef(
-  (props: ActionContentProps, forwardedRef: React.Ref<HTMLDivElement>) => {
+  (props: ActionContentProps, forwardedRef: Ref<HTMLDivElement>) => {
     const { children, className = "", ...alertProps } = props;
     const modalClass = classNames({
       "st-react-modal": true,

@@ -55,7 +55,7 @@ export const DefaultLeftLabel = {
   },
 };
 
-export const LongList = {
+export const LongList: Story = {
   ...Default,
   args: {
     options: longListItems,
