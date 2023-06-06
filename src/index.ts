@@ -15,3 +15,7 @@ export * from "./components/Error";
 export * from "./components/Warning";
 export * from "./components/FormField";
 export * from "./components/Fields/TextField";
+export * from "./components/Avatar";
+export * from "./components/Menu";
+export * from "./components/Navbar";
+export * from "./components/Switch";
