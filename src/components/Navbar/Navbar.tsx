@@ -142,7 +142,7 @@ export const NavbarSpacer = () => (
 );
 
 export type NavbarProps = {
-  children?: React.ReactNode[];
+  children?: React.ReactNode;
   enableMobileMenu?: boolean;
   mobileBreakpoint?: number;
   mobileMenuPosition?: "left" | "right";
@@ -198,10 +198,10 @@ export const Navbar = (props: NavbarProps) => {
   const visibleChildren: React.ReactNode[] = [];
   let mobileMenu;
   ((children as ReactJSXElement[]) || []).forEach((child) => {
-    if (child.type.displayName === NavbarMobileMenu.name) {
+    if (child.type.name === NavbarMobileMenu.name) {
       // Pull out the mobile menu as we will render it separately
       mobileMenu = child;
-    } else if (child.type.displayName === NavbarBreakpoint.name) {
+    } else if (child.type.name === NavbarBreakpoint.name) {
       // Enforce min and max breakpoints
       const childProps = child.props as NavbarBreakpointProps;
       if (
