@@ -32,6 +32,7 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
       "st-react-switch": true,
       "st-react-switch--label-right": labelPosition === "right",
       "st-react-switch--unlabeled": !label,
+      "st-react-switch--disabled": disabled,
       [className]: !!className,
     });
     return (
