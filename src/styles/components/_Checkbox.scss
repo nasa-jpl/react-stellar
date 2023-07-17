@@ -4,8 +4,16 @@
     text-align: left;
     user-select: none;
     color: var(--st-react-checkbox-label-color);
+  }
+
+  &:not(.st-react-checkbox--disabled) .st-react-checkbox--label {
     cursor: pointer;
   }
+
+  &.st-react-checkbox--disabled .st-react-checkbox--label {
+    cursor: not-allowed;
+  }
+
   &:hover .st-react-checkbox--label {
     color: var(--st-react-checkbox-label-hover-color);
   }
@@ -65,5 +73,11 @@
 
   &.st-react-checkbox--unlabeled {
     padding: 0;
+  }
+
+  &.st-react-checkbox--disabled,
+  &.st-react-checkbox--disabled .st-react-checkbox--box {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }

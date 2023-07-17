@@ -36,6 +36,14 @@ export const Unlabeled: Story = {
   decorators: LabelLeft.decorators,
 };
 
+export const Disabled: Story = {
+  args: {
+    label: "Disabled checkbox",
+    disabled: true,
+  },
+  decorators: LabelLeft.decorators,
+};
+
 export const List: Story = {
   decorators: LabelLeft.decorators,
   render: (args) => (
