@@ -10,6 +10,7 @@ export interface MultiselectProps {
   onChange: (value: string) => unknown;
   selectedValue: string;
   size?: "medium" | "large";
+  disabled: boolean;
   className?: string;
 }
 
@@ -25,11 +26,13 @@ export const Multiselect = (props: MultiselectProps) => {
     onChange,
     size = "medium",
     className = "",
+    disabled = false,
   } = props;
 
   const multiSelectClass = classNames({
     "st-react-multiselect": true,
     [`st-react-multiselect--${size}`]: true,
+    "st-react-multiselect--disabled": disabled,
     [className]: !!className,
   });
   const onOptionClick = (value: string) => {
@@ -46,6 +49,7 @@ export const Multiselect = (props: MultiselectProps) => {
         onClick={() => onOptionClick(option.value)}
         key={option.value}
         className={optionClass}
+        disabled={disabled}
       >
         <div className="st-react-multiselect--optionText st-typography-medium">
           {option.label}

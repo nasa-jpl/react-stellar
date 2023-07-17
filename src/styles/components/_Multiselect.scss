@@ -6,6 +6,15 @@
   border-radius: var(--st-react-multiselect-border-radius);
 }
 
+.st-react-multiselect--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+
+  .st-react-multiselect--option {
+    cursor: not-allowed;
+  }
+}
+
 .st-react-multiselect--option {
   border: 1px solid var(--st-react-multiselect-option-border-color);
   border-radius: var(--st-react-multiselect-border-radius);
