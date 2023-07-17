@@ -95,6 +95,16 @@ export const Searchable = {
   },
 };
 
+export const Loading = {
+  ...Default,
+  args: {
+    options: longListItems,
+    label: "Dropdown Label",
+    labelPosition: "top",
+    isLoading: true,
+  },
+};
+
 export const Clearable = {
   ...Default,
   args: {
@@ -102,6 +112,17 @@ export const Clearable = {
     label: "Dropdown Label",
     labelPosition: "top",
     isClearable: true,
+  },
+};
+
+export const Disabled = {
+  ...Default,
+  args: {
+    options: longListItems,
+    label: "Dropdown Label",
+    labelPosition: "top",
+    disabled: true,
+    isLoading: true,
   },
 };
 

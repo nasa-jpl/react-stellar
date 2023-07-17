@@ -80,6 +80,7 @@ export const Dropdown = (props: DropdownProps) => {
 
   const containerClass = classNames({
     "st-react-dropdown": true,
+    "st-react-dropdown--disabled": disabled,
     [className]: !!className,
   });
   const SingleValueComponent: SingleValue<OptionType> = (
