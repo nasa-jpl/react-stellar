@@ -14,6 +14,12 @@
     cursor: not-allowed;
   }
 
+  &.st-react-checkbox--disabled,
+  &.st-react-checkbox--disabled .st-react-checkbox--box {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   &:hover .st-react-checkbox--label {
     color: var(--st-react-checkbox-label-hover-color);
   }
@@ -73,11 +79,5 @@
 
   &.st-react-checkbox--unlabeled {
     padding: 0;
-  }
-
-  &.st-react-checkbox--disabled,
-  &.st-react-checkbox--disabled .st-react-checkbox--box {
-    opacity: 0.5;
-    cursor: not-allowed;
   }
 }
