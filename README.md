@@ -6,8 +6,7 @@ React implementation of the Stellar design system built on top of the (native CS
 
 ## What is Stellar?
 
-Stellar is design system for operations tools that enables developers and designers to make use of battle-tested components and focus their efforts on the unique aspects of their applications. Included in this design system are code components, design files and assets, and guidelines for use. Please refer to the Figma
-file [here](https://www.figma.com/file/a696svN2S7YNlZRYAkeLob/Stellar-Design-System?type=design&node-id=0%3A1&t=hcGqixx7MZ4qSgbd-1) for more documentation about the Stellar design system.
+Stellar is design system for operations tools that enables developers and designers to make use of battle-tested components and focus their efforts on the unique aspects of their applications. Included in this design system are code components, design files and assets, and guidelines for use.
 
 ## Component Usage and Demos
 
