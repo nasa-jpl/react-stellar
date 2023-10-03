@@ -16,6 +16,20 @@
     gap: var(--st-grid-unit);
   }
 
+  &:not(.st-react-switch--disabled) .st-react-switch--label {
+    cursor: pointer;
+  }
+
+  &.st-react-switch--disabled .st-react-switch--label {
+    cursor: not-allowed;
+  }
+
+  &.st-react-switch--disabled,
+  &.st-react-switch--disabled .st-react-switch--box {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   .st-react-switch--box {
     cursor: pointer;
     padding: 0;
@@ -27,11 +41,10 @@
     background: var(--st-react-switch-unchecked-background);
   }
 
-  &:hover {
+  &:not(.st-react-switch--disabled):hover {
     .st-react-switch--box[data-state="unchecked"] {
       background: var(--st-react-switch-unchecked-hover-background);
     }
-    // background: var(--st-react-switch-checked-hover-background);
     .st-react-switch--box[data-state="checked"] {
       background: var(--st-react-switch-checked-hover-background);
     }

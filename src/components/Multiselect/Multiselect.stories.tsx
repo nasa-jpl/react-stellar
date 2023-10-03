@@ -50,3 +50,14 @@ export const Large: Story = {
   },
   render: Medium.render,
 };
+
+export const Disabled: Story = {
+  args: {
+    options,
+    disabled: true,
+  },
+  render: (args) => {
+    const [value, setValue] = useState(options[0].value);
+    return <Multiselect {...args} selectedValue={value} onChange={setValue} />;
+  },
+};

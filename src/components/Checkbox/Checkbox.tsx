@@ -49,6 +49,7 @@ export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(
       "st-react-checkbox": true,
       "st-react-checkbox--label-right": labelPosition === "right",
       "st-react-checkbox--unlabeled": !label,
+      "st-react-checkbox--disabled": disabled,
       [className]: !!className,
     });
     return (

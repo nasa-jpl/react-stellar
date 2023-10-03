@@ -32,6 +32,15 @@ export const LabelRight: Story = {
   decorators: LabelLeft.decorators,
 };
 
+export const Disabled: Story = {
+  args: {
+    ...LabelLeft.args,
+    label: "Disabled switch",
+    disabled: true,
+  },
+  decorators: LabelLeft.decorators,
+};
+
 export const Unlabeled: Story = {
   args: {},
   decorators: LabelLeft.decorators,

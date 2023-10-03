@@ -3,6 +3,12 @@
   gap: calc(var(--st-grid-unit) / 2);
   flex-direction: column;
 
+
+  &.st-react-dropdown--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   .st-react-dropdown--inner-label {
     color: var(--st-react-dropdown-inner-label-color);
   }
