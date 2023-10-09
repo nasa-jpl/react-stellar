@@ -19,3 +19,4 @@ export * from "./components/Avatar";
 export * from "./components/Menu";
 export * from "./components/Navbar";
 export * from "./components/Switch";
+export * from "./components/Slider";
