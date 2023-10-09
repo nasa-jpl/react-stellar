@@ -143,6 +143,23 @@
   --st-react-switch-checked-background: var(--st-primary-70);
   --st-react-switch-checked-hover-background: var(--st-primary-80);
 
+  // Slider.
+  --st-react-slider-label-color: var(--st-gray-60);
+  --st-react-slider-height: 14px;
+  --st-react-slider-range-background-color: var(--st-primary-50);
+  --st-react-slider-thumb-background-color: var(--st-gray-15);
+  --st-react-slider-thumb-hover-background-color: var(--st-gray-10);
+  --st-react-slider-thumb-border-color: var(--st-primary-50);
+  --st-react-slider-thumb-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.14);
+  --st-react-slider-thumb-focus-box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
+  --st-react-slider-disabled-range-background-color: var(--st-gray-50);
+  --st-react-slider-disabled-thumb-background-color: var(--st-gray-30);
+  --st-react-slider-disabled-thumb-border-color: var(--st-gray-50);
+  --st-react-slider-track-height: 4px;
+  --st-react-slider-track-background-color: var(--st-gray-20);
+  --st-react-slider-input-max-width: 64px;
+  --st-react-slider-min-max-color: var(--st-gray-50);
+
   // Tooltip.
   --st-react-tooltip-border-radius: calc(var(--st-grid-unit) / 2);
   --st-react-tooltip-padding: var(--st-grid-unit) var(--st-grid-unit3x);
