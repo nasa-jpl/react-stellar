@@ -56,6 +56,16 @@ export const LabelRight: Story = {
   render: Single.render,
 };
 
+export const InputRight: Story = {
+  args: {
+    ...Single.args,
+    label: "Switch label",
+    inputPosition: "right",
+  },
+  decorators: Single.decorators,
+  render: Single.render,
+};
+
 export const WithRangeShown: Story = {
   args: {
     ...Single.args,
