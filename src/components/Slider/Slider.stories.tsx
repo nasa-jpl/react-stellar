@@ -56,7 +56,7 @@ export const LabelRight: Story = {
   render: Single.render,
 };
 
-export const WithRange: Story = {
+export const WithRangeShown: Story = {
   args: {
     ...Single.args,
     label: "Switch label",
