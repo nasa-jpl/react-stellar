@@ -7,6 +7,7 @@ import { Input } from "components/Input";
 export type SliderProps = {
   label?: string;
   labelPosition?: "left" | "right";
+  inputPosition?: "left" | "right";
   className?: string;
   disabled?: boolean;
   showInputs?: boolean;
@@ -15,6 +16,7 @@ export type SliderProps = {
   max?: number;
   onValueChange?(value: number[]): void;
   onValueCommit?(value: number[]): void;
+  step?: number;
 } & SliderPrimitive.SliderProps;
 
 /** A control that allows the user to slide between a fixed range of values. Intended for usage in a list where the parent element will supply a width.
@@ -32,15 +34,41 @@ export const Slider = forwardRef<HTMLButtonElement, SliderProps>(
       className = "",
       label = "",
       labelPosition = "left",
+      inputPosition = "left",
       value: propsValue,
       defaultValue = [50],
       min = 0,
       max = 100,
       showInputs = true,
       showRange = true,
+      step = 1,
       onValueChange = () => {},
       ...other
     } = props;
+
+    const formatRangeLabel = (x: number) => {
+      // Round to at most three decimal places
+      return Math.round((x + Number.EPSILON) * 1000) / 1000;
+    };
+
+    const renderInput = (
+      value: number,
+      onChange: (evt: React.FormEvent<HTMLInputElement>) => void,
+    ) => {
+      if (showInputs) {
+        return (
+          <Input
+            className="st-react-slider--input"
+            value={value}
+            type="number"
+            min={min}
+            max={max}
+            onChange={onChange}
+          />
+        );
+      }
+      return null;
+    };
 
     const value = propsValue || defaultValue;
     const sliderClass = classNames({
@@ -49,6 +77,14 @@ export const Slider = forwardRef<HTMLButtonElement, SliderProps>(
       "st-react-slider--unlabeled": !label,
       [className]: !!className,
     });
+
+    const showFirstInput = showInputs && value.length > 0;
+    const showSecondInput = showInputs && value.length > 1;
+    const onFirstInputChange = (evt: React.FormEvent<HTMLInputElement>) => {
+      const newValue = [parseFloat(evt.currentTarget.value)];
+      if (value.length > 1) newValue.push(value[1]);
+      onValueChange(newValue);
+    };
     return (
       <div className={sliderClass}>
         {label && (
@@ -57,26 +93,18 @@ export const Slider = forwardRef<HTMLButtonElement, SliderProps>(
           </Label>
         )}
         <div className="st-react-slider--container">
-          {showInputs && value.length > 0 && (
-            <Input
-              className="st-react-slider--input"
-              value={value[0]}
-              type="number"
-              min={min}
-              max={max}
-              onChange={(evt) => {
-                const newValue = [parseFloat(evt.currentTarget.value)];
-                if (value.length > 1) newValue.push(value[1]);
-                onValueChange(newValue);
-              }}
-            />
-          )}
+          {showFirstInput &&
+            inputPosition === "left" &&
+            renderInput(value[0], onFirstInputChange)}
           <SliderPrimitive.Slider
             defaultValue={value}
             disabled={disabled}
             ref={ref}
             className="st-react-slider--root"
             onValueChange={onValueChange}
+            step={step}
+            min={min}
+            max={max}
             {...(showInputs ? { value } : "")}
             {...other}
           >
@@ -91,12 +119,19 @@ export const Slider = forwardRef<HTMLButtonElement, SliderProps>(
             ))}
             {showRange && (
               <div className="st-react-slider--min-max st-typography-label">
-                <div className="st-react-slider--min">{min}</div>
-                <div className="st-react-slider--max">{max}</div>
+                <div className="st-react-slider--min">
+                  {formatRangeLabel(min)}
+                </div>
+                <div className="st-react-slider--max">
+                  {formatRangeLabel(max)}
+                </div>
               </div>
             )}
           </SliderPrimitive.Slider>
-          {showInputs && value.length > 1 && (
+          {showFirstInput &&
+            inputPosition === "right" &&
+            renderInput(value[0], onFirstInputChange)}
+          {showSecondInput && (
             <Input
               className="st-react-slider--input"
               value={value[1]}
