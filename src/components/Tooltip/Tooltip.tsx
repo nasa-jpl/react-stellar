@@ -49,20 +49,22 @@ export const Tooltip = (props: TooltipProps) => {
       {...otherTooltipProps}
     >
       <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
-      <TooltipPrimitive.Content
-        side="top"
-        align="center"
-        className={contentClass}
-        sideOffset={sideOffset}
-        {...otherContentProps}
-      >
-        {content}
-        <TooltipPrimitive.Arrow
-          width={arrowWidth}
-          height={arrowHeight}
-          className="st-react-tooltip--arrow"
-        />
-      </TooltipPrimitive.Content>
+      <TooltipPrimitive.Portal>
+        <TooltipPrimitive.Content
+          side="top"
+          align="center"
+          className={contentClass}
+          sideOffset={sideOffset}
+          {...otherContentProps}
+        >
+          {content}
+          <TooltipPrimitive.Arrow
+            width={arrowWidth}
+            height={arrowHeight}
+            className="st-react-tooltip--arrow"
+          />
+        </TooltipPrimitive.Content>
+      </TooltipPrimitive.Portal>
     </TooltipPrimitive.Root>
   );
 };
