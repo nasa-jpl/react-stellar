@@ -1,6 +1,8 @@
+const template = require("./icon-index-template.cjs");
+
 module.exports = {
   typescript: true,
-  indexTemplate: require("./icon-index-template.js"),
+  indexTemplate: template,
   svgoConfig: {
     plugins: [
       {
