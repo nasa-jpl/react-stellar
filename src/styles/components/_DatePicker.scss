@@ -131,3 +131,7 @@
 .date-picker--footer-content {
   padding: 8px;
 }
+
+.date-picker-caption button > svg {
+  pointer-events: none;
+}
