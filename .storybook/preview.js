@@ -1,4 +1,5 @@
 import "../src/styles/styles.scss";
+import "@nasa-jpl/stellar/font/inter/inter.css";
 import { useDarkMode } from "storybook-dark-mode";
 
 // create a component that uses the dark mode hook
