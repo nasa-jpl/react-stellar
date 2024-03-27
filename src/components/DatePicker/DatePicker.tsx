@@ -225,6 +225,7 @@ function Picker({
 }
 
 export interface DatePickerProps {
+  onChange: (date: Date) => void;
   label?: string;
   year?: number;
   month?: number;
@@ -245,9 +246,8 @@ export interface DatePickerProps {
     setDateState: (date: Date) => void,
     setOpen: Dispatch<SetStateAction<boolean>>,
   ) => React.ReactNode;
-  onChange: (date: Date) => void;
-  formatString: "ISO" | string;
-  rightAdornment: React.ReactNode;
+  formatString?: "ISO" | string;
+  rightAdornment?: React.ReactNode;
 }
 
 const now = new Date();
