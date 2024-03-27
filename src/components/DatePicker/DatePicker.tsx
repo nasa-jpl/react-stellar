@@ -247,7 +247,6 @@ export interface DatePickerProps {
   ) => React.ReactNode;
   onChange: (date: Date) => void;
   formatString: "ISO" | string;
-  // parseDate: (dateString: string) => Date;
   rightAdornment: React.ReactNode;
 }
 
@@ -410,16 +409,8 @@ export function DatePicker({
         const { value } = target as HTMLInputElement;
         setOpened(false);
         const error = validateTimeCallback(value);
-        // const error = validate(value, required, min, max);
         if (!error) {
           onChange(parseDate(value, formatString));
-          if (!utc) {
-            // TODO why do i have to do this?
-            // Done here https://react-day-picker.js.org/guides/input-fields but
-            // want to know why parse is different from date constructor
-          } else {
-            // onChange(new Date(value));
-          }
         }
       }
     },
@@ -439,18 +430,8 @@ export function DatePicker({
       } = event;
       setDateStringState(value);
       const error = validateTimeCallback(value);
-      if (value !== dateStringState) {
-        // const error = validate(value, required);
-        if (!error) {
-          onChange(parseDate(value, formatString));
-          if (!utc) {
-            // TODO why do i have to do this?
-            // Done here https://react-day-picker.js.org/guides/input-fields but
-            // want to know why parse is different from date constructor
-          } else {
-            // onChange(new Date(value));
-          }
-        }
+      if (value !== dateStringState && !error) {
+        onChange(parseDate(value, formatString));
       }
     },
     [onChange, validateTimeCallback],
