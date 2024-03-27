@@ -10,14 +10,7 @@ import "react-day-picker/dist/style.css";
 import { DayPicker, useNavigation } from "react-day-picker";
 import { Dropdown, OptionType } from "components/Dropdown";
 import { TextField } from "components/Fields/TextField";
-import {
-  format,
-  isAfter,
-  isBefore,
-  isValid,
-  parse,
-  parseISO,
-} from "date-fns";
+import { format, isAfter, isBefore, isValid, parse, parseISO } from "date-fns";
 import { formatInTimeZone } from "date-fns-tz";
 import { Button } from "components/Button";
 import {
@@ -167,12 +160,6 @@ interface PickerProps {
   updateYear: (year: number) => void;
   onBlur: () => void;
 }
-
-/*
-
-TODO
-- bug: month and year not propagating to calendar after selection and re-opening
-*/
 
 function Picker({
   opened,
