@@ -36,7 +36,7 @@
     font-weight: var(--st-react-dropdown-font-weight);
     height: var(--st-react-dropdown-height);
     letter-spacing: var(--st-react-dropdown-letter-spacing) !important;
-    line-height: var(--st-select-line-height);
+    line-height: var(--st-react-dropdown-line-height);
     color: var(--st-react-dropdown-value-color);
   }
 
@@ -72,7 +72,7 @@
     border-radius: var(--st-react-dropdown-menu-list-border-radius);
     border-radius: inherit;
     box-shadow: var(--st-react-dropdown-menu-list-box-shadow);
-    background: var(--st-react-dropdown-menu-list-background-color)
+    background: var(--st-react-dropdown-menu-list-background-color);
   }
 
   .st-react-dropdown--rs__menu-notice--no-options {
@@ -112,6 +112,7 @@
     display: flex;
     color: var(--st-react-dropdown-input-container-color);
     margin: 0;
+    padding: 0;
   }
 
   .st-react-dropdown--rs__control--is-focused {

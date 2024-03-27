@@ -137,7 +137,13 @@ export const JSXOptions = {
     options: [
       {
         label: (
-          <div style={{ display: "flex", gap: "var(--st-grid-unit)" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "var(--st-grid-unit)",
+            }}
+          >
             <IconSol />
             Label 1
           </div>
@@ -146,7 +152,13 @@ export const JSXOptions = {
       },
       {
         label: (
-          <div style={{ display: "flex", gap: "var(--st-grid-unit)" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "var(--st-grid-unit)",
+            }}
+          >
             <IconSol />
             Label 2
           </div>
@@ -155,7 +167,13 @@ export const JSXOptions = {
       },
       {
         label: (
-          <div style={{ display: "flex", gap: "var(--st-grid-unit)" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "var(--st-grid-unit)",
+            }}
+          >
             <IconSol />
             Label 3
           </div>

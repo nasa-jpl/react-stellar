@@ -25,7 +25,8 @@
   --st-react-dropdown-font-weight: var(--st-typography-body-font-weight);
   --st-react-dropdown-font-size: var(--st-typography-body-font-size);
   --st-react-dropdown-letter-spacing: var(--st-typography-body-letter-spacing);
-  --st-react-dropdown-line-height: var(--st-typography-body-line-height);
+  --st-react-dropdown-height: calc(var(--st-grid-unit) * 3);
+  --st-react-dropdown-line-height: var(--st-react-dropdown-height);
   --st-react-dropdown-value-color: var(--st-gray-80);
   --st-react-dropdown-value-container-padding: 0 var(--st-grid-unit);
   --st-react-dropdown-value-container-flex-gap: calc(var(--st-grid-unit) / 2);
@@ -55,7 +56,7 @@
   --st-react-dropdown-indicator-svg-color: var(--st-gray-60);
   --st-react-dropdown-input-container-color: var(--st-gray-80);
   --st-react-dropdown-option-margin: 0px calc(var(--st-grid-unit) / 2);
-  --st-react-dropdown-option-padding: calc(var(--st-grid-unit) / 2);
+  --st-react-dropdown-option-padding: 0 calc(var(--st-grid-unit) / 2);
   --st-react-dropdown-option-width: calc(100% - var(--st-grid-unit));
   --st-react-dropdown-option-border-radius: calc(var(--st-grid-unit) / 2);
   --st-react-dropdown-option-focus-background-color: var(--st-gray-15);
