@@ -69,6 +69,7 @@ interface CustomCaptionProps {
   max?: Date;
   updateMonth: (month: number) => void;
   updateYear: (year: number) => void;
+  preventCloseString: string;
 }
 
 function CustomCaption({
@@ -78,6 +79,7 @@ function CustomCaption({
   max,
   updateMonth,
   updateYear,
+  preventCloseString,
 }: CustomCaptionProps) {
   const { goToMonth, nextMonth, previousMonth } = useNavigation();
 
@@ -109,7 +111,7 @@ function CustomCaption({
     <div className="date-picker-caption">
       <Button
         variant="icon"
-        className="prevent-close"
+        className={preventCloseString}
         disabled={!previousMonth}
         onClick={() => previousMonth && goToMonth(previousMonth)}
       >
@@ -134,7 +136,7 @@ function CustomCaption({
       <div className="date-picker-caption--buttons">
         <Button
           variant="icon"
-          className="prevent-close"
+          className={preventCloseString}
           disabled={!nextMonth}
           onClick={() => nextMonth && goToMonth(nextMonth)}
         >
@@ -159,6 +161,7 @@ interface PickerProps {
   updateMonth: (month: number) => void;
   updateYear: (year: number) => void;
   onBlur: () => void;
+  preventCloseString: string;
 }
 
 function Picker({
@@ -174,6 +177,7 @@ function Picker({
   max,
   renderHeader,
   renderFooter,
+  preventCloseString,
 }: PickerProps) {
   const disabled = [];
   if (min) disabled.push({ from: new Date("1900"), to: min });
@@ -209,6 +213,7 @@ function Picker({
                 updateMonth={updateMonth}
                 min={min}
                 max={max}
+                preventCloseString={preventCloseString}
               />
             ),
           }}
@@ -273,6 +278,10 @@ function parseDate(dateString: string, formatString: "ISO" | string): Date {
   return parse(dateString, formatString, new Date());
 }
 
+function generateID() {
+  return Math.random().toString(16).slice(2);
+}
+
 /** A date picker component that supports UTC and local time.
  *
  * Built using React-Day-Picker, styled for Stellar.
@@ -297,6 +306,7 @@ export function DatePicker({
   minWidth = 182,
   placeholder = "",
 }: DatePickerProps) {
+  const [preventCloseString] = useState(`prevent-close-${generateID()}`);
   const [dateState, setDateState] = useState<Date>(date);
   const [dateStringState, setDateStringState] = useState<string>(() =>
     formatDate(date, formatString, utc),
@@ -332,10 +342,11 @@ export function DatePicker({
   const windowClickCallback = useCallback(
     (event: MouseEvent) => {
       if (
-        event.target instanceof HTMLElement &&
+        (event.target instanceof HTMLElement ||
+          event.target instanceof SVGElement) &&
         wrapperRef &&
         !wrapperRef.current?.contains(event.target) &&
-        !event.target.classList.contains("prevent-close") &&
+        !event.target.classList.contains(preventCloseString) &&
         !event.target.classList.contains("st-react-dropdown--rs__option")
       ) {
         datePickerCloseCallback();
@@ -494,6 +505,7 @@ export function DatePicker({
         updateYear={setYearState}
         min={min}
         max={max}
+        preventCloseString={preventCloseString}
         renderHeader={
           renderHeader ? () => renderHeader(onChange, setOpened) : undefined
         }
