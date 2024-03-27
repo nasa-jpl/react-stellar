@@ -443,11 +443,8 @@ export function DatePicker({
         labelPosition={labelPosition}
         label={label}
         value={inputValue}
-        // key={inputKey}
         onKeyUp={onKeyUpCallback}
         onChange={onInputChange}
-        // onClick={openPickerCallback}
-        // onFocus={openPickerCallback}
         onBlur={onBlurCallback}
         error={errorString || errorStringProp}
         placeholder={
